@@ -1,11 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  description: MyText
-  price: 1
+machine1:
+  title: Maquina HH22O
+  description: Maquina bien cuidada.
+  price: 200
 
-two:
-  title: MyString
-  description: MyText
-  price: 1
+machine2:
+  title: Mauqina KKlY02
+  description: Mauqina con desgaste en pintura.
+  price: 150
