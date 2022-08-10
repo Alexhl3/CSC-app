@@ -1,3 +1,5 @@
 <h2 class='title'><%= @product.title %></h2>
 <p class='description'><%= @product.description %></p>
 <span class='price'>$<%= @product.price %></span>
+
+<%= link_to 'editar', edit_product_path(@product)%>

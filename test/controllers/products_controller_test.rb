@@ -37,6 +37,17 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_equal flash[:notice], 'El producto ha sido creado con exito!!'
   end
 
+  test 'allow to edit a product' do
+    patch product_path(products(:machine1)), params: {
+      product: {
+        title: 'maquina XXJ4',
+      }
+    }
+
+    assert_redirected_to products_path
+    assert_equal flash[:notice], 'El producto ha sido actualizado con exito!!'
+  end
+
   test 'dont allow to create new product with empty field' do
     post products_path, params: {
       product: {
@@ -47,5 +58,22 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     }
 
     assert_response :unprocessable_entity
+  end
+
+  test 'dont allow to edit a product with empty field' do
+    post products_path, params: {
+      product: {
+        title: '',
+      }
+    }
+
+    assert_response :unprocessable_entity
+  end
+
+  test 'render edit product from' do
+    get edit_product_path(products(:machine1))
+
+    assert_response :success
+    assert_select 'form'
   end
 end
