@@ -34,5 +34,18 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     }
 
     assert_redirected_to products_path
+    assert_equal flash[:notice], 'El producto ha sido creado con exito!!'
+  end
+
+  test 'dont allow to create new product with empty field' do
+    post products_path, params: {
+      product: {
+        title: '',
+        description: 'Maquina en buen estado.',
+        price: 230
+      }
+    }
+
+    assert_response :unprocessable_entity
   end
 end
