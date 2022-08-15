@@ -1,0 +1,39 @@
+es:
+  activerecord:
+    models:
+      product: Producto
+    attributes:
+      product:
+        title: 'Título'
+        description: 'Descripción'
+        price: 'Precio'
+        photo: 'Imagen'
+    errors:
+      models:
+        product:
+          attributes:
+            title:
+              blank: 'no puede estar en blanco'
+            description:
+              blank: 'no puede estar en blanco'
+            price:
+              blank: 'no puede estar en blanco'
+  products:
+    index:
+      title: 'Productos'
+    show:
+      edit: 'Editar'
+      destroy: 'Eliminar'
+    new:
+      title: 'Ingresar producto'
+    create:
+      created: 'El producto ha sido creado con exito!!'
+    edit:
+      title: 'Editar producto'
+    update:
+      updated: 'El producto ha sido actualizado con exito!!'
+    destroy:
+      destroyed: 'El producto ha sido eliminado'
+  shared:
+    header:
+      add: 'Añadir producto'

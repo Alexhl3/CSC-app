@@ -18,5 +18,11 @@ module CSC
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # available locales
+    config.i18n.available_locales = [:en, :es]
+
+    # default locale
+    config.i18n.default_locale = :es
   end
 end
