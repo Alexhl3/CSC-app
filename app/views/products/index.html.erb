@@ -1,11 +1,3 @@
 <h1>Productos</h1>
 
-<% @products.each do |product| %>
-  <%= link_to product_path(product.id), class: 'product' do %>
-    <h2><%= product.title %></h2>
-  <div>
-    <%= image_tag product.photo, width: 100 if product.photo.attached? %>
-  </div>
-  <% end %>
-    <span>$<%= product.price %></span>
-<% end %>
+<%= render partial: 'product', collection: @products %>
