@@ -4,8 +4,16 @@ machine1:
   title: Maquina HH22O
   description: Maquina bien cuidada.
   price: 200
+  category: oldMachines
 
 machine2:
-  title: Mauqina KKlY02
+  title: Maquina KKlY02
   description: Mauqina con desgaste en pintura.
   price: 150
+  category: balanceMachines
+
+machine3:
+  title: Maquina LLE2H
+  description: Maquina le faltan cables.
+  price: 75
+  category: balanceMachines
