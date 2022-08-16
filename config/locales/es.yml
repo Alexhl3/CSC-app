@@ -34,6 +34,25 @@ es:
       updated: 'El producto ha sido actualizado con exito!!'
     destroy:
       destroyed: 'El producto ha sido eliminado'
+  categories:
+    index:
+      title: 'Categorias'
+      new: 'Crear categoria'
+    new:
+      title: 'Nueva categoria'
+      back: 'Volver a categorias'
+    create:
+      created: 'La categoria ha sido creada con exito!!'
+    edit:
+      title: 'Editar categoria'
+      back: 'Volver a categorias'
+    update:
+      updated: 'La categoria ha sido actualizada con exito!!'
+    destroy:
+      destroyed: 'La categoria ha sido eliminada'
+    category:
+      edit: 'Editar'
+      destroy: 'Eliminar'
   shared:
     header:
       add: 'Añadir producto'
