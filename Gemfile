@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
 
+# Pagy for pagination
+gem "pagy", "~> 5.10"
+
 # Pg_search fulltextseach
 gem "pg_search", "~> 2.3"
 
