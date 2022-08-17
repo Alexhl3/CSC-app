@@ -24,6 +24,10 @@ es:
       all: 'Todos'
       min_price: 'Precio minimo'
       max_price: 'Precio maximo'
+      text: 'Buscar'
+      newest: 'Nuevo'
+      expensive: 'Mas caro'
+      cheapest: 'Mas barato'
     show:
       edit: 'Editar'
       destroy: 'Eliminar'

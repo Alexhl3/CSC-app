@@ -24,6 +24,10 @@ en:
       all: 'All'
       min_price: 'Min price'
       max_price: 'Max price'
+      text: 'Search'
+      newest: 'Newest'
+      expensive: 'Expensive'
+      cheapest: 'Cheapest'
     show:
       edit: 'Edit'
       destroy: 'Delete'

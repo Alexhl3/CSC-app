@@ -117,4 +117,20 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_select '.product', 1
     assert_select 'h2', 'Maquina HH22O'
   end
+
+  test 'sort products by expensive' do
+    get products_path(order_by: 'expensive')
+
+    assert_response :success
+    assert_select '.product', 3
+    assert_select '.products .product:first-child h2', 'Maquina HH22O'
+  end
+
+  test 'sort products by cheapest' do
+    get products_path(order_by: 'cheapest')
+
+    assert_response :success
+    assert_select '.product', 3
+    assert_select '.products .product:first-child h2', 'Maquina LLE2H'
+  end
 end
