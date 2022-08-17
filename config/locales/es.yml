@@ -22,6 +22,8 @@ es:
     index:
       title: 'Productos'
       all: 'Todos'
+      min_price: 'Precio minimo'
+      max_price: 'Precio maximo'
     show:
       edit: 'Editar'
       destroy: 'Eliminar'

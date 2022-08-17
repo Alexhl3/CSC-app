@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
 
+# Pg_search fulltextseach
+gem "pg_search", "~> 2.3"
+
 # Solargraph for code completion
 gem 'solargraph', group: :development
 

@@ -94,4 +94,27 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
     assert_select '.product', 2
   end
+
+  test 'filter products by min_price' do
+    get products_path(min_price: 200)
+
+    assert_response :success
+    assert_select '.product', 1
+    assert_select 'h2', 'Maquina HH22O'
+  end
+
+  test 'filter products by max_price' do
+    get products_path(max_price: 150)
+
+    assert_response :success
+    assert_select '.product', 2
+  end
+
+  test 'filter products by query_text' do
+    get products_path(query_text: products(:machine1).title)
+
+    assert_response :success
+    assert_select '.product', 1
+    assert_select 'h2', 'Maquina HH22O'
+  end
 end
