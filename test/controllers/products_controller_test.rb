@@ -6,6 +6,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
     assert_response :success
     assert_select '.product', 3
+    assert_select '.category', 4
   end
 
   test 'render detail product view' do
@@ -85,5 +86,12 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to products_path
     assert_equal flash[:notice], 'El producto ha sido eliminado'
+  end
+
+  test 'filter products by category' do
+    get products_path(category_id: categories(:balanceMachines))
+
+    assert_response :success
+    assert_select '.product', 2
   end
 end

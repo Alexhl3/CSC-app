@@ -21,6 +21,7 @@ es:
   products:
     index:
       title: 'Productos'
+      all: 'Todos'
     show:
       edit: 'Editar'
       destroy: 'Eliminar'
@@ -56,3 +57,4 @@ es:
   shared:
     header:
       add: 'Añadir producto'
+      categories: 'Categorias'

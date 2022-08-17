@@ -24,5 +24,8 @@ module CSC
 
     # default locale
     config.i18n.default_locale = :es
+
+    # multy query
+    config.active_record.async_query_executor = :global_thread_pool
   end
 end
