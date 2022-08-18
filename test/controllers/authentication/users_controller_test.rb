@@ -1,6 +1,10 @@
 require "test_helper"
 
 class Authentication::UsersControllerTest < ActionDispatch::IntegrationTest
+  def setup
+    login
+  end
+
   test "new_user_url" do
     get new_user_url
 

@@ -1,6 +1,9 @@
 require 'test_helper'
 
 class ProductsControllerTest < ActionDispatch::IntegrationTest
+  setup do
+    login
+  end
   test 'render all products' do
     get products_path
 

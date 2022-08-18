@@ -1,7 +1,8 @@
 require "test_helper"
 
 class CategoriesControllerTest < ActionDispatch::IntegrationTest
-  setup do
+  def setup
+    login
     @category = categories(:cutMachines)
   end
 

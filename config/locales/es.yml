@@ -99,3 +99,5 @@ es:
     header:
       add: 'Añadir producto'
       categories: 'Categorias'
+  commond:
+    not_logged_in: 'Ingrese usario y contraseña para continuar'
