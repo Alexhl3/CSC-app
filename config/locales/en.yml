@@ -88,6 +88,13 @@ en:
     users:
       create:
         created: 'The user has been successfully created!!'
+  sessions:
+      new:
+        login: 'User'
+        password: 'Password'
+      create:
+        created: 'Successful login'
+        error: 'The account name and/or password are incorrect'
   shared:
     header:
       add: 'Add product'
