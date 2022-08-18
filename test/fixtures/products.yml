@@ -3,159 +3,186 @@ machine1:
   description: Maquina en buen estado.
   price: 200
   category: newMachines
+  user: pedro
 
 machine2:
   title: Maquina 2
   description: Maquina le falta carcasa.
   price: 300
   category: oldMachines
+  user: david
 
 machine3:
   title: Maquina 3
   description: Maquina le faltan cables.
   price: 75
   category: balanceMachines
+  user: julia
 
 machine4:
   title: Maquina 4
   description: Maquina en buen estado.
   price: 85
   category: balanceMachines
+  user: julia
 
 machine5:
   title: Maquina 5
   description: Maquina le falta carcasa.
   price: 15
   category: oldMachines
+  user: david
 
 machine6:
   title: Maquina 6
   description: Maquina le faltan cables.
   price: 150
   category: oldMachines
+  user: david
 
 machine7:
   title: Maquina 7
   description: Maquina en buen estado.
   price: 235
   category: newMachines
+  user: pedro
 
 machine8:
   title: Maquina 8
   description: Maquina le falta carcasa.
   price: 125
   category: oldMachines
+  user: david
 
 machine9:
   title: Maquina 9
   description: Maquina le faltan cables.
   price: 55
   category: balanceMachines
+  user: julia
 
 machine10:
   title: Maquina 10
   description: Maquina en buen estado.
   price: 500
   category: newMachines
+  user: pedro
 
 machine11:
   title: Maquina 11
   description: Maquina le falta carcasa.
   price: 450
   category: oldMachines
+  user: david
 
 machine12:
   title: Maquina 12
   description: Maquina le faltan cables.
   price: 45
   category: oldMachines
+  user: david
 
 machine13:
   title: Maquina 13
   description: Maquina en buen estado.
   price: 50
   category: newMachines
+  user: pedro
 
 machine14:
   title: Maquina 14
   description: Maquina le falta carcasa.
   price: 175
   category: balanceMachines
+  user: julia
 
 machine15:
   title: Maquina 15
   description: Maquina le faltan cables.
   price: 80
   category: oldMachines
+  user: david
 
 machine16:
   title: Maquina 16
   description: Maquina le faltan cables.
   price: 210
   category: oldMachines
+  user: david
 
 machine17:
   title: Maquina 17
   description: Maquina en buen estado.
   price: 345
   category: newMachines
+  user: pedro
 
 machine18:
   title: Maquina 18
   description: Maquina le falta carcasa.
   price: 490
   category: balanceMachines
+  user: julia
 
 machine19:
   title: Maquina 19
   description: Maquina le faltan cables.
   price: 65
   category: oldMachines
+  user: david
 
 machine20:
   title: Maquina 20
   description: Maquina le faltan cables.
   price: 25
   category: oldMachines
+  user: david
 
 machine21:
   title: Maquina 21
   description: Maquina en buen estado.
   price: 750
   category: newMachines
+  user: pedro
 
 machine22:
   title: Maquina 22
   description: Maquina le falta carcasa.
   price: 455
   category: balanceMachines
+  user: julia
 
 machine23:
   title: Maquina 23
   description: Maquina le faltan cables.
   price: 356
   category: oldMachines
+  user: david
 
 machine24:
   title: Maquina 24
   description: Maquina le faltan cables.
   price: 170
   category: oldMachines
+  user: david
 
 machine25:
   title: Maquina 25
   description: Maquina en buen estado.
   price: 370
   category: newMachines
+  user: pedro
 
 machine26:
   title: Maquina 26
   description: Maquina le falta carcasa.
   price: 80
   category: balanceMachines
+  user: julia
 
 machine27:
   title: Maquina 27
   description: Maquina le faltan cables.
   price: 428
   category: oldMachines
+  user: david
