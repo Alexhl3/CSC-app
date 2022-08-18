@@ -63,7 +63,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'dont allow to edit a product with empty field' do
-    post products_path, params: {
+    patch product_path(products(:machine1)), params: {
       product: {
         title: '',
       }

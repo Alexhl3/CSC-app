@@ -8,6 +8,10 @@ es:
         description: 'Descripción'
         price: 'Precio'
         photo: 'Imagen'
+      category: Categoria
+    attributes:
+      category:
+        name: 'Nombre'
     errors:
       models:
         product:
@@ -17,6 +21,10 @@ es:
             description:
               blank: 'no puede estar en blanco'
             price:
+              blank: 'no puede estar en blanco'
+        category:
+          attributes:
+            name:
               blank: 'no puede estar en blanco'
   products:
     index:

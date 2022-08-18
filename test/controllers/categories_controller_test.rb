@@ -44,4 +44,24 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to categories_url
   end
+
+  test 'dont allow to create new category with empty field' do
+    post categories_url, params: {
+      category: {
+        name: ''
+      }
+    }
+
+    assert_response :unprocessable_entity
+  end
+
+  test 'dont allow to edit a category with empty field' do
+    patch category_url(categories(:newMachines)), params: {
+      category: {
+        name: ''
+      }
+    }
+
+    assert_response :unprocessable_entity
+  end
 end
