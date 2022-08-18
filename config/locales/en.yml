@@ -2,12 +2,20 @@ en:
   activerecord:
     models:
       product: Product
+      category: Category
+      user: User
     attributes:
       product:
         title: 'Title'
         description: 'Description'
         price: 'Price'
         photo: 'Photo'
+      category:
+        name: 'nombre'
+      user:
+        email: 'Email'
+        username: 'Username'
+        password: 'Password'
     errors:
       models:
         product:
@@ -18,6 +26,22 @@ en:
               blank: "can't be blank"
             price:
               blank: "can't be blank"
+        category:
+          attributes:
+            name:
+              blank: "can't be blank"
+        user:
+          attributes:
+            email:
+              blank: "can't be blank"
+              invalid: 'invalid'
+            username:
+              blank: "can't be blank"
+              too_short: 'must contain at least 3 characters'
+              invalid: 'invalid'
+            password:
+              blank: "can't be blank"
+              too_short: 'must contain at least 6 characters'
   products:
     index:
       title: 'Products'
@@ -60,6 +84,10 @@ en:
     category:
       edit: 'Edit'
       destroy: 'Delete'
+  authentication:
+    users:
+      create:
+        created: 'The user has been successfully created!!'
   shared:
     header:
       add: 'Add product'

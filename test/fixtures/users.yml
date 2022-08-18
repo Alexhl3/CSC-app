@@ -1,0 +1,14 @@
+pedro:
+  email: perdro@scs.com
+  username: pedro95
+  password_digest: <%= BCrypt::Password.create('password', cost: 5) %>
+
+julia:
+  email: jualia@scs.com
+  username: julia92
+  password_digest: <%= BCrypt::Password.create('password', cost: 5) %>
+
+david:
+  email: david@scs.com
+  username: david91
+  password_digest: <%= BCrypt::Password.create('password', cost: 5) %>

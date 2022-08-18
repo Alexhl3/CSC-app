@@ -2,16 +2,20 @@ es:
   activerecord:
     models:
       product: Producto
+      category: Categoria
+      user: Usuario
     attributes:
       product:
         title: 'Título'
         description: 'Descripción'
         price: 'Precio'
         photo: 'Imagen'
-      category: Categoria
-    attributes:
       category:
         name: 'Nombre'
+      user:
+        email: 'Correo electronico'
+        username: 'Nombre de usuario'
+        password: 'Contraseña'
     errors:
       models:
         product:
@@ -26,6 +30,18 @@ es:
           attributes:
             name:
               blank: 'no puede estar en blanco'
+        user:
+          attributes:
+            email:
+              blank: 'no puede estar en blanco'
+              invalid: 'no invalido'
+            username:
+              blank: 'no puede estar en blanco'
+              too_short: 'debe contener al menos 3 caracteres'
+              invalid: 'no valido'
+            password:
+              blank: 'no puede estar en blanco'
+              too_short: 'debe contener al menos 6 caracteres'
   products:
     index:
       title: 'Productos'
@@ -68,6 +84,10 @@ es:
     category:
       edit: 'Editar'
       destroy: 'Eliminar'
+  authentication:
+    users:
+      create:
+        created: 'El usuario ha sido ingresado con exito!!'
   shared:
     header:
       add: 'Añadir producto'
