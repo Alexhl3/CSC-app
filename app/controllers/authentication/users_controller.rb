@@ -1,4 +1,6 @@
 class Authentication::UsersController < ApplicationController
+  before_action :authorized?
+
   def new
     @user = User.new
   end

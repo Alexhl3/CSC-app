@@ -106,3 +106,4 @@ en:
       login: 'Login'
   commond:
     not_logged_in: 'login with your username and password to continue'
+    not_authorized: "You can't access this action"

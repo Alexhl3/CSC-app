@@ -106,3 +106,4 @@ es:
       login: 'Iniciar sesion'
   commond:
     not_logged_in: 'Ingrese usario y contraseña para continuar'
+    not_authorized: 'No puedes acceder a esta accion'
