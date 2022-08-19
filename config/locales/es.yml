@@ -101,5 +101,8 @@ es:
     header:
       add: 'Añadir producto'
       categories: 'Categorias'
+      sign_up: 'Crear nuevo usuario'
+      logout: 'Cerrar session'
+      login: 'Iniciar sesion'
   commond:
     not_logged_in: 'Ingrese usario y contraseña para continuar'

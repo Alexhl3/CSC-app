@@ -101,5 +101,8 @@ en:
     header:
       add: 'Add product'
       categories: 'Categories'
+      sign_up: 'Sign up'
+      logout: 'logout'
+      login: 'Login'
   commond:
     not_logged_in: 'login with your username and password to continue'
