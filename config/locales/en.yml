@@ -86,12 +86,15 @@ en:
       destroy: 'Delete'
   authentication:
     users:
+      new:
+        add_user: 'Add user'
       create:
         created: 'The user has been successfully created!!'
   sessions:
       new:
         login: 'User'
         password: 'Password'
+        new_session: 'Login'
       create:
         created: 'Successful login'
         error: 'The account name and/or password are incorrect'
@@ -107,3 +110,4 @@ en:
   commond:
     not_logged_in: 'login with your username and password to continue'
     not_authorized: "You can't access this action"
+    submit: 'Submit'

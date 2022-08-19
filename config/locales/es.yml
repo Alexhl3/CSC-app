@@ -86,12 +86,15 @@ es:
       destroy: 'Eliminar'
   authentication:
     users:
+      new:
+        add_user: 'Crear usuario'
       create:
         created: 'El usuario ha sido ingresado con exito!!'
     sessions:
       new:
         login: 'Usuario'
-        password: 'contraseña'
+        password: 'Contraseña'
+        new_session: 'Iniciar sesion'
       create:
         created: 'Inicio de sesión completado con exito'
         error: 'El nombre de la cuenta y/o la contraseña que has introducido son incorrectos'
@@ -107,3 +110,4 @@ es:
   commond:
     not_logged_in: 'Ingrese usario y contraseña para continuar'
     not_authorized: 'No puedes acceder a esta accion'
+    submit: 'Enviar'
