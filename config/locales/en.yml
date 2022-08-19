@@ -95,6 +95,8 @@ en:
       create:
         created: 'Successful login'
         error: 'The account name and/or password are incorrect'
+      destroy:
+        destroyed: 'Successful logout'
   shared:
     header:
       add: 'Add product'

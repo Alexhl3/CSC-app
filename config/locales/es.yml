@@ -95,6 +95,8 @@ es:
       create:
         created: 'Inicio de sesión completado con exito'
         error: 'El nombre de la cuenta y/o la contraseña que has introducido son incorrectos'
+      destroy:
+        destroyed: 'La sesion ha sido cerrada con exito'
   shared:
     header:
       add: 'Añadir producto'
