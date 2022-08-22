@@ -100,6 +100,9 @@ en:
         error: 'The account name and/or password are incorrect'
       destroy:
         destroyed: 'Successful logout'
+  users:
+    show:
+      not_found: 'User not found'
   shared:
     header:
       add: 'Add product'

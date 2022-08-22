@@ -100,6 +100,9 @@ es:
         error: 'El nombre de la cuenta y/o la contraseña que has introducido son incorrectos'
       destroy:
         destroyed: 'La sesion ha sido cerrada con exito'
+  users:
+    show:
+      not_found: 'El usuario indicado no ha sido encontrado'
   shared:
     header:
       add: 'Añadir producto'
