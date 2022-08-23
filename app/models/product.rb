@@ -12,6 +12,7 @@ class Product < ApplicationRecord
   }
 
   has_one_attached :photo
+  has_many :favorites, dependent: :destroy
 
   validates :title, presence: true
   validates :description, presence: true

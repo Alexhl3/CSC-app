@@ -56,6 +56,7 @@ es:
       edit: 'Editar'
       destroy: 'Eliminar'
       show_more: 'Mostrar mas productos de %{username}'
+      favorite: 'Agregar a favoritos'
     new:
       title: 'Ingresar producto'
     create:

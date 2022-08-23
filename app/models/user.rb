@@ -16,6 +16,7 @@ class User < ApplicationRecord
 
   has_many :products, dependent: :destroy
   before_save :downcase_attributes
+  has_many :favorites, dependent: :destroy
 
   private
 
