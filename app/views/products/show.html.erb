@@ -9,3 +9,5 @@
   <%= link_to t('.edit'), edit_product_path(@product) %>
   <%= link_to t('.destroy'), product_path(@product), data: { turbo_method: :delete } %>
 <% end %>
+
+<%= link_to t('.show_more', username: @product.user.username), user_path(@product.user.username) if Current.user&.admin? %>

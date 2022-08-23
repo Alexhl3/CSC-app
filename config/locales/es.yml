@@ -55,6 +55,7 @@ es:
     show:
       edit: 'Editar'
       destroy: 'Eliminar'
+      show_more: 'Mostrar mas productos de %{username}'
     new:
       title: 'Ingresar producto'
     create:

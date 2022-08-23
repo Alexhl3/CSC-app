@@ -55,6 +55,7 @@ en:
     show:
       edit: 'Edit'
       destroy: 'Delete'
+      show_more: 'More products of %{username}'
     new:
       title: 'Add product'
     create:
