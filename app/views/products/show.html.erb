@@ -2,14 +2,28 @@
 <div>
   <%= image_tag @product.photo, width: 200 if @product.photo.attached? %>
 </div>
+
 <p class='description'><%= @product.description %></p>
+
 <span class='price'>$<%= @product.price %></span>
 
-<% if Current.user == @product.user or Current.user.admin? %>
-  <%= link_to t('.edit'), edit_product_path(@product) %>
-  <%= link_to t('.destroy'), product_path(@product), data: { turbo_method: :delete } %>
-<% end %>
+<div>
+  <% if Current.user == @product.user or Current.user&.admin? %>
+    <%= link_to t('.edit'), edit_product_path(@product) %>
+    <%= link_to t('.destroy'), product_path(@product), data: { turbo_method: :delete } %>
+  <% end %>
+</div>
 
-<%= link_to t('.show_more', username: @product.user.username), user_path(@product.user.username) if Current.user&.admin? %>
+<div>
+  <%= link_to t('.show_more', username: @product.user.username), user_path(@product.user.username) if Current.user&.admin? %>
+</div>
 
-<%= link_to t('.favorite'), favorites_path(product_id: @product.id), data: { turbo_method: :post } %>
+<div>
+  <% if @product.favorites.find_by(user: Current.user) %>
+    <%= button_to t('.destroy_favorite'), favorite_path(@product.id), method: :delete %>
+  <% else %>
+    <%= link_to t('.favorite'), favorites_path(product_id: @product.id), data: { turbo_method: :post } if Current.user%>
+  <% end %>
+</div>
+
+

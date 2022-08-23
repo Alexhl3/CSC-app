@@ -56,7 +56,8 @@ en:
       edit: 'Edit'
       destroy: 'Delete'
       show_more: 'More products of %{username}'
-      favorite: 'add to favorites'
+      favorite: 'Add to favorites'
+      destroy_favorite: 'Delete from favorites'
     new:
       title: 'Add product'
     create:

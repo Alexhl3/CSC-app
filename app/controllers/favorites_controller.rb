@@ -4,6 +4,11 @@ class FavoritesController < ApplicationController
     redirect_to product_path(product)
   end
 
+  def destroy
+    product.favorites.find_by(user: Current.user).destroy
+    redirect_to product_path(product)
+  end
+
   private
 
   def product
