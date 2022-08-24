@@ -106,6 +106,9 @@ en:
   users:
     show:
       not_found: 'User not found'
+  favorites:
+    index:
+      title: 'My favorites'
   shared:
     header:
       add: 'Add product'
@@ -113,6 +116,7 @@ en:
       sign_up: 'Sign up'
       logout: 'logout'
       login: 'Login'
+      favorites: 'Favorites'
   commond:
     not_logged_in: 'login with your username and password to continue'
     not_authorized: "You can't access this action"

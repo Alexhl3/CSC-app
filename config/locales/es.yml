@@ -106,6 +106,9 @@ es:
   users:
     show:
       not_found: 'El usuario indicado no ha sido encontrado'
+  favorites:
+    index:
+      title: 'Mis favoritos'
   shared:
     header:
       add: 'Añadir producto'
@@ -113,6 +116,7 @@ es:
       sign_up: 'Crear nuevo usuario'
       logout: 'Cerrar session'
       login: 'Iniciar sesion'
+      favorites: 'Favoritos'
   commond:
     not_logged_in: 'Ingrese usario y contraseña para continuar'
     not_authorized: 'No puedes acceder a esta accion'
