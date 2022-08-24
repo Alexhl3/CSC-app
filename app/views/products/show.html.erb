@@ -19,7 +19,7 @@
 </div>
 
 <div>
-  <% if @product.favorites.find_by(user: Current.user) %>
+  <% if @product.favorite %>
     <%= button_to t('.destroy_favorite'), favorite_path(@product.id), method: :delete %>
   <% else %>
     <%= link_to t('.favorite'), favorites_path(product_id: @product.id), data: { turbo_method: :post } if Current.user%>
