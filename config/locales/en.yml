@@ -117,6 +117,7 @@ en:
       logout: 'logout'
       login: 'Login'
       favorites: 'Favorites'
+      products: 'Products'
   commond:
     not_logged_in: 'login with your username and password to continue'
     not_authorized: "You can't access this action"

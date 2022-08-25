@@ -1,15 +1,17 @@
-<%= link_to products_path do %>
+<%= link_to homes_path do %>
   <h1>Comerciales Sistemas Comerciales</h1>
 <% end %>
 
 <%= Current.user.inspect %>
 
+<%= link_to t('.products'), products_path %>
+
 <% if Current.user %>
   <% if Current.user.admin? %>
-  <%= link_to t('.add'), new_product_path %>
-  <%= link_to t('.categories'), categories_path %>
-  <%= link_to t('.sign_up'), new_user_path %>
+    <%= link_to t('.categories'), categories_path %>
+    <%= link_to t('.sign_up'), new_user_path %>
   <% end %>
+  <%= link_to t('.add'), new_product_path %>
   <%= link_to t('.favorites'), favorites_path %>
   <%= button_to t('.logout'), session_path('123'), method: :delete %>
 <% else %>
