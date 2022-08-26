@@ -10,8 +10,8 @@
   <% if Current.user.admin? %>
     <%= link_to t('.categories'), categories_path %>
     <%= link_to t('.sign_up'), new_user_path %>
+    <%= link_to t('.add'), new_product_path %>
   <% end %>
-  <%= link_to t('.add'), new_product_path %>
   <%= link_to t('.favorites'), favorites_path %>
   <%= button_to t('.logout'), session_path('123'), method: :delete %>
 <% else %>

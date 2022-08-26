@@ -109,6 +109,16 @@ en:
   favorites:
     index:
       title: 'My favorites'
+  homes:
+    index:
+      title: 'Welcome to Comerciales Sistemas Comerciales'
+      about_us: 'About us'
+      subtitle_1: 'Sale of machines'
+      description_1: 'All types of machines to implement in your business.'
+      subtitle_2: 'Training'
+      description_2: 'Proper use of machines.'
+      subtitle_3: 'Technical Service'
+      description_3: 'Repair and maintenance of scales, meat grinders, meat slicers and more.'
   shared:
     header:
       add: 'Add product'

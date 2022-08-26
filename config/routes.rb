@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   resources :homes, only: :index, path: '/'
   resources :favorites, only: [:index, :create, :destroy], param: :product_id
-  resources :users, only: [:show], path: '/user', param: :username
+  resources :users, only: :show, path: '/user', param: :username
   resources :categories, except: :show
   resources :products
 end
