@@ -110,8 +110,9 @@ en:
     index:
       title: 'My favorites'
   homes:
-    index:
+    banner:
       title: 'Welcome to Comerciales Sistemas Comerciales'
+    index:
       about_us: 'About us'
       subtitle_1: 'Sale of machines'
       description_1: 'All types of machines to implement in your business.'

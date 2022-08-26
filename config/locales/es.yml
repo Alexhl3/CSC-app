@@ -111,7 +111,6 @@ es:
       title: 'Mis favoritos'
   homes:
     index:
-      title: 'Bienvenidos a Comerciales Sistemas Comerciales'
       about_us: 'Sobre nosotros'
       subtitle_1: 'Venta de maquinas'
       description_1: 'Todo tipo de maquinas para implementar en su negocio.'
@@ -119,6 +118,8 @@ es:
       description_2: 'Uso adecuado de las maquinas.'
       subtitle_3: 'Servicio tecnico'
       description_3: 'Reparacion y mantencion de balanzas, moledoras de carne, cortadoras de cesina, entre otras.'
+    banner:
+      title: 'Bienvenidos a Comerciales Sistemas Comerciales'
   shared:
     header:
       add: 'Añadir producto'

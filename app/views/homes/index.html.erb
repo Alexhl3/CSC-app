@@ -1,24 +1,44 @@
-<h1><%= t('.title') %></h1>
-
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat cum omnis accusantium illum explicabo modi quam exercitationem temporibus corporis, saepe ratione repellendus neque assumenda molestiae magni non laudantium eum maiores.</p>
-
-<h2><%= t('.about_us') %></h2>
+<%= render "banner"%>
 
 <div>
-  <h2><%= t('.subtitle_1') %></h2>
-  <%= image_tag('home/image1.jpg')%>
-  <p><%= t('.description_1') %></p>
+  <h2 class='container py-10 mx-auto text-center font-sans text-2xl font-bold '>
+    <%= t('.about_us') %>
+  </h2>
 </div>
 
-<div>
-  <h2><%= t('.subtitle_2') %></h2>
-  <%= image_tag('home/image2.jpg')%>
-  <p><%= t('.description_2') %></p>
+<div class='flex justify-center container mx-auto text-justify font-sans text-lg antialiased font-medium'>
+  <div class=' grid xl:grid-cols-3 gap-20 px-20 place-content-between grid-cols-1' >
+      <div class=' rounded-lg bg-slate-200 w-96'>
+        <div>
+          <%= image_tag('home/image1.jpg', :class => "object-cover h-48 w-96 rounded-t-lg")%>
+        </div>
+        <div class='p-2'>
+          <h2 class='font-bold tracking-wide'><%= t('.subtitle_1') %></h2>
+          <p><%= t('.description_1') %></p>
+        </div>
+      </div>
+
+      <div class=' rounded-lg bg-slate-200 w-96'>
+        <div>
+          <%= image_tag('home/image2.jpg', :class => "object-cover h-48 rounded-t-lg w-96")%>
+        </div>
+        <div class='p-2'>
+          <h2 class='font-bold tracking-wide'><%= t('.subtitle_2') %></h2>
+          <p><%= t('.description_2') %></p>
+        </div>
+      </div>
+
+      <div class='rounded-lg bg-slate-200 w-96'>
+        <div>
+          <%= image_tag('home/image3.jpg', :class => "object-cover h-48 rounded-t-lg w-96")%>
+        </div>
+        <div class='p-2'>
+          <h2 class='font-bold' tracking-wide><%= t('.subtitle_3') %></h2>
+          <p><%= t('.description_3') %></p>
+        </div>
+      </div>
+  </div>
 </div>
 
-<div>
-  <h2><%= t('.subtitle_3') %></h2>
-  <%= image_tag('home/image3.jpg')%>
-  <p><%= t('.description_3') %></p>
+<div class='py-11'>
 </div>
-
