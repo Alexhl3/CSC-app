@@ -110,7 +110,7 @@ es:
     index:
       title: 'Mis favoritos'
   homes:
-    index:
+    about_us:
       about_us: 'Sobre nosotros'
       subtitle_1: 'Venta de maquinas'
       description_1: 'Todo tipo de maquinas para implementar en su negocio.'

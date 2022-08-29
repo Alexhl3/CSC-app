@@ -1,0 +1,39 @@
+<div>
+  <h2 class='container py-10 mx-auto text-center font-sans text-3xl font-bold '>
+    <%= t('.about_us') %>
+  </h2>
+</div>
+
+<div class='flex justify-center container mx-auto text-justify font-sans text-lg antialiased font-medium'>
+  <div class=' grid xl:grid-cols-3 gap-20 px-20 place-content-between grid-cols-1' >
+      <div class=' rounded-lg bg-slate-200 w-96 hover:scale-110 ease-out duration-200'>
+        <div>
+          <%= image_tag('home/image1.jpg', :class => "object-cover h-48 w-96 rounded-t-lg")%>
+        </div>
+        <div class='p-2'>
+          <h2 class='font-bold tracking-wide'><%= t('.subtitle_1') %></h2>
+          <p><%= t('.description_1') %></p>
+        </div>
+      </div>
+
+      <div class=' rounded-lg bg-slate-200 w-96 hover:scale-110 ease-out duration-200'>
+        <div>
+          <%= image_tag('home/image2.jpg', :class => "object-cover h-48 rounded-t-lg w-96")%>
+        </div>
+        <div class='p-2'>
+          <h2 class='font-bold tracking-wide'><%= t('.subtitle_2') %></h2>
+          <p><%= t('.description_2') %></p>
+        </div>
+      </div>
+
+      <div class='rounded-lg bg-slate-200 w-96 hover:scale-110 ease-out duration-200'>
+        <div>
+          <%= image_tag('home/image3.jpg', :class => "object-cover h-48 rounded-t-lg w-96")%>
+        </div>
+        <div class='p-2'>
+          <h2 class='font-bold' tracking-wide><%= t('.subtitle_3') %></h2>
+          <p><%= t('.description_3') %></p>
+        </div>
+      </div>
+  </div>
+</div>
