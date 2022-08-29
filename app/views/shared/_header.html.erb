@@ -1,19 +1,37 @@
-<%= link_to homes_path do %>
-  <h1>Comerciales Sistemas Comerciales</h1>
-<% end %>
+<div class=" bg-slate-900 flex justify-around items-center h-24 font-sans text-xl font-semibold text-white">
+    <%= link_to homes_path do %>
+      <h1>Comerciales Sistemas Comerciales</h1>
+    <% end %>
 
-<%= Current.user.inspect %>
+  <div class="text-slate-600 hover:text-white">
+    <%= link_to t('.products'), products_path %>
+  </div>
 
-<%= link_to t('.products'), products_path %>
-
-<% if Current.user %>
-  <% if Current.user.admin? %>
-    <%= link_to t('.categories'), categories_path %>
-    <%= link_to t('.sign_up'), new_user_path %>
-    <%= link_to t('.add'), new_product_path %>
+  <% if Current.user %>
+      <% if Current.user.admin? %>
+      <div class="text-slate-600 hover:text-white">
+          <%= link_to t('.categories'), categories_path %>
+      </div>
+      <div class="text-slate-600 hover:text-white">
+          <%= link_to t('.sign_up'), new_user_path %>
+      </div>
+      <div class="text-slate-600 hover:text-white">
+          <%= link_to t('.add'), new_product_path %>
+      </div>
+      <% end %>
+      <div class="text-slate-600 hover:text-white">
+          <%= link_to t('.favorites'), favorites_path %>
+      </div>
+      <div class="text-slate-600 hover:text-white">
+          <%= button_to t('.logout'), session_path('123'), method: :delete %>
+      </div>
+    <% else %>
+    <div class="text-slate-600 hover:text-white">
+      <%= link_to t('.login'), new_session_path %>
+    </div>
   <% end %>
-  <%= link_to t('.favorites'), favorites_path %>
-  <%= button_to t('.logout'), session_path('123'), method: :delete %>
-<% else %>
-  <%= link_to t('.login'), new_session_path %>
-<% end %>
+</div>
+
+<div class='h-24'>
+</div>
+
