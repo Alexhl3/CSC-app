@@ -95,6 +95,9 @@ es:
         created: 'El usuario ha sido ingresado con exito!!'
     sessions:
       new:
+        title: 'INICIAR SESIÓN'
+        placeholder_username: 'Usuario o email'
+        placeholder_password: 'Contraseña'
         login: 'Usuario'
         password: 'Contraseña'
         new_session: 'Iniciar sesion'

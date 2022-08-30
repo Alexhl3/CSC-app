@@ -95,6 +95,7 @@ en:
         created: 'The user has been successfully created!!'
   sessions:
       new:
+        title: 'Account'
         login: 'User'
         password: 'Password'
         new_session: 'Login'
