@@ -11,10 +11,13 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
+  <body class="flex flex-col min-h-screen">
     <%= render 'shared/flash' %>
     <%= render 'shared/header' %>
     <%= yield %>
-    <%= render 'shared/footer' %>
   </body>
+
+  <footer class="mt-auto">
+    <%= render 'shared/footer' %>
+  </footer>
 </html>
