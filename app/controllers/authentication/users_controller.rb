@@ -13,6 +13,7 @@ class Authentication::UsersController < ApplicationController
 
       redirect_to products_path, notice: t('.created')
     else
+      pp 'error'
       render :new, status: :unprocessable_entity
     end
   end

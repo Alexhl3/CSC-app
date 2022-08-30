@@ -90,7 +90,11 @@ en:
   authentication:
     users:
       new:
+        title: 'Sign up'
         add_user: 'Add user'
+        placeholder_username: 'Username'
+        placeholder_email: 'Email adress'
+        placeholder_password: 'Password'
       create:
         created: 'The user has been successfully created!!'
   sessions:
