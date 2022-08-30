@@ -129,6 +129,15 @@ es:
       login: 'Iniciar sesion'
       favorites: 'Favoritos'
       products: 'Productos'
+    footer:
+      why_contact_us: 'Porque contactarnos'
+      payment_options: 'Metodos de pago'
+      copyright: 'Derechos'
+      contact_us: 'Contactanos'
+      address: 'Direccion'
+      phone_number: 'Numero de telefonico'
+      email: 'Correo electronico'
+      whatsapp_number: 'Numero de whatsapp'
   commond:
     not_logged_in: 'Ingrese usario y contraseña para continuar'
     not_authorized: 'No puedes acceder a esta accion'
