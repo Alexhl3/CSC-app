@@ -43,6 +43,10 @@ es:
               blank: 'no puede estar en blanco'
               too_short: 'debe contener al menos 6 caracteres'
   products:
+    form:
+      placeholder_title: 'Titulo'
+      placeholder_description: 'Descripcion del producto'
+      placeholder_price: 'Precio'
     index:
       title: 'Productos'
       all: 'Todos'
@@ -59,7 +63,7 @@ es:
       favorite: 'Agregar a favoritos'
       destroy_favorite: 'Quitar de favoritos'
     new:
-      title: 'Ingresar producto'
+      title: 'Nuevo producto'
     create:
       created: 'El producto ha sido creado con exito!!'
     edit:

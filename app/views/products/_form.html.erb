@@ -1,36 +1,69 @@
-<%= form_with model: @product do |form| %>
-  <% @product.errors.full_messages.each do |error|%>
-    <div>
-    <%= error %>
+<div class="flex justify-center">
+  <%= form_with model: @product do |form| %>
+    <% @product.errors.full_messages.each do |error|%>
+          <div class="bg-red-500 p-1 border-2 border-white rounded-lg font-sans relative">
+
+          <div class="absolute top-0 right-0 -mr-1 -mt-1 w-4 h-4 rounded-full bg-red-700 animate-ping"></div>
+          <div class="absolute top-0 right-0 -mr-1 -mt-1 w-4 h-4 rounded-full bg-red-700"></div>
+
+            <%= error %>
+          </div>
+    <% end %>
+
+  <div class ="py-1"></div>
+
+  <div class="bg-slate-200 px-10 py-5 rounded-lg">
+      <div>
+        <%= form.label :title %>
+      </div>
+      <div>
+        <%= form.text_field :title, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-sans font-medium",placeholder: t('.placeholder_title') %>
+      </div>
+
+      <div>
+        <%= form.label :description %>
+      </div>
+      <div>
+        <%= form.text_area :description, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-sans font-medium",placeholder: t('.placeholder_description') %>
+      </div>
+
+
+
+    <div class="flex justify-center py-2 space-x-2">
+      <div>
+        <div>
+          <%= form.label :category_id %>
+        </div>
+        <div>
+          <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name, {}, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-sans font-medium"%>
+        </div>
+      </div>
+
+      <div>
+        <div>
+          <%= form.label :price %>
+        </div>
+        <div>
+          <%= form.number_field :price, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-sans font-medium",placeholder: t('.placeholder_price') %>
+        </div>
+      </div>
     </div>
-  <% end %>
 
-  <div>
-  <%= form.label :title %>
-  <%= form.text_field :title %>
-  </div>
 
-  <div>
-  <%= form.label :description %>
-  <%= form.text_area :description %>
-  </div>
 
-  <div>
-  <%= form.label :price %>
-  <%= form.number_field :price %>
-  </div>
 
-  <div>
-  <%= form.label :category_id %>
-  <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name %>
-  </div>
+      <div>
+        <%= form.label :photo %>
+      </div>
+      <div>
+        <%= form.file_field :photo, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-sans font-medium" %>
+      </div>
 
-  <div>
-  <%= form.label :photo %>
-  <%= form.file_field :photo %>
+      <div class="flex justify-center py-2">
+        <%= form.submit t('commond.submit'), class: "bg-slate-800 p-2 rounded-md text-white hover:bg-slate-700" %>
+      </div>
+    <% end %>
   </div>
+</div>
 
-  <div>
-  <%= form.submit t('commond.submit')%>
-  </div>
-<% end %>
+<div class="py-20"></div>

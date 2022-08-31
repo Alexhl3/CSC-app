@@ -43,6 +43,10 @@ en:
               blank: "can't be blank"
               too_short: 'must contain at least 6 characters'
   products:
+    form:
+      placeholder_title: 'Titulo'
+      placeholder_description: 'Descripcion del producto'
+      placeholder_price: 'Precio'
     index:
       title: 'Products'
       all: 'All'
