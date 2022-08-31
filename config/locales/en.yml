@@ -69,17 +69,17 @@ en:
     destroy:
       destroyed: 'The product has been removed'
   categories:
+    form:
+      back: 'Back to categories'
     index:
       title: 'Categories'
       new: 'New category'
     new:
       title: 'New category'
-      back: 'Back to categories'
     create:
       created: 'The category has been successfully created!!'
     edit:
       title: 'Edit category'
-      back: 'Back to categories'
     update:
       updated: 'The category has been successfully edited!!'
     destroy:

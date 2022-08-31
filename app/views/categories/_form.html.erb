@@ -1,16 +1,33 @@
-<%= form_with(model: category) do |form| %>
-  <% @category.errors.full_messages.each do |error|%>
-    <div>
-    <%= error %>
-    </div>
-  <% end %>
+<div class="flex justify-center">
+  <%= form_with(model: category) do |form| %>
+    <% @category.errors.full_messages.each do |error|%>
+          <div class="bg-red-500 p-1 border-2 border-white rounded-lg font-sans relative">
 
-  <div>
-    <%= form.label :name %>
-    <%= form.text_field :name %>
-  </div>
+          <div class="absolute top-0 right-0 -mr-1 -mt-1 w-4 h-4 rounded-full bg-red-700 animate-ping"></div>
+          <div class="absolute top-0 right-0 -mr-1 -mt-1 w-4 h-4 rounded-full bg-red-700"></div>
 
-  <div>
-    <%= form.submit t('commond.submit')%>
+            <%= error %>
+          </div>
+    <% end %>
+
+  <div class ="py-1"></div>
+
+  <div class="bg-slate-200 px-10 py-5 rounded-lg">
+      <div>
+        <%= form.label :name %>
+      </div>
+      <div>
+        <%= form.text_field :name, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-sans font-medium",placeholder: t('.placeholder_name') %>
+      </div>
+
+      <div class="flex justify-center py-2 space-x-2">
+        <div class="bg-zinc-600 p-2 rounded-md text-white hover:bg-zinc-500">
+          <%= link_to t('.back'), categories_path %>
+        </div>
+        <%= form.submit t('commond.submit'), class: "bg-slate-800 p-2 rounded-md text-white hover:bg-slate-700" %>
+      </div>
+    <% end %>
   </div>
-<% end %>
+</div>
+
+<div class="py-20"></div>

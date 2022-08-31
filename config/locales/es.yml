@@ -69,17 +69,18 @@ es:
     destroy:
       destroyed: 'El producto ha sido eliminado'
   categories:
+    form:
+      back: 'Volver a categorias'
+      placeholder_name: 'Nombre de categoria'
     index:
       title: 'Categorias'
       new: 'Crear categoria'
     new:
       title: 'Nueva categoria'
-      back: 'Volver a categorias'
     create:
       created: 'La categoria ha sido creada con exito!!'
     edit:
       title: 'Editar categoria'
-      back: 'Volver a categorias'
     update:
       updated: 'La categoria ha sido actualizada con exito!!'
     destroy:
