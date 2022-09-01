@@ -45,7 +45,9 @@
     <div>
       <%= turbo_frame_tag :products do %>
         <%= turbo_frame_tag "products-#{@pagy.page}", class: 'products' do %>
-          <%= render partial: 'product', collection: @products %>
+          <div class="grid grid-cols-3 gap-4 px-8">
+              <%= render partial: 'product', collection: @products %>
+          </div>
           <%= turbo_frame_tag "products-#{@pagy.next}", class: 'products', src: pagy_url_for(@pagy, @pagy.next), loading: :lazy if @pagy.next %>
         <% end %>
       <% end %>
