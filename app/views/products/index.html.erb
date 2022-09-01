@@ -1,24 +1,55 @@
 <%= turbo_frame_tag 'index' do %>
-  <h1><%= t('.title')%></h1>
+  <h1 class="pb-10 mx-auto font-sans text-3xl font-bold"><%= t('.title')%></h1>
+  <div class="flex">
+    <div>
+      <div class="flex flex-col bg-slate-200 rounded-r-lg p-2 py-3 border-y-2 border-r-2 border-slate-500 sticky top-0">
+        <%= form_with url: products_path, method: :get do |form| %>
+          <div>
+            <h1 class="mb-2 border-b border-slate-400">Nombre</h1>
+            <%= form.text_field :query_text, class: "block border border-grey-light w-full p-3 rounded bg-slate-300 focus:bg-white font-sans font-medium", placeholder: t('.text'), onChange: 'this.form.requestSubmit()', value: params[:query_text] %>
+          </div>
 
-  <%= form_with url: products_path, method: :get do |form| %>
-    <%= form.text_field :query_text, placeholder: t('.text'), onChange: 'this.form.requestSubmit()', value: params[:query_text] %>
+          <h1 class="mb-2 border-b border-slate-400">Precio</h1>
+          <div class="flex space-x-3">
 
-    <%= form.number_field :min_price, placeholder: t('.min_price'), onChange: 'this.form.requestSubmit()', value: params[:min_price] %>
+            <div class="w-32">
+              <%= form.number_field :min_price, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-sans font-medium", placeholder: t('.min_price'), onChange: 'this.form.requestSubmit()', value: params[:min_price] %>
+            </div>
 
-    <%= form.number_field :max_price, placeholder: t('.max_price'), onChange: 'this.form.requestSubmit()', value: params[:max_price] %>
+            <div class="w-32">
+              <%= form.number_field :max_price, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-sans font-medium", placeholder: t('.max_price'), onChange: 'this.form.requestSubmit()', value: params[:max_price] %>
+            </div>
+          </div>
 
-    <%= form.select :order_by, options_for_select(Product::ORDER_BY.keys.map { |order| [t(".#{order}"), order] }, params[:order_by]), {}, { onChange: 'this.form.requestSubmit()' } %>
-  <% end %>
+          <div>
+          <h1 class="mb-2 border-b border-slate-400">Filtro</h1>
 
-  <%= link_to t('.all'), products_path %>
+            <%= form.select :order_by, options_for_select(Product::ORDER_BY.keys.map { |order| [t(".#{order}"), order] }, params[:order_by]), {}, { onChange: 'this.form.requestSubmit()', class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-sans font-medium" } %>
+          </div>
 
-  <%= render partial: 'category', collection: @categories %>
+          <h1 class="mb-2 border-b border-slate-400">Categorias</h1>
+          <div class="grid grid-cols-2 gap-2">
+            <%= render partial: 'category', collection: @categories %>
+          </div>
+            <div class="text-center block border border-grey-light w-full rounded bg-slate-300 font-sans hover:bg-red-500 mt-2">
+              <%= link_to t('.all'), products_path %>
+            </div>
+          <% end %>
+      </div>
+    </div>
 
-  <%= turbo_frame_tag :products do %>
-    <%= turbo_frame_tag "products-#{@pagy.page}", class: 'products' do %>
-      <%= render partial: 'product', collection: @products %>
-      <%= turbo_frame_tag "products-#{@pagy.next}", class: 'products', src: pagy_url_for(@pagy, @pagy.next), loading: :lazy if @pagy.next %>
-    <% end %>
-  <% end %>
+
+
+
+
+    <div>
+      <%= turbo_frame_tag :products do %>
+        <%= turbo_frame_tag "products-#{@pagy.page}", class: 'products' do %>
+          <%= render partial: 'product', collection: @products %>
+          <%= turbo_frame_tag "products-#{@pagy.next}", class: 'products', src: pagy_url_for(@pagy, @pagy.next), loading: :lazy if @pagy.next %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
 <% end %>

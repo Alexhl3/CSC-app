@@ -49,9 +49,9 @@ es:
       placeholder_price: 'Precio'
     index:
       title: 'Productos'
-      all: 'Todos'
-      min_price: 'Precio minimo'
-      max_price: 'Precio maximo'
+      all: 'Limpiar busqueda'
+      min_price: 'Precio min'
+      max_price: 'Precio max'
       text: 'Buscar'
       newest: 'Nuevo'
       expensive: 'Mas caro'
