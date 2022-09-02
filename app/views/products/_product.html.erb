@@ -1,5 +1,5 @@
 <%= link_to product_path(product.id), class: 'product', 'data-turbo-frame': '_top' do %>
-  <div class="bg-slate-200 rounded-md 800 h-96 w-80">
+  <div class="bg-slate-200 rounded-md 800 h-96 w-80 hover:scale-110 ease-out duration-200">
 
       <div class="min-h-80 bg-white rounded-md">
         <%= image_tag product.photo, class: "object-scale-down w-full h-80 rounded-t-lg" if product.photo.attached? %>

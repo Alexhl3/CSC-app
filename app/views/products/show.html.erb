@@ -1,21 +1,45 @@
-<h2 class='title'><%= @product.title %></h2>
-<div>
-  <%= image_tag @product.photo, width: 200 if @product.photo.attached? %>
+<div class="flex justify-center">
+  <div class="flex flex-col pl-5 pb-20">
+    <div class="flex">
+      <div>
+        <%= image_tag @product.photo, class: "max-h-96" if @product.photo.attached? %>
+      </div>
+
+      <div class="flex flex-col bg-slate-200 rounded-r-lg p-3">
+        <h2 class='title font-bold text-xl'><%= @product.title %></h2>
+
+        <div class="flex justify-between">
+          <span class='price text-red-700 text-lg'>$<%= @product.price %></span>
+          <div>
+            <div class="bg-slate-800 rounded px-1 text-white">
+              <%= render partial: 'favorites', locals: { product: @product }%>
+            </div>
+          </div>
+        </div>
+
+        <p class='description w-80 text-justify py-3'><%= @product.description %></p>
+
+        <div class="mt-auto">
+          <%= link_to t('.show_more', username: @product.user.username), user_path(@product.user.username) if Current.user&.admin? %>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex">
+        <% if Current.user == @product.user or Current.user&.admin? %>
+          <div class="bg-slate-800 rounded-b-lg text-center p-1 text-white">
+            <%= link_to t('.edit'), edit_product_path(@product) %>
+          </div>
+
+          <div class="bg-red-700 rounded-b-lg text-center p-1 text-white">
+            <%= link_to t('.destroy'), product_path(@product), data: { turbo_method: :delete } %>
+          </div>
+        <% end %>
+      </div>
+  </div>
 </div>
 
-<p class='description'><%= @product.description %></p>
 
-<span class='price'>$<%= @product.price %></span>
 
-<div>
-  <% if Current.user == @product.user or Current.user&.admin? %>
-    <%= link_to t('.edit'), edit_product_path(@product) %>
-    <%= link_to t('.destroy'), product_path(@product), data: { turbo_method: :delete } %>
-  <% end %>
-</div>
 
-<div>
-  <%= link_to t('.show_more', username: @product.user.username), user_path(@product.user.username) if Current.user&.admin? %>
-</div>
 
-<%= render partial: 'favorites', locals: { product: @product }%>
