@@ -14,12 +14,16 @@
   <body class="flex flex-col min-h-screen">
     <%= render 'shared/flash' %>
     <%= render 'shared/header' %>
-    <div class="bg-slate-50 py-16">
-      <%= yield %>
+    <div class=" bg-slate-50 py-16">
+      <div class="flex justify-center">
+        <div>
+          <%= yield %>
+        </div>
+      </div>
     </div>
   </body>
+    <footer class="mt-auto">
+      <%= render 'shared/footer' %>
+    </footer>
 
-  <footer class="mt-auto">
-    <%= render 'shared/footer' %>
-  </footer>
 </html>
