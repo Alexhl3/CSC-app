@@ -56,6 +56,10 @@ es:
       newest: 'Nuevo'
       expensive: 'Mas caro'
       cheapest: 'Mas barato'
+      name: 'Nombre'
+      price: 'Precio'
+      filter: 'Filtro'
+      category: 'Categoria'
     show:
       edit: 'Editar'
       destroy: 'Eliminar'
@@ -118,6 +122,7 @@ es:
   users:
     show:
       not_found: 'El usuario indicado no ha sido encontrado'
+      products_of: 'Productos de '
   favorites:
     index:
       title: 'Mis favoritos'

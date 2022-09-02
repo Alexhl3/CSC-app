@@ -1,5 +1,9 @@
 <div>
-  <h2><%= @user.username %></h2>
+  <div class ="flex justify-center">
+    <div>
+      <h2 class="text-center pb-10 text-stone-800 font-sans text-2xl font-normal py-4 antialiased"><%=t('.products_of')%> <%= @user.username %></h2>
+      <%= turbo_frame_tag :products, src: products_path(user_id: @user.id) %>
+    </div>
+  </div>
 </div>
 
-<%= turbo_frame_tag :products, src: products_path(user_id: @user.id) %>

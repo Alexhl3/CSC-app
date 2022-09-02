@@ -56,6 +56,10 @@ en:
       newest: 'Newest'
       expensive: 'Expensive'
       cheapest: 'Cheapest'
+      name: 'Name'
+      price: 'Price'
+      filter: 'Filter'
+      category: 'Category'
     show:
       edit: 'Edit'
       destroy: 'Delete'
@@ -115,6 +119,7 @@ en:
   users:
     show:
       not_found: 'User not found'
+      products_of: 'Products of '
   favorites:
     index:
       title: 'My favorites'
