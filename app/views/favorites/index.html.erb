@@ -1,3 +1,8 @@
-<h2><%= t('.title') %></h2>
-
-<%= turbo_frame_tag :products, src: products_path(favorites: true) %>
+<div>
+  <div class ="flex justify-center">
+    <div>
+      <h2 class="text-center pb-10 text-stone-800 font-sans text-2xl font-normal py-4 antialiased"><%= t('.title') %></h2>
+      <%= turbo_frame_tag :products, src: products_path(favorites: true) %>
+    </div>
+  </div>
+</div>

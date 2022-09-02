@@ -1,10 +1,12 @@
 <%= link_to product_path(product.id), class: 'product', 'data-turbo-frame': '_top' do %>
-  <div class="bg-slate-200 border rounded-md border-red-800 h-96 w-80">
+  <div class="bg-slate-200 rounded-md 800 h-96 w-80">
 
-      <div class="min-h-80 bg-white">
-        <%= image_tag product.photo, class: "object-scale-down w-full h-80" if product.photo.attached? %>
+      <div class="min-h-80 bg-white rounded-md">
+        <%= image_tag product.photo, class: "object-scale-down w-full h-80 rounded-t-lg" if product.photo.attached? %>
       </div>
-      <h2><%= product.title %></h2>
-      <span>$<%= product.price %></span>
+      <div class="text-center">
+        <h2 class="font-semibold text-lg"><%= product.title %></h2>
+        <span class="font-medium text-red-700 text-base">$<%= product.price %></span>
+      </div>
   </div>
 <% end %>
