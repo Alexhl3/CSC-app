@@ -143,6 +143,8 @@ en:
       login: 'Login'
       favorites: 'Favorites'
       products: 'Products'
+      phone_number: 'Phone number'
+      adress: 'Adress'
     footer:
       why_contact_us: 'Why you should contact us?'
       payment_options: 'Methods of payment'

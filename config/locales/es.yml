@@ -146,6 +146,8 @@ es:
       login: 'Iniciar sesion'
       favorites: 'Favoritos'
       products: 'Productos'
+      phone_number: 'Numero telefonico'
+      adress: 'Dirreccion'
     footer:
       why_contact_us: '¿Porque contactarnos?'
       payment_options: 'Metodos de pago'
