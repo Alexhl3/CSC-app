@@ -5,14 +5,16 @@
         <%= image_tag @product.photo, class: "max-h-96" if @product.photo.attached? %>
       </div>
 
-      <div class="flex flex-col bg-slate-200 rounded-r-lg p-3">
+      <div class="flex flex-col bg-slate-200 rounded-r-lg p-3 w-96">
         <h2 class='title font-bold text-xl'><%= @product.title %></h2>
 
         <div class="flex justify-start">
           <span class='price text-red-700 text-lg'>$<%= @product.price %></span>
         </div>
 
-        <p class='description w-80 text-justify py-3'><%= @product.description %></p>
+        <div class="description">
+          <%= simple_format(@product.description, class: "w-fit") %>
+        </div>
 
         <div class="mt-auto">
           <%= link_to t('.show_more', username: @product.user.username), user_path(@product.user.username) if Current.user&.admin? %>
