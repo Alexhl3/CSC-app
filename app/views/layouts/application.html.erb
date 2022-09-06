@@ -11,19 +11,19 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="flex flex-col min-h-screen">
+  <body class="flex flex-col min-h-screen bg-slate-50">
     <%= render 'shared/flash' %>
     <%= render 'shared/header' %>
-    <div class=" bg-slate-50 py-10">
+    <div class="py-10">
       <div class="flex justify-center">
         <div>
           <%= yield %>
         </div>
       </div>
     </div>
-  </body>
     <footer class="mt-auto">
       <%= render 'shared/footer' %>
     </footer>
+  </body>
 
 </html>
