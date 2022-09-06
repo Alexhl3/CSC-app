@@ -20,24 +20,21 @@
     <div class="text-slate-600 hover:text-white py-2 pr-2">
       <%= link_to t('.products'), products_path %>
     </div>
-    <% if Current.user %>
-        <% if Current.user.admin? %>
-        <div class="text-slate-600 hover:text-white p-2">
-            <%= link_to t('.categories'), categories_path %>
-        </div>
-        <div class="text-slate-600 hover:text-white p-2">
-            <%= link_to t('.sign_up'), new_user_path %>
-        </div>
-        <div class="text-slate-600 hover:text-white p-2">
-            <%= link_to t('.add'), new_product_path %>
-        </div>
-        <% end %>
-        <div class="text-slate-600 hover:text-white p-2">
-            <%= link_to t('.favorites'), favorites_path %>
-        </div>
-      <% end %>
-      <div class="ml-auto text-slate-600 hover:text-white py-2">
-        <%= button_to t('.logout'), session_path('123'), method: :delete if Current.user%>
+    <% if Current.user&.admin? %>
+      <div class="text-slate-600 hover:text-white p-2">
+        <%= link_to t('.categories'), categories_path %>
       </div>
+
+      <div class="text-slate-600 hover:text-white p-2">
+        <%= link_to t('.sign_up'), new_user_path %>
+      </div>
+
+      <div class="text-slate-600 hover:text-white p-2">
+        <%= link_to t('.add'), new_product_path %>
+      </div>
+    <% end %>
+    <div class="ml-auto text-slate-600 hover:text-white py-2">
+      <%= button_to t('.logout'), session_path('123'), method: :delete if Current.user%>
+    </div>
   </div>
 </div>

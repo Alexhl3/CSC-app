@@ -95,6 +95,7 @@ es:
       updated: 'La categoria ha sido actualizada con exito!!'
     destroy:
       destroyed: 'La categoria ha sido eliminada'
+      cant_delete: 'Imposible eliminar categoria, ya que tiene productos asociados'
     category:
       edit: 'Editar'
       destroy: 'Eliminar'

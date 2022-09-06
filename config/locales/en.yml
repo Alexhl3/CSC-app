@@ -94,6 +94,7 @@ en:
       updated: 'The category has been successfully edited!!'
     destroy:
       destroyed: 'The category has been removed'
+      cant_delete: 'The category cannot be deleted because it has associated products'
     category:
       edit: 'Edit'
       destroy: 'Delete'

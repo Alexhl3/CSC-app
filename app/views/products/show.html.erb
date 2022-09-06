@@ -8,13 +8,8 @@
       <div class="flex flex-col bg-slate-200 rounded-r-lg p-3">
         <h2 class='title font-bold text-xl'><%= @product.title %></h2>
 
-        <div class="flex justify-between">
+        <div class="flex justify-start">
           <span class='price text-red-700 text-lg'>$<%= @product.price %></span>
-          <div>
-            <div class="bg-slate-800 rounded px-1 text-white">
-              <%= render partial: 'favorites', locals: { product: @product }%>
-            </div>
-          </div>
         </div>
 
         <p class='description w-80 text-justify py-3'><%= @product.description %></p>
