@@ -26,6 +26,8 @@ en:
               blank: "can't be blank"
             price:
               blank: "can't be blank"
+            photo:
+              blank: "can't be blank"
         category:
           attributes:
             name:

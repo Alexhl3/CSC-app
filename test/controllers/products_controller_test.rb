@@ -34,7 +34,8 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
         title: 'maquina XXJ4',
         description: 'Maquina en buen estado.',
         price: 230,
-        category_id: categories(:newMachines).id
+        category_id: categories(:newMachines).id,
+        photo: fixture_file_upload('maquinaN1.png', 'image/png')
       }
     }
 
@@ -46,6 +47,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     patch product_path(products(:machine1)), params: {
       product: {
         title: 'maquina XXJ4',
+        photo: fixture_file_upload('maquinaN1.png', 'image/png')
       }
     }
 

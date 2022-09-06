@@ -26,6 +26,8 @@ es:
               blank: 'no puede estar en blanco'
             price:
               blank: 'no puede estar en blanco'
+            photo:
+              blank: 'no puede estar en blanco'
         category:
           attributes:
             name:
