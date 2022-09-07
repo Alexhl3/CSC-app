@@ -140,6 +140,8 @@ es:
       description_3: 'Reparacion y mantencion de balanzas, moledoras de carne, cortadoras de cesina, entre otras.'
     banner:
       title: 'Bienvenidos a Comerciales Sistemas Comerciales'
+    brand_logos:
+      title: 'Nuestras marcas'
   shared:
     header:
       add: 'Añadir producto'
