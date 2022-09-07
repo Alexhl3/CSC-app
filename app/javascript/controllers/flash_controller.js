@@ -8,6 +8,6 @@ export default class extends Controller {
   }
 
   dismiss() {
-    this.element.remove()
+    this.element.classList.add("hinge")
   }
 }

@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
 
+# animations
+gem 'animate.css-rails', '~> 3.2.0'
+
 # Pagy for pagination
 gem "pagy", "~> 5.10"
 
