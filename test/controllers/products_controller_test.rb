@@ -35,7 +35,8 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
         description: 'Maquina en buen estado.',
         price: 230,
         category_id: categories(:newMachines).id,
-        photo: fixture_file_upload('maquinaN1.png', 'image/png')
+        photo: fixture_file_upload('maquinaN1.png', 'image/png'),
+        images: [fixture_file_upload('maquinaN1.png', 'image/png'), fixture_file_upload('maquinaN2.png', 'image/png')]
       }
     }
 

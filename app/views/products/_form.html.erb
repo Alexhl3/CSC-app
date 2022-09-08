@@ -49,14 +49,18 @@
       </div>
     </div>
 
-
-
-
       <div>
         <%= form.label :photo %>
       </div>
       <div>
         <%= form.file_field :photo, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-sans font-medium" %>
+      </div>
+
+      <div>
+        <%= form.label :images %>
+      </div>
+      <div>
+        <%= form.file_field :images, multiple: true %>
       </div>
 
       <div class="flex justify-center py-2">

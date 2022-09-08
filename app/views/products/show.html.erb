@@ -36,7 +36,9 @@
   </div>
 </div>
 
-
+<% (0...@product.images.count).each do |image| %>
+  <% image_tag(@product.images[image])%>
+<% end %>
 
 
 
