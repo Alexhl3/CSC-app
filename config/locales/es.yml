@@ -9,7 +9,8 @@ es:
         title: 'Título'
         description: 'Descripción'
         price: 'Precio'
-        photo: 'Imagen'
+        photo: 'Imagen presentacion'
+        images: 'Imagenes adjuntas'
       category:
         name: 'Nombre'
       user:

@@ -8,5 +8,9 @@ Rails.application.routes.draw do
   resources :favorites, only: [:index, :create, :destroy], param: :product_id
   resources :users, only: :show, path: '/user', param: :username
   resources :categories, except: :show
-  resources :products
+  resources :products do
+    member do
+      delete :delete_image_attachment
+    end
+  end
 end

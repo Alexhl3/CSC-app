@@ -47,6 +47,14 @@ class ProductsController < ApplicationController
     redirect_to products_path, notice: t('.destroyed'), status: :see_other
   end
 
+  def delete_image_attachment
+    authorized?
+
+    @image = ActiveStorage::Attachment.find(params[:id])
+    @image.purge
+    redirect_back(fallback_location: request.referer)
+  end
+
   private
 
   def product_params

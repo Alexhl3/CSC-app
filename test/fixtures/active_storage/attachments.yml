@@ -1,0 +1,4 @@
+machine1_photo:
+  name: photo
+  record: machine1 (Product)
+  blob: machine1_photo_blob

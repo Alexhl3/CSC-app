@@ -10,6 +10,7 @@ en:
         description: 'Description'
         price: 'Price'
         photo: 'Photo'
+        images: 'Images'
       category:
         name: 'nombre'
       user:

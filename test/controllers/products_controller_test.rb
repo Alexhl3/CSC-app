@@ -138,4 +138,10 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_select '.product', 15
     assert_select '.products .product:first-child h2', 'Maquina 5'
   end
+
+  # test 'delete a attached image' do
+  #   delete delete_image_attachment_product_path(products(:machine1).photo.id)
+
+  #   assert_redirected_to products_path
+  # end
 end

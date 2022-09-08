@@ -36,9 +36,13 @@
   </div>
 </div>
 
-<% (0...@product.images.count).each do |image| %>
-  <% image_tag(@product.images[image])%>
-<% end %>
+      <div>
+          <h1>Editar imagenes</h1>
+          <% @product.images.each do |image| %>
+            <%= image_tag(image)%>
+            <%= button_to t('.remove'), delete_image_attachment_product_path(image.id),method: :delete%>
+          <% end %>
+      </div>
 
 
 
