@@ -51,8 +51,7 @@ class ProductsController < ApplicationController
     authorized?
 
     @image = ActiveStorage::Attachment.find(params[:id])
-    @image.purge
-    redirect_back(fallback_location: request.referer)
+    @image.purge_later
   end
 
   private
