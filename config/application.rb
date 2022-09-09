@@ -29,6 +29,6 @@ module CSC
     config.active_record.async_query_executor = :global_thread_pool
 
     #Active Storage can't overwrite files
-    #config.active_storage.replace_on_assign_to_many = false
+    config.active_storage.replace_on_assign_to_many = false
   end
 end

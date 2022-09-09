@@ -36,15 +36,5 @@
   </div>
 </div>
 
-      <div>
-          <h1>Editar imagenes</h1>
-          <% @product.images.each do |image| %>
-            <div data-controller="imagedelete" class="animated w-20">
-              <%= image_tag(image)%>
-              <%= button_to t('.remove'), delete_image_attachment_product_path(image.id), method: :delete, data: { action: "imagedelete#dismiss" }%>
-            </div>
-          <% end %>
-      </div>
-
 
 

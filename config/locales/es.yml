@@ -50,6 +50,8 @@ es:
       placeholder_title: 'Titulo'
       placeholder_description: 'Descripcion del producto'
       placeholder_price: 'Precio'
+      delete_attachement: 'Eliminar imagenes adjuntas'
+      remove: 'Eliminar'
     index:
       title: 'Productos'
       all: 'Limpiar busqueda'

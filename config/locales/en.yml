@@ -47,9 +47,11 @@ en:
               too_short: 'must contain at least 6 characters'
   products:
     form:
-      placeholder_title: 'Titulo'
-      placeholder_description: 'Descripcion del producto'
-      placeholder_price: 'Precio'
+      placeholder_title: 'Title'
+      placeholder_description: 'Product description'
+      placeholder_price: 'Price'
+      delete_attachement: 'Delete attachements'
+      remove: 'Eliminar'
     index:
       title: 'Products'
       all: 'All'
