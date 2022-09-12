@@ -71,7 +71,7 @@
       </div>
     </div>
     <div>
-      <% if @product.images.count > 0 %>
+      <% if @product.images.attached? %>
         <div class="bg-slate-200 px-10 py-5 rounded-lg">
           <div class="font-sans text-lg font-light pb-1">
             <%= t('.delete_attachement') %>
