@@ -2,9 +2,11 @@ class Product < ApplicationRecord
   include PgSearch::Model
   include Favoritable
 
-  pg_search_scope :search_full_text, against: {
-    title: 'A',
-    description: 'B'
+  pg_search_scope :search_full_text, against: [:title],using: {
+    tsearch: {
+      prefix: true,
+      negation: true
+    }
   }
 
   ORDER_BY = {
