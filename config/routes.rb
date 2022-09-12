@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     resources :sessions, only: [:new, :create, :destroy], path: '/login', path_names: { new: '/' }
   end
 
+  resources :administrations, only: :index
   resources :homes, only: :index, path: '/'
   resources :favorites, only: [:index, :create, :destroy], param: :product_id
   resources :users, only: :show, path: '/user', param: :username

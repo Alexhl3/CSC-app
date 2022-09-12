@@ -145,6 +145,13 @@ es:
       title: 'Bienvenidos a Comerciales Sistemas Comerciales'
     brand_logos:
       title: 'Nuestras marcas'
+  administrations:
+    index:
+      title: 'Administrar productos'
+      new: 'Crear producto'
+    product:
+      edit: 'Editar'
+      destroy: 'Eliminar'
   shared:
     header:
       add: 'Añadir producto'
@@ -156,6 +163,7 @@ es:
       products: 'Productos'
       phone_number: 'Numero telefonico'
       adress: 'Dirreccion'
+      administration: 'Administrar productos'
     footer:
       why_contact_us: '¿Porque contactarnos?'
       payment_options: 'Metodos de pago'

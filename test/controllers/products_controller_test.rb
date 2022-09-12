@@ -119,8 +119,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     get products_path(query_text: products(:machine1).title)
 
     assert_response :success
-    assert_select '.product', 1
-    assert_select 'h2', 'Maquina 1'
+    assert_select '.product', 11
   end
 
   test 'sort products by expensive' do
