@@ -2,7 +2,7 @@
   <div class="flex flex-col pl-5 pb-20">
     <div class="flex">
       <div>
-        <%= image_tag @product.photo, class: "max-h-96" if @product.photo.attached? %>
+        <%= render partial: 'carousel' if @product.photo.attached?%>
       </div>
 
       <div class="flex flex-col bg-slate-200 rounded-r-lg p-3 w-96">
@@ -35,6 +35,3 @@
       </div>
   </div>
 </div>
-
-
-
