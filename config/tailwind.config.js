@@ -10,8 +10,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'lb': '#006dff',
+        'dgreen': '#003951',
+        'lgray': '#4d4d4d',
+        'dgray': '#333333',
+        'slg': '#f9f9f9'
+      },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        'montserrat': ['Montserrat'],
       },
     },
   },
