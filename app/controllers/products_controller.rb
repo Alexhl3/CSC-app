@@ -18,7 +18,7 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
 
     if @product.save
-      redirect_to products_path, notice: t('.created')
+      redirect_to administrations_path, notice: t('.created')
     else
       render :new, status: :unprocessable_entity
     end
@@ -33,7 +33,7 @@ class ProductsController < ApplicationController
     authorized?(product)
 
     if product.update(product_params)
-      redirect_to products_path, notice: t('.updated')
+      redirect_to administrations_path, notice: t('.updated')
     else
       render :edit, status: :unprocessable_entity
     end
@@ -44,7 +44,7 @@ class ProductsController < ApplicationController
 
     product.destroy
 
-    redirect_to products_path, notice: t('.destroyed'), status: :see_other
+    redirect_to administrations_path, notice: t('.destroyed'), status: :see_other
   end
 
   def delete_image_attachment

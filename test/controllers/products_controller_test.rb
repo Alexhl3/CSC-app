@@ -40,7 +40,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
       }
     }
 
-    assert_redirected_to products_path
+    assert_redirected_to administrations_path
     assert_equal flash[:notice], 'El producto ha sido creado con exito!!'
   end
 
@@ -52,7 +52,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
       }
     }
 
-    assert_redirected_to products_path
+    assert_redirected_to administrations_path
     assert_equal flash[:notice], 'El producto ha sido actualizado con exito!!'
   end
 
@@ -90,7 +90,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
       delete product_path(products(:machine1))
     end
 
-    assert_redirected_to products_path
+    assert_redirected_to administrations_path
     assert_equal flash[:notice], 'El producto ha sido eliminado'
   end
 
