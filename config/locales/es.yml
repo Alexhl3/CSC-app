@@ -65,6 +65,10 @@ es:
       price: 'Precio'
       filter: 'Filtro'
       category: 'Categoria'
+      status: 'Estado de la maquina'
+      any: 'Cualquier estado'
+      new: 'Maquinas nuevas'
+      old: 'Maquinas usadas'
     show:
       edit: 'Editar'
       destroy: 'Eliminar'

@@ -15,6 +15,11 @@ class Product < ApplicationRecord
     cheapest: 'price ASC'
   }
 
+  PRODUCT_STATUS = {
+    new: 'true',
+    old: 'false'
+  }
+
   has_one_attached :photo
   has_many_attached :images
   has_many :favorites, dependent: :destroy

@@ -27,6 +27,10 @@
             <%= form.select :order_by, options_for_select(Product::ORDER_BY.keys.map { |order| [t(".#{order}"), order] }, params[:order_by]), {}, { onChange: 'this.form.requestSubmit()', class: "block border border-grey-light w-full p-3 rounded mb-4 bg-white font-sans font-medium" } %>
           </div>
 
+          <h1 class="mb-2 border-b border-slate-400 text-dgray pt-3 font-semibold "><%= t('.status')%></h1>
+
+          <%= form.select :status, options_for_select(Product::PRODUCT_STATUS.keys.map { |status| [t(".#{status}"), status] }, params[:status]), {include_blank: t('.any')}, { onChange: 'this.form.requestSubmit()', class: "block border border-grey-light w-full p-3 rounded mb-4 bg-white font-sans font-medium" } %>
+
           <h1 class="mb-2 border-b border-slate-400 text-dgray font-semibold"><%= t('.category')%></h1>
           <div class="grid grid-cols-2 gap-2 text-center w-max">
             <%= render partial: 'category', collection: @categories %>
