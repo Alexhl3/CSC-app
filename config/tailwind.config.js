@@ -12,10 +12,13 @@ module.exports = {
     extend: {
       colors: {
         'lb': '#006dff',
+        'lbd': '#0057CB',
         'dgreen': '#003951',
         'lgray': '#4d4d4d',
         'dgray': '#333333',
-        'slg': '#f9f9f9'
+        'bgray': '#1A1A1A',
+        'slg': '#f9f9f9',
+        'slgb': '#F6F6F6'
       },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],

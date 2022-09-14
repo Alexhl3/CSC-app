@@ -1,9 +1,9 @@
-<div class="flex justify-center">
+<div class="flex justify-center font-montserrat">
   <div class="flex space-x-4">
     <div>
       <%= form_with model: @product do |form| %>
         <% @product.errors.full_messages.each do |error|%>
-              <div class="bg-red-500 p-1 border-2 border-white rounded-lg font-sans relative">
+              <div class="bg-red-500 p-1 border-2 border-white rounded-lg relative">
 
               <div class="absolute top-0 right-0 -mr-1 -mt-1 w-4 h-4 rounded-full bg-red-700 animate-ping"></div>
               <div class="absolute top-0 right-0 -mr-1 -mt-1 w-4 h-4 rounded-full bg-red-700"></div>
@@ -18,14 +18,14 @@
             <%= form.label :title %>
           </div>
           <div>
-            <%= form.text_field :title, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-sans font-medium",placeholder: t('.placeholder_title') %>
+            <%= form.text_field :title, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-medium",placeholder: t('.placeholder_title') %>
           </div>
 
           <div>
             <%= form.label :description %>
           </div>
           <div>
-            <%= form.text_area :description, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-sans font-medium",placeholder: t('.placeholder_description') %>
+            <%= form.text_area :description, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-medium",placeholder: t('.placeholder_description') %>
           </div>
 
 
@@ -36,7 +36,7 @@
               <%= form.label :category_id %>
             </div>
             <div>
-              <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name, {}, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-sans font-medium"%>
+              <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name, {}, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-medium"%>
             </div>
           </div>
 
@@ -45,7 +45,7 @@
               <%= form.label :price %>
             </div>
             <div>
-              <%= form.number_field :price, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-sans font-medium",placeholder: t('.placeholder_price') %>
+              <%= form.number_field :price, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-medium",placeholder: t('.placeholder_price') %>
             </div>
           </div>
         </div>
@@ -54,18 +54,18 @@
             <%= form.label :photo %>
           </div>
           <div>
-            <%= form.file_field :photo, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-sans font-medium" %>
+            <%= form.file_field :photo, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-medium" %>
           </div>
 
           <div>
             <%= form.label :images %>
           </div>
           <div>
-            <%= form.file_field :images, multiple: true, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-sans font-medium" %>
+            <%= form.file_field :images, multiple: true, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-medium" %>
           </div>
 
           <div class="flex justify-center py-2">
-            <%= form.submit t('commond.submit'), class: "bg-slate-800 p-2 rounded-md text-white hover:bg-slate-700" %>
+            <%= form.submit t('commond.submit'), class: "font-semibold bg-lb hover:bg-lbd p-2 rounded-md text-white" %>
           </div>
         <% end %>
       </div>
@@ -73,7 +73,7 @@
     <div>
       <% if @product.images.attached? %>
         <div class="bg-slate-200 px-10 py-5 rounded-lg">
-          <div class="font-sans text-lg font-light pb-1">
+          <div class= text-lg font-light pb-1">
             <%= t('.delete_attachement') %>
           </div>
           <div class="grid grid-cols-2 gap-2">

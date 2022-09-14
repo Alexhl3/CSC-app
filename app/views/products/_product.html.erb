@@ -1,18 +1,22 @@
 <%= link_to product_path(product.id), class: 'product', 'data-turbo-frame': '_top' do %>
-  <div class="bg-slg rounded-md 800 min-h-full w-80 hover:scale-110 ease-out duration-200 drop-shadow">
+  <div class="bg-slg rounded-md 800 min-h-full w-80 hover:scale-105 ease-out duration-200 drop-shadow">
 
       <div class="min-h-80 bg-white rounded-md">
         <%= image_tag product.photo, class: "object-scale-down w-full h-80 rounded-t-lg" if product.photo.attached? %>
       </div>
 
       <% if product.status %>
-        <div class="bg-dgray px-1 rounded-md w-max text-white">Estado Nueva</div>
+        <div class="p-1">
+          <div class="bg-dgreen px-1 rounded-md w-max text-white">Estado Nueva</div>
+        </div>
       <% else %>
-      <div class="bg-dgray px-1 rounded-md w-max text-white">Estado Usada</div>
+        <div class="p-1">
+          <div class="bg-dgreen px-1 rounded-md w-max text-white">Estado Usada</div>
+        </div>
       <% end %>
 
       <div class="text-center">
-        <h2 class="font-semibold text-lg"><%= product.title %></h2>
+        <h2 class="font-semibold text-lg text-bgray"><%= product.title %></h2>
         <span class="font-medium text-red-700 text-base">$<%= product.price %></span>
       </div>
   </div>

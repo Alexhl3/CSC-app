@@ -4,13 +4,13 @@
   </div>
 
   <div class="flex justify-end">
-    <div class="bg-slate-800 px-1 rounded-md text-white hover:bg-slate-700">
+    <div class="font-semibold bg-lb hover:bg-lbd px-1 rounded-md text-white">
       <%= link_to t('.edit'), edit_category_path(category) %>
     </div>
   </div>
 
   <div class="flex justify-end">
-    <div class="bg-red-700 px-1 rounded-md text-white hover:bg-red-600">
+    <div class="bg-red-600 px-1 rounded-md text-white hover:bg-red-700">
       <%= link_to t('.destroy'), category_path(category), data: {
         turbo_method: :delete
       } %>
