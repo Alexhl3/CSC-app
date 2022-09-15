@@ -17,7 +17,6 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
     assert_response :success
     assert_select '.title', 'Maquina 1'
-    assert_select '.description', 'Maquina en buen estado.'
     assert_select '.price', '$200'
   end
 
@@ -48,7 +47,8 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     patch product_path(products(:machine1)), params: {
       product: {
         title: 'maquina XXJ4',
-        photo: fixture_file_upload('maquinaN1.png', 'image/png')
+        photo: fixture_file_upload('maquinaN1.png', 'image/png'),
+        description: 'En buen estado.'
       }
     }
 

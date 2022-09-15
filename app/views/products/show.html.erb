@@ -5,7 +5,7 @@
         <%= render partial: 'carousel' if @product.images.attached? or @product.photo.attached?%>
       </div>
 
-      <div class="flex flex-col bg-white  rounded-r-lg p-3 w-96 border-l border-slgb">
+      <div class="flex flex-col bg-white  rounded-r-lg p-3 w-max border-l border-slgb">
         <h2 class='title font-bold text-xl text-bgray'><%= @product.title %></h2>
 
         <div class="flex justify-start">
@@ -13,7 +13,7 @@
         </div>
 
         <div class="description">
-          <%= simple_format(@product.description, class: "w-fit") %>
+          <%= @product.description %>
         </div>
 
         <div class="mt-auto">

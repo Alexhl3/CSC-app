@@ -21,18 +21,10 @@
             <%= form.text_field :title, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-medium",placeholder: t('.placeholder_title') %>
           </div>
 
-          <div>
+          <div class="description_form">
             <%= form.label :description %>
+            <%= form.rich_text_area :description %>
           </div>
-          <div>
-            <%= form.text_area :description, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-medium",placeholder: t('.placeholder_description') %>
-          </div>
-
-          <div class="">
-            <%= form.rich_text_area :content %>
-          </div>
-
-
 
         <div class="flex justify-center py-2 space-x-2">
           <div>

@@ -23,7 +23,7 @@ class Product < ApplicationRecord
   has_one_attached :photo
   has_many_attached :images
   has_many :favorites, dependent: :destroy
-  has_rich_text :content
+  has_rich_text :description
 
   validates :title, presence: true
   validates :description, presence: true
