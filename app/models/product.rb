@@ -29,6 +29,7 @@ class Product < ApplicationRecord
   validates :description, presence: true
   validates :price, presence: true
   validates :photo, presence: true
+  validates :images, presence: true
 
   belongs_to :category
   belongs_to :user, default: -> { Current.user }

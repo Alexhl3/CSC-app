@@ -1,1 +1,5 @@
 machine1_photo_blob: <%= ActiveStorage::FixtureSet.blob filename: "maquinaN1.png", service_name: "test_fixtures" %>
+
+machine1_image_blob: <%= ActiveStorage::FixtureSet.blob filename: "maquinaN1.png", service_name: "test_fixtures" %>
+
+machine1_image2_blob: <%= ActiveStorage::FixtureSet.blob filename: "maquinaN2.png", service_name: "test_fixtures" %>

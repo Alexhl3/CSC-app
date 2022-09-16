@@ -2,3 +2,13 @@ machine1_photo:
   name: photo
   record: machine1 (Product)
   blob: machine1_photo_blob
+
+machine1_image:
+  name: images
+  record: machine1 (Product)
+  blob: machine1_image_blob
+
+machine1_image2:
+  name: images
+  record: machine1 (Product)
+  blob: machine1_image2_blob

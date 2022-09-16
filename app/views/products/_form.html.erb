@@ -67,7 +67,7 @@
       </div>
     </div>
     <div>
-      <% if @product.images.attached? %>
+      <% unless @product.id.nil? %>
         <div class="bg-slate-200 px-10 py-5 rounded-lg">
           <div class= text-lg font-light pb-1">
             <%= t('.delete_attachement') %>
