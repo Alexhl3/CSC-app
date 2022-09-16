@@ -143,6 +143,23 @@ en:
       title: 'Welcome to Comerciales Sistemas Comerciales'
     brand_logos:
       title: 'Nuestras marcas'
+  administrations:
+    index:
+      title: 'Administrate products'
+      new: 'Add product'
+    product:
+      edit: 'Edit'
+      destroy: 'Destroy'
+  contacts:
+    create:
+      created: 'Your message has been sent, thank you for contacting us!'
+      error: 'Your message could not be sent. Please try again later'
+    new:
+      title: 'Contact us'
+      name: 'Name'
+      email: 'Email'
+      message: 'Message'
+      placeholder_send: 'Add your message'
   shared:
     header:
       add: 'Add product'
@@ -154,6 +171,7 @@ en:
       products: 'Products'
       phone_number: 'Phone number'
       adress: 'Adress'
+      contact: 'Contact us'
     footer:
       why_contact_us: 'Why you should contact us?'
       payment_options: 'Methods of payment'

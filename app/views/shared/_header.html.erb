@@ -26,7 +26,11 @@
       </div>
 
     <% end %>
-    <div class="ml-auto text-slate-600 hover:text-white py-2">
+    <div class="text-white hover:bg-[#104358] p-2">
+      <%= link_to t('.contact'), new_contact_path %>
+    </div>
+  
+    <div class="ml-auto text-white hover:bg-[#104358] py-2">
       <%= button_to t('.logout'), session_path('123'), method: :delete if Current.user%>
     </div>
   </div>

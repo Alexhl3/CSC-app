@@ -4,6 +4,7 @@ es:
       product: Producto
       category: Categoria
       user: Usuario
+      contact: Contacto
     attributes:
       product:
         title: 'Título'
@@ -158,6 +159,19 @@ es:
     product:
       edit: 'Editar'
       destroy: 'Eliminar'
+  contacts:
+    create:
+      created: 'Tu mensaje ha sido enviado, gracias por contactarnos!!'
+      error: 'No se ha podido enviar tu mensaje. Inténtalo de nuevo más tarde'
+    new:
+      title: 'Contactanos'
+    form:
+      name: 'Nombre'
+      email: 'Correo electronico'
+      message: 'Mensaje'
+      placeholder_name: 'ingresa tu nombre'
+      placeholder_email: 'email'
+      placeholder_message: 'Escribe tu mensaje'
   shared:
     header:
       add: 'Añadir producto'
@@ -170,6 +184,7 @@ es:
       phone_number: 'Numero telefonico'
       adress: 'Dirreccion'
       administration: 'Administrar productos'
+      contact: 'Contactanos'
     footer:
       why_contact_us: '¿Porque contactarnos?'
       payment_options: 'Metodos de pago'

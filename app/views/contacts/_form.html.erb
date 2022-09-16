@@ -1,0 +1,33 @@
+<div class="flex justify-center font-montserrat">
+  <div class="flex space-x-4">
+    <div class="bg-slate-200 px-10 py-5 rounded-lg">
+      <%= form_for @contact do |form| %>
+
+      <div>
+        <h1><%= t('.name')%></h1>
+        <%= form.text_field  :name, required: true, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-medium",placeholder: t('.placeholder_name') %>
+      </div>
+
+      <div>
+        <h1><%= t('.email')%></h1>
+        <%= form.text_field  :email, required: true, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-medium",placeholder: t('.placeholder_email') %>
+      </div>
+
+      <div>
+        <h1><%= t('.message')%></h1>
+        <%= form.text_area  :message, required: true, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-medium w-96 h-44",placeholder: t('.placeholder_message') %>
+      </div>
+
+      <div class="flex justify-center py-2">
+        <%= form.submit t('commond.submit'), class: "font-semibold bg-lb hover:bg-lbd p-2 rounded-md text-white" %>
+      </div>
+
+      <div class= "d-none hidden">
+        <%= form.label :nickname %>
+        <%= form.text_field :nickname, :hint => 'Leave this field blank!' %>
+      </div>
+
+      <% end %>
+    </div>
+  </div>
+</div>
