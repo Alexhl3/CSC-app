@@ -78,6 +78,7 @@ es:
       show_more: 'Mostrar mas productos de %{username}'
       favorite: 'Agregar a favoritos'
       destroy_favorite: 'Quitar de favoritos'
+      contact: 'Contactanos'
     new:
       title: 'Nuevo producto'
     create:

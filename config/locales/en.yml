@@ -72,6 +72,7 @@ en:
       show_more: 'More products of %{username}'
       favorite: 'Add to favorites'
       destroy_favorite: 'Delete from favorites'
+      contact: 'Contact us'
     new:
       title: 'Add product'
     create:

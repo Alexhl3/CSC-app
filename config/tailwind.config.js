@@ -10,6 +10,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      minWidth: {
+        '96': '24rem',
+      },
       colors: {
         'lb': '#006dff',
         'lbd': '#0057CB',

@@ -1,11 +1,11 @@
 <div class="flex justify-center font-montserrat">
   <div class="flex flex-col pl-5 pb-20">
     <div class="flex drop-shadow">
-      <div>
+      <div class="h-full">
         <%= render partial: 'carousel' if @product.images.attached? or @product.photo.attached?%>
       </div>
 
-      <div class="flex flex-col bg-white  rounded-r-lg p-3 w-max border-l border-slgb">
+      <div class="flex flex-col bg-white  rounded-r-lg p-3 w-auto min-w-96 border-l border-slgb">
         <h2 class='title font-bold text-xl text-bgray'><%= @product.title %></h2>
 
         <div class="flex justify-start">
@@ -16,8 +16,8 @@
           <%= @product.description %>
         </div>
 
-        <div class="mt-auto">
-          <%= link_to t('.show_more', username: @product.user.username), user_path(@product.user.username) if Current.user&.admin? %>
+        <div class="flex justify-end mt-auto">
+          <%= link_to t('.contact'), new_contact_path, class: "font-semibold bg-lb hover:bg-lbd p-2 rounded-md text-white" %>
         </div>
       </div>
     </div>
