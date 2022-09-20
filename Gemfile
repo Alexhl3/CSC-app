@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
 
+#load environment variables from `.env`
+gem 'dotenv-rails'
+
 # email form
 gem 'mail_form'
 
