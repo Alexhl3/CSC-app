@@ -51,7 +51,7 @@ class FindProducts
   def filter_by_query_text(scoped, query_text)
     return scoped unless query_text.present?
 
-    scoped.search_full_text(query_text)
+    scoped.where("title LIKE ?", "%#{query_text}%")
   end
 
   def filter_by_user_id(scoped, user_id)
