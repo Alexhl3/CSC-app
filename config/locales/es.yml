@@ -12,6 +12,7 @@ es:
         price: 'Precio'
         photo: 'Imagen presentacion'
         images: 'Imagenes adjuntas'
+        status: 'Estado de la maquina'
       category:
         name: 'Nombre'
       user:
@@ -56,6 +57,8 @@ es:
       placeholder_price: 'Precio'
       delete_attachement: 'Eliminar imagenes adjuntas'
       remove: 'Eliminar'
+      old: 'Maquina usada'
+      new: 'Maquina nueva'
     index:
       title: 'Productos'
       all: 'Limpiar busqueda'

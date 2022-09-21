@@ -11,6 +11,7 @@ en:
         price: 'Price'
         photo: 'Photo'
         images: 'Images'
+        status: 'Status'
       category:
         name: 'nombre'
       user:
@@ -53,6 +54,8 @@ en:
       placeholder_price: 'Price'
       delete_attachement: 'Delete attachements'
       remove: 'Eliminar'
+      old: 'Old machine'
+      new: 'New Machine'
     index:
       title: 'Products'
       all: 'All'

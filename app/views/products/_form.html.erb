@@ -47,6 +47,23 @@
         </div>
 
           <div>
+            <div>
+              <%= form.label :status %>
+            </div>
+            <div class="flex justify-around border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-medium">
+              <div>
+                <%= form.radio_button :status, true %>
+                <%= form.label :status, t('.new') %>
+              </div>
+
+              <div>
+                <%= form.radio_button :status, false %>
+                <%= form.label :status, t('.old') %>
+              </div>
+            </div>
+          </div>
+
+          <div>
             <%= form.label :photo %>
           </div>
           <div>
