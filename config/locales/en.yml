@@ -29,6 +29,7 @@ en:
               blank: "can't be blank"
             photo:
               blank: "can't be blank"
+              too_long: "can't be more than 5"
         category:
           attributes:
             name:

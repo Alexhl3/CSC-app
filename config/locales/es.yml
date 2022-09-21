@@ -32,6 +32,7 @@ es:
               blank: 'no puede estar en blanco'
             images:
               blank: 'no puede estar en blanco'
+              too_long: 'no pueden ser mas de 5'
         category:
           attributes:
             name:
