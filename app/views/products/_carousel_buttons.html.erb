@@ -1,0 +1,64 @@
+<% if @product.photo.attached? %>
+  <button
+  type="button"
+  data-bs-target="#carouselExampleControls"
+  data-bs-slide-to="0"
+  class="active"
+  aria-current="true"
+  aria-label="Slide 1"
+  >
+    <%= image_tag @product.photo, class: "object-scale-down w-full max-h-20"%>
+  </button>
+<% end %>
+
+<% if !@product.images[0].nil? %>
+  <button
+  type="button"
+  data-bs-target="#carouselExampleControls"
+  data-bs-slide-to="1"
+  class="active"
+  aria-current="true"
+  aria-label="Slide 1"
+  >
+    <%= image_tag @product.images[0], class: "object-scale-down w-full max-h-20"%>
+  </button>
+<% end %>
+
+<% if !@product.images[1].nil? %>
+  <button
+  type="button"
+  data-bs-target="#carouselExampleControls"
+  data-bs-slide-to="2"
+  class="active"
+  aria-current="true"
+  aria-label="Slide 1"
+  >
+    <%= image_tag @product.images[1], class: "object-scale-down w-full max-h-20"%>
+  </button>
+<% end %>
+
+<% if !@product.images[2].nil? %>
+  <button
+  type="button"
+  data-bs-target="#carouselExampleControls"
+  data-bs-slide-to="3"
+  class="active"
+  aria-current="true"
+  aria-label="Slide 1"
+  >
+    <%= image_tag @product.images[2], class: "object-scale-down w-full max-h-20"%>
+  </button>
+<% end %>
+
+<% if !@product.images[3].nil? %>
+  <button
+  type="button"
+  data-bs-target="#carouselExampleControls"
+  data-bs-slide-to="4"
+  class="active"
+  aria-current="true"
+  aria-label="Slide 1"
+  >
+    <%= image_tag @product.images[3], class: "object-scale-down w-full max-h-20"%>
+  </button>
+<% end %>

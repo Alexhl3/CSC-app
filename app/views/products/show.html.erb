@@ -1,6 +1,9 @@
 <div class="flex justify-center font-montserrat">
   <div class="flex flex-col pl-5 pb-20">
     <div class="flex drop-shadow">
+      <div class="h-full w-max flex flex-col bg-white">
+         <%= render partial: 'carousel_buttons' if @product.images.attached? or @product.photo.attached?%>
+      </div>
       <div class="h-full">
         <%= render partial: 'carousel' if @product.images.attached? or @product.photo.attached?%>
       </div>
