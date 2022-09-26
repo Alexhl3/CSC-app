@@ -13,6 +13,9 @@ es:
         photo: 'Imagen presentacion'
         images: 'Imagenes adjuntas'
         status: 'Estado de la maquina'
+        height: 'Altura'
+        depth: 'Profundidad'
+        width: 'Ancho'
       category:
         name: 'Nombre'
       user:
@@ -34,6 +37,12 @@ es:
             images:
               blank: 'no puede estar en blanco'
               too_long: 'no pueden ser mas de 5'
+            depth:
+              blank: 'no puede estar en blanco'
+            height:
+              blank: 'no puede estar en blanco'
+            width:
+              blank: 'no puede estar en blanco'
         category:
           attributes:
             name:
@@ -59,6 +68,10 @@ es:
       remove: 'Eliminar'
       old: 'Maquina usada'
       new: 'Maquina nueva'
+      dimensions: 'Dimensiones'
+      placeholder_height: 'Altura'
+      placeholder_depth: 'Profun'
+      placeholder_width: 'Ancho'
     index:
       title: 'Productos'
       all: 'Limpiar busqueda'
@@ -83,6 +96,10 @@ es:
       favorite: 'Agregar a favoritos'
       destroy_favorite: 'Quitar de favoritos'
       contact: 'Contactanos'
+      dimensions: 'Dimensiones'
+      height: 'Altura'
+      depth: 'Profundidad'
+      width: 'Ancho'
     new:
       title: 'Nuevo producto'
     create:

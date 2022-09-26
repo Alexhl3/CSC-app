@@ -56,6 +56,10 @@ en:
       remove: 'Eliminar'
       old: 'Old machine'
       new: 'New Machine'
+      dimensions: 'Dimensions'
+      placeholder_height: 'Height'
+      placeholder_depth: 'Depth'
+      placeholder_width: 'Width'
     index:
       title: 'Products'
       all: 'All'
@@ -77,6 +81,10 @@ en:
       favorite: 'Add to favorites'
       destroy_favorite: 'Delete from favorites'
       contact: 'Contact us'
+      dimensions: 'Dimensions'
+      height: 'Height'
+      depth: 'Depth'
+      width: 'Width'
     new:
       title: 'Add product'
     create:

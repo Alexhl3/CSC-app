@@ -3,159 +3,240 @@ machine1:
   price: 200
   category: newMachines
   user: pedro
+  depth: 2
+  width: 3.4
+  height: 6
 
 machine2:
   title: Maquina 2
   price: 300
   category: oldMachines
   user: david
+  depth: 5
+  width: 8
+  height: 9.1
 
 machine3:
   title: Maquina 3
   price: 75
   category: balanceMachines
   user: julia
+  depth: 8
+  width: 8.2
+  height: 6
 
 machine4:
   title: Maquina 4
   price: 85
   category: balanceMachines
   user: julia
+  depth: 2.7
+  width: 5
+  height: 7
 
 machine5:
   title: Maquina 5
   price: 15
   category: oldMachines
   user: david
+  depth: 9.2
+  width: 4.4
+  height: 7.8
 
 machine6:
   title: Maquina 6
   price: 150
   category: oldMachines
   user: david
+  depth: 5
+  width: 9
+  height: 8.2
 
 machine7:
   title: Maquina 7
   price: 235
   category: newMachines
   user: pedro
+  depth: 2
+  width: 5
+  height: 7.2
 
 machine8:
   title: Maquina 8
   price: 125
   category: oldMachines
   user: david
+  depth: 6
+  width: 9
+  height: 8.1
 
 machine9:
   title: Maquina 9
   price: 55
   category: balanceMachines
   user: julia
+  depth: 8
+  width: 3
+  height: 4.2
 
 machine10:
   title: Maquina 10
   price: 500
   category: newMachines
   user: pedro
+  depth: 7
+  width: 5
+  height: 6.2
 
 machine11:
   title: Maquina 11
   price: 450
   category: oldMachines
   user: david
+  depth: 1
+  width: 1
+  height: 7.3
 
 machine12:
   title: Maquina 12
   price: 45
   category: oldMachines
   user: david
+  depth: 6
+  width: 1.2
+  height: 7
 
 machine13:
   title: Maquina 13
   price: 50
   category: newMachines
   user: pedro
+  depth: 5.8
+  width: 8
+  height: 1
 
 machine14:
   title: Maquina 14
   price: 175
   category: balanceMachines
   user: julia
+  depth: 6.6
+  width: 1.9
+  height: 11
 
 machine15:
   title: Maquina 15
   price: 80
   category: oldMachines
   user: david
+  depth: 3
+  width: 4
+  height: 7.2
 
 machine16:
   title: Maquina 16
   price: 210
   category: oldMachines
   user: david
+  depth: 4.1
+  width: 7
+  height: 8.1
 
 machine17:
   title: Maquina 17
   price: 345
   category: newMachines
   user: pedro
+  depth: 7
+  width: 5
+  height: 1.2
 
 machine18:
   title: Maquina 18
   price: 490
   category: balanceMachines
   user: julia
+  depth: 9
+  width: 5.5
+  height: 5.1
 
 machine19:
   title: Maquina 19
   price: 65
   category: oldMachines
   user: david
+  depth: 2.1
+  width: 2.
+  height: 1
 
 machine20:
   title: Maquina 20
   price: 25
   category: oldMachines
   user: david
+  depth: 1
+  width: 9
+  height: 4.1
 
 machine21:
   title: Maquina 21
   price: 750
   category: newMachines
   user: pedro
+  depth: 6
+  width: 6
+  height: 7.2
 
 machine22:
   title: Maquina 22
   price: 455
   category: balanceMachines
   user: julia
+  depth: 1
+  width: 6.2
+  height: 5
 
 machine23:
   title: Maquina 23
   price: 356
   category: oldMachines
   user: david
+  depth: 2.1
+  width: 5.2
+  height: 4.4
 
 machine24:
   title: Maquina 24
   price: 170
   category: oldMachines
   user: david
+  depth: 2
+  width: 4
+  height: 5.2
 
 machine25:
   title: Maquina 25
   price: 370
   category: newMachines
   user: pedro
+  depth: 7.2
+  width: 9.1
+  height: 7.2
 
 machine26:
   title: Maquina 26
   price: 80
   category: balanceMachines
   user: julia
+  depth: 8.1
+  width: 32
+  height: 44
 
 machine27:
   title: Maquina 27
   price: 428
   category: oldMachines
   user: david
+  depth: 2.2
+  width: 3.2
+  height: 4

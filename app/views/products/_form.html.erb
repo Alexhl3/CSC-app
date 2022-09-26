@@ -26,7 +26,7 @@
             <%= form.rich_text_area :description %>
           </div>
 
-        <div class="flex justify-center py-2 space-x-2">
+        <div class="flex py-2 ">
           <div>
             <div>
               <%= form.label :category_id %>
@@ -36,12 +36,30 @@
             </div>
           </div>
 
-          <div>
+          <div class="ml-auto">
             <div>
               <%= form.label :price %>
             </div>
             <div>
               <%= form.number_field :price, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-medium",placeholder: t('.placeholder_price') %>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h1><%= t('.dimensions')%></h1>
+
+          <div class="flex py-2 space-x-2">
+            <div>
+              <%= form.number_field :height, step: :any, class: "w-32 block border border-grey-light p-3 rounded mb-4 bg-slate-300 focus:bg-white font-medium", placeholder: t('.placeholder_height') %>
+            </div>
+
+            <div>
+              <%= form.number_field :depth, step: :any, class: "w-32 block border border-grey-light p-3 rounded mb-4 bg-slate-300 focus:bg-white font-medium", placeholder: t('.placeholder_depth') %>
+            </div>
+
+            <div>
+              <%= form.number_field :width, step: :any, class: "w-32 block border border-grey-light p-3 rounded mb-4 bg-slate-300 focus:bg-white font-medium", placeholder: t('.placeholder_width') %>
             </div>
           </div>
         </div>
@@ -83,8 +101,9 @@
         <% end %>
       </div>
     </div>
-    <div>
+
       <% unless @product.id.nil? %>
+    <div>
         <div class="bg-slate-200 px-10 py-5 rounded-lg">
           <div class= text-lg font-light pb-1">
             <%= t('.delete_attachement') %>

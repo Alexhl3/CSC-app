@@ -16,7 +16,15 @@
         </div>
 
         <div class="description">
+          <h1 class="font-medium">Especificaciones</h1>
           <%= @product.description %>
+        </div>
+
+        <div class="py-2">
+          <h1 class="font-medium"><%= t('.dimensions') %></h1>
+          <li><%= "#{t('.height')}: #{sprintf('%g', @product.height) unless @product.height.nil?}m"%></li>
+          <li><%= "#{t('.depth')}: #{sprintf('%g',@product.depth) unless @product.depth.nil?}m"%></li>
+          <li><%= "#{t('.width')}: #{sprintf('%g',@product.width) unless @product.width.nil?}m"%></li>
         </div>
 
         <div class="flex justify-end mt-auto">
