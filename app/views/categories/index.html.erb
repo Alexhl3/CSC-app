@@ -1,14 +1,13 @@
-<div class="flex justify-center font-montserrat">
+<div class="font-montserrat flex justify-center">
   <div class="w-auto">
-      <h1 class="text-bgray text-left text-2xl font-medium py-4 antialiased"><%= t('.title') %></h1>
-      <div class="bg-slate-200 p-2 rounded-lg">
-
+    <h1 class="text-bgray py-4 text-left text-2xl font-medium antialiased"><%= t('.title') %></h1>
+    <div class="rounded-lg bg-slate-200 p-2">
       <div>
         <%= render partial: 'category', collection: @categories %>
       </div>
 
       <div class="flex justify-start">
-        <div class="bg-lb hover:bg-lbd font-medium rounded-b-lg text-center p-1 text-white">
+        <div class="bg-lb hover:bg-lbd rounded-b-lg p-1 text-center font-medium text-white">
           <%= link_to t('.new'), new_category_path %>
         </div>
       </div>
