@@ -22,9 +22,9 @@
 
         <div class="py-2">
           <h1 class="font-medium"><%= t('.dimensions') %></h1>
-          <li><%= "#{t('.height')}: #{sprintf('%g', @product.height) unless @product.height.nil?}cm"%></li>
-          <li><%= "#{t('.depth')}: #{sprintf('%g',@product.depth) unless @product.depth.nil?}cm"%></li>
-          <li><%= "#{t('.width')}: #{sprintf('%g',@product.width) unless @product.width.nil?}cm"%></li>
+          <li><%= "#{t('.height')}: #{@product.height.nil? ? 'n/a' : sprintf('%g', @product.height)+'cm'}"%></li>
+          <li><%= "#{t('.depth')}: #{@product.depth.nil? ? 'n/a' : sprintf('%g', @product.depth)+'cm'}"%></li>
+          <li><%= "#{t('.width')}: #{@product.width.nil? ? 'n/a' : sprintf('%g', @product.width)+'cm'}"%></li>
         </div>
 
         <div class="flex justify-end mt-auto">

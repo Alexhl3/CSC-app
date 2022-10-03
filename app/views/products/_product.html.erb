@@ -7,11 +7,11 @@
 
       <% if product.status %>
         <div class="p-1">
-          <div class="bg-dgreen px-1 rounded-md w-max text-white">Estado Nueva</div>
+          <div class="bg-dgreen px-1 rounded-md w-max text-white"><%= t('.new')%></div>
         </div>
       <% else %>
         <div class="p-1">
-          <div class="bg-dgreen px-1 rounded-md w-max text-white">Estado Usada</div>
+          <div class="bg-dgreen px-1 rounded-md w-max text-white"><%= t('.old')%></div>
         </div>
       <% end %>
 

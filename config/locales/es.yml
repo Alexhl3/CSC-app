@@ -36,7 +36,7 @@ es:
               blank: 'no puede estar en blanco'
             images:
               blank: 'no puede estar en blanco'
-              too_long: 'no pueden ser mas de 5'
+              too_long: 'no pueden ser mas de 4'
             depth:
               blank: 'no puede estar en blanco'
             height:
@@ -66,12 +66,15 @@ es:
       placeholder_price: 'Precio'
       delete_attachement: 'Eliminar imagenes adjuntas'
       remove: 'Eliminar'
-      old: 'Maquina usada'
-      new: 'Maquina nueva'
+      old: 'Usada'
+      new: 'Nueva'
       dimensions: 'Dimensiones'
       placeholder_height: 'Altura'
       placeholder_depth: 'Profun'
       placeholder_width: 'Ancho'
+    product:
+      new: 'Nueva'
+      old: 'Usada'
     index:
       title: 'Productos'
       all: 'Limpiar busqueda'
