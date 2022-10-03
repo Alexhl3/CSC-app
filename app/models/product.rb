@@ -33,7 +33,7 @@ class Product < ApplicationRecord
   validates :width, presence: true
   validates :height, presence: true
   validates :depth, presence: true
-  validates_length_of :images, maximum: 5
+  validates_length_of :images, maximum: 4
 
   belongs_to :category
   belongs_to :user, default: -> { Current.user }
