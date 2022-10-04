@@ -35,6 +35,8 @@
   resize: both;
   max-width: 500px;
   min-width: 100px;
+  background-color: #f9f9f9;
+  border-color: #6b7280;
 }
 
 

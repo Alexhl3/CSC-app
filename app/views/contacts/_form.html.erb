@@ -4,18 +4,18 @@
       <%= form_for @contact do |form| %>
 
       <div>
-        <h1><%= t('.name')%></h1>
-        <%= form.text_field  :name, required: true, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-medium",placeholder: t('.placeholder_name') %>
+        <h1 class="font-medium"><%= t('.name')%></h1>
+        <%= form.text_field  :name, required: true, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slg focus:bg-white font-medium",placeholder: t('.placeholder_name') %>
       </div>
 
       <div>
-        <h1><%= t('.email')%></h1>
-        <%= form.text_field  :email, required: true, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-medium",placeholder: t('.placeholder_email') %>
+        <h1 class="font-medium"><%= t('.email')%></h1>
+        <%= form.text_field  :email, required: true, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slg focus:bg-white font-medium",placeholder: t('.placeholder_email') %>
       </div>
 
       <div>
-        <h1><%= t('.message')%></h1>
-        <%= form.text_area  :message, required: true, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-medium w-96 h-44",placeholder: t('.placeholder_message') %>
+        <h1 class="font-medium"><%= t('.message')%></h1>
+        <%= form.text_area  :message, required: true, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slg focus:bg-white font-medium w-96 h-44",placeholder: t('.placeholder_message') %>
       </div>
 
       <div class="flex justify-center py-2">
