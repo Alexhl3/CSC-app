@@ -18,7 +18,7 @@
             <%= form.label :title, t('.title'), class: "font-medium" %>
           </div>
           <div>
-            <%= form.text_field :title, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slg focus:bg-white font-medium",placeholder: t('.placeholder_title') %>
+            <%= form.text_field :title, required: true, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slg focus:bg-white font-medium",placeholder: t('.placeholder_title') %>
           </div>
 
           <div class="description_form">
@@ -41,7 +41,7 @@
               <%= form.label :price, t('.price'), class: "font-medium" %>
             </div>
             <div>
-              <%= form.number_field :price, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slg focus:bg-white font-medium",placeholder: t('.placeholder_price') %>
+              <%= form.number_field :price, required: true, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slg focus:bg-white font-medium",placeholder: t('.placeholder_price') %>
             </div>
           </div>
         </div>
@@ -85,14 +85,14 @@
             <%= form.label :photo, t('.photo'), class: "font-medium" %>
           </div>
           <div>
-            <%= form.file_field :photo, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-medium" %>
+            <%= form.file_field :photo, required: true, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-medium" %>
           </div>
 
           <div>
             <%= form.label :images, t('.images'), class: "font-medium" %>
           </div>
           <div>
-            <%= form.file_field :images, multiple: true, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-medium" %>
+            <%= form.file_field :images, required: true, multiple: true, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-medium" %>
           </div>
 
           <div class="flex justify-center py-2">
