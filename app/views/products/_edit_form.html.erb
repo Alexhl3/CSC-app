@@ -1,0 +1,127 @@
+<div class="flex justify-center font-montserrat">
+  <div class="flex space-x-4">
+    <div>
+      <%= form_with model: @product do |form| %>
+        <% @product.errors.full_messages.each do |error|%>
+              <div class="bg-red-500 p-1 border-2 border-white rounded-lg relative">
+
+              <div class="absolute top-0 right-0 -mr-1 -mt-1 w-4 h-4 rounded-full bg-red-700 animate-ping"></div>
+              <div class="absolute top-0 right-0 -mr-1 -mt-1 w-4 h-4 rounded-full bg-red-700"></div>
+
+                <%= error %>
+              </div>
+        <% end %>
+
+
+      <div class="bg-slate-200 px-10 py-5 rounded-lg">
+          <div>
+            <%= form.label :title, t('products.form.title'), class: "font-medium" %>
+          </div>
+          <div>
+            <%= form.text_field :title, required: true, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slg focus:bg-white font-medium",placeholder: t('products.form.placeholder_title') %>
+          </div>
+
+          <div class="description_form">
+            <%= form.label :description, t('products.form.description') , class: "font-medium" %>
+            <%= form.rich_text_area :description %>
+          </div>
+
+        <div class="flex py-2 ">
+          <div>
+            <div>
+              <%= form.label :category_id, t('products.form.category') , class: "font-medium" %>
+            </div>
+            <div>
+              <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name, {}, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slg focus:bg-white font-medium"%>
+            </div>
+          </div>
+
+          <div class="ml-auto">
+            <div>
+              <%= form.label :price, t('products.form.price'), class: "font-medium" %>
+            </div>
+            <div>
+              <%= form.number_field :price, required: true, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slg focus:bg-white font-medium",placeholder: t('products.form.placeholder_price') %>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h1 class="font-medium"><%= t('products.form.dimensions')%></h1>
+
+          <div class="flex py-2 space-x-2">
+            <div>
+              <%= form.number_field :height, step: :any, class: "w-32 block border border-grey-light p-3 rounded mb-4 bg-slg focus:bg-white font-medium", placeholder: t('products.form.placeholder_height') %>
+            </div>
+
+            <div>
+              <%= form.number_field :depth, step: :any, class: "w-32 block border border-grey-light p-3 rounded mb-4 bg-slg focus:bg-white font-medium", placeholder: t('products.form.placeholder_depth') %>
+            </div>
+
+            <div>
+              <%= form.number_field :width, step: :any, class: "w-32 block border border-grey-light p-3 rounded mb-4 bg-slg focus:bg-white font-medium", placeholder: t('products.form.placeholder_width') %>
+            </div>
+          </div>
+        </div>
+
+          <div>
+            <div>
+              <%= form.label :status, t('products.form.status'), class: "font-medium" %>
+            </div>
+            <div class="flex justify-around border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-medium">
+              <div>
+                <%= form.radio_button :status, true %>
+                <%= form.label :status, t('products.form.new') %>
+              </div>
+
+              <div>
+                <%= form.radio_button :status, false %>
+                <%= form.label :status, t('products.form.old') %>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <%= form.label :photo, t('products.form.photo'), class: "font-medium" %>
+          </div>
+          <div>
+            <%= form.file_field :photo, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-medium" %>
+          </div>
+
+          <div>
+            <%= form.label :images, t('products.form.images'), class: "font-medium" %>
+          </div>
+          <div>
+            <%= form.file_field :images, multiple: true, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-medium" %>
+          </div>
+
+          <div class="flex justify-center py-2">
+            <%= form.submit t('commond.submit'), class: "font-semibold bg-lb hover:bg-lbd p-2 rounded-md text-white" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+      <% unless @product.id.nil? %>
+    <div>
+        <div class="bg-slate-200 px-10 py-5 rounded-lg">
+          <div class= "text-lg font-medium" font-light pb-1">
+            <%= t('.delete_attachement') %>
+          </div>
+          <div class="grid grid-cols-2 gap-2">
+            <% @product.images.each do |image| %>
+                <div data-controller="imagedelete" class="animated bg-slate-200 rounded-md 800 h-max w-28">
+                  <%= image_tag(image, class: "object-scale-down h-24 w-full bg-white")%>
+                  <%= button_to t('.remove'), delete_image_attachment_product_path(image.id), method: :delete, data: { action: "imagedelete#dismiss"}, class: " rounded-b-lg bg-red-700 text-white hover:bg-red-600 w-full"%>
+                </div>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="py-20"></div>

@@ -30,9 +30,6 @@ class Product < ApplicationRecord
   validates :price, presence: true
   validates :photo, presence: true
   validates :images, presence: true
-  validates :width, presence: true
-  validates :height, presence: true
-  validates :depth, presence: true
   validates_length_of :images, maximum: 4
 
   belongs_to :category

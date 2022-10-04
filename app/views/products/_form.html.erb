@@ -101,27 +101,8 @@
         <% end %>
       </div>
     </div>
-
-      <% unless @product.id.nil? %>
-    <div>
-        <div class="bg-slate-200 px-10 py-5 rounded-lg">
-          <div class= "text-lg font-medium" font-light pb-1">
-            <%= t('.delete_attachement') %>
-          </div>
-          <div class="grid grid-cols-2 gap-2">
-            <% @product.images.each do |image| %>
-                <div data-controller="imagedelete" class="animated bg-slate-200 rounded-md 800 h-max w-28">
-                  <%= image_tag(image, class: "object-scale-down h-24 w-full bg-white")%>
-                  <%= button_to t('.remove'), delete_image_attachment_product_path(image.id), method: :delete, data: { action: "imagedelete#dismiss"}, class: " rounded-b-lg bg-red-700 text-white hover:bg-red-600 w-full"%>
-                </div>
-            <% end %>
-          </div>
-        </div>
-      <% end %>
     </div>
   </div>
 </div>
-
-
 
 <div class="py-20"></div>

@@ -72,13 +72,14 @@ es:
       placeholder_title: 'Titulo'
       placeholder_description: 'Descripcion del producto'
       placeholder_price: 'Precio'
-      delete_attachement: 'Eliminar imagenes adjuntas'
-      remove: 'Eliminar'
       old: 'Usada'
       new: 'Nueva'
       placeholder_height: 'Altura'
       placeholder_depth: 'Profun'
       placeholder_width: 'Ancho'
+    edit_form:
+      delete_attachement: 'Eliminar imagenes adjuntas'
+      remove: 'Eliminar'
     product:
       new: 'Nueva'
       old: 'Usada'
