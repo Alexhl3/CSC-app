@@ -1,3 +1,9 @@
 <h1 class="text-bgray font-medium text-center text-2xl py-4 antialiased"><%= t('.title') %></h1>
 
-<%= render 'form' %>
+<div class="flex drop-shadow">
+  <%= link_to 'https://www.google.cl/maps/@-33.3905646,-70.5465761,15z' do %>
+    <%= image_tag('contact/map.png', class: "object-scale-down h-auto w-[27rem] rounded-l-lg")%>
+  <% end %>
+  <%= render 'form' %>
+</div>
+
