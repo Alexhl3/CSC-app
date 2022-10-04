@@ -61,6 +61,14 @@ es:
               too_short: 'debe contener al menos 6 caracteres'
   products:
     form:
+      title: 'Titulo *'
+      description: 'Descripcion *'
+      category: 'Categoria *'
+      price: 'Precio *'
+      dimensions: 'Dimensiones (Opcional)'
+      status: 'Estado de la maquina *'
+      photo: 'Imagen presentacion *'
+      images: 'Imagenes adjuntas *'
       placeholder_title: 'Titulo'
       placeholder_description: 'Descripcion del producto'
       placeholder_price: 'Precio'
@@ -68,7 +76,6 @@ es:
       remove: 'Eliminar'
       old: 'Usada'
       new: 'Nueva'
-      dimensions: 'Dimensiones'
       placeholder_height: 'Altura'
       placeholder_depth: 'Profun'
       placeholder_width: 'Ancho'
@@ -115,6 +122,7 @@ es:
       destroyed: 'El producto ha sido eliminado'
   categories:
     form:
+      name: 'Nombre *'
       back: 'Volver a categorias'
       placeholder_name: 'Nombre de categoria'
     index:
@@ -191,9 +199,9 @@ es:
     new:
       title: 'Contactanos'
     form:
-      name: 'Nombre'
-      email: 'Correo electronico'
-      message: 'Mensaje'
+      name: 'Nombre *'
+      email: 'Correo electronico *'
+      message: 'Mensaje *'
       placeholder_name: 'ingresa tu nombre'
       placeholder_email: 'email'
       placeholder_message: 'Escribe tu mensaje'

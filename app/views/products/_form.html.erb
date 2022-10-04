@@ -15,21 +15,21 @@
 
       <div class="bg-slate-200 px-10 py-5 rounded-lg">
           <div>
-            <%= form.label :title, class: "font-medium" %>
+            <%= form.label :title, t('.title'), class: "font-medium" %>
           </div>
           <div>
             <%= form.text_field :title, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slg focus:bg-white font-medium",placeholder: t('.placeholder_title') %>
           </div>
 
           <div class="description_form">
-            <%= form.label :description, class: "font-medium" %>
+            <%= form.label :description, t('.description') , class: "font-medium" %>
             <%= form.rich_text_area :description %>
           </div>
 
         <div class="flex py-2 ">
           <div>
             <div>
-              <%= form.label :category_id, class: "font-medium" %>
+              <%= form.label :category_id, t('.category') , class: "font-medium" %>
             </div>
             <div>
               <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name, {}, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slg focus:bg-white font-medium"%>
@@ -38,7 +38,7 @@
 
           <div class="ml-auto">
             <div>
-              <%= form.label :price, class: "font-medium" %>
+              <%= form.label :price, t('.price'), class: "font-medium" %>
             </div>
             <div>
               <%= form.number_field :price, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slg focus:bg-white font-medium",placeholder: t('.placeholder_price') %>
@@ -66,7 +66,7 @@
 
           <div>
             <div>
-              <%= form.label :status, class: "font-medium" %>
+              <%= form.label :status, t('.status'), class: "font-medium" %>
             </div>
             <div class="flex justify-around border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-medium">
               <div>
@@ -82,14 +82,14 @@
           </div>
 
           <div>
-            <%= form.label :photo, class: "font-medium" %>
+            <%= form.label :photo, t('.photo'), class: "font-medium" %>
           </div>
           <div>
             <%= form.file_field :photo, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-medium" %>
           </div>
 
           <div>
-            <%= form.label :images, class: "font-medium" %>
+            <%= form.label :images, t('.images'), class: "font-medium" %>
           </div>
           <div>
             <%= form.file_field :images, multiple: true, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slate-300 focus:bg-white font-medium" %>

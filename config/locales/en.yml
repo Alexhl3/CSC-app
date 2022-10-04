@@ -49,6 +49,14 @@ en:
               too_short: 'must contain at least 6 characters'
   products:
     form:
+      title: 'Title *'
+      description: 'Description *'
+      category: 'Category *'
+      price: 'Price *'
+      dimensions: 'Dimensions (Optional)'
+      status: 'machine condition *'
+      photo: 'Photo *'
+      images: 'Images *'
       placeholder_title: 'Title'
       placeholder_description: 'Product description'
       placeholder_price: 'Price'
@@ -56,7 +64,6 @@ en:
       remove: 'Eliminar'
       old: 'Used'
       new: 'New'
-      dimensions: 'Dimensions'
       placeholder_height: 'Height'
       placeholder_depth: 'Depth'
       placeholder_width: 'Width'
@@ -100,6 +107,7 @@ en:
       destroyed: 'The product has been removed'
   categories:
     form:
+      name: 'Name *'
       back: 'Back to categories'
     index:
       title: 'Categories'
@@ -172,9 +180,9 @@ en:
       error: 'Your message could not be sent. Please try again later'
     new:
       title: 'Contact us'
-      name: 'Name'
-      email: 'Email'
-      message: 'Message'
+      name: 'Name *'
+      email: 'Email *'
+      message: 'Message *'
       placeholder_send: 'Add your message'
   shared:
     header:
