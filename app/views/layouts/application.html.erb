@@ -7,11 +7,9 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
   <body class="flex flex-col min-h-screen bg-slgb">
     <%= render 'shared/flash' %>
     <%= render 'shared/header' %>
@@ -27,5 +25,4 @@
       <%= render 'shared/footer' %>
     </footer>
   </body>
-
 </html>

@@ -10,7 +10,6 @@
     <%= image_tag @product.photo, class: "object-scale-down w-full max-h-20"%>
   </button>
 <% end %>
-
 <% (0...@product.images.count).each do |image|%>
   <% if !@product.images[0].nil? %>
     <button

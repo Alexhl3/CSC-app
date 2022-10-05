@@ -1,0 +1,19 @@
+<%= turbo_frame_tag 'index' do %>
+  <div class="flex font-montserrat">
+    <%= render "filters"%>
+    <div>
+      <%= turbo_frame_tag :products do %>
+        <%= turbo_frame_tag "products-#{@pagy.page}", class: 'products' do %>
+          <div class="grid grid-cols-3 gap-4 px-4 pb-2 text-dgray">
+            <%= render partial: 'product', collection: @products %>
+            <% if @products.blank? %>
+              <div class=""></div>
+              <h1 class="items-center mt-3 text-2xl font-bold text-center w-80 h-max">No se han encontrado resultados</h1>
+            <% end %>
+          </div>
+          <%= turbo_frame_tag "products-#{@pagy.next}", class: 'products', src: pagy_url_for(@pagy, @pagy.next), loading: :lazy if @pagy.next %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+<% end %>

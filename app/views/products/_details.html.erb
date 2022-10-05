@@ -1,0 +1,41 @@
+<div class="flex justify-center font-montserrat">
+  <div class="flex flex-col pb-20 pl-5">
+    <div class="flex drop-shadow">
+      <div class="flex flex-col h-full bg-white w-max">
+        <%= render partial: 'carousel_buttons' if @product.images.attached? or @product.photo.attached?%>
+      </div>
+      <div class="h-full">
+        <%= render partial: 'carousel' if @product.images.attached? or @product.photo.attached?%>
+      </div>
+      <div class="flex flex-col w-auto p-3 bg-white border-l rounded-r-lg min-w-96 border-slgb">
+        <h2 class='text-xl font-bold title text-bgray'><%= @product.title %></h2>
+        <div class="flex justify-start">
+          <span class='text-lg text-red-700 price'>$<%= @product.price %></span>
+        </div>
+        <div class="description">
+          <h1 class="font-medium">Especificaciones</h1>
+          <%= @product.description %>
+        </div>
+        <div class="py-2">
+          <h1 class="font-medium"><%= t('.dimensions') %></h1>
+          <li><%= "#{t('.height')}: #{@product.height.nil? ? 'n/a' : sprintf('%g', @product.height)+'cm'}"%></li>
+          <li><%= "#{t('.depth')}: #{@product.depth.nil? ? 'n/a' : sprintf('%g', @product.depth)+'cm'}"%></li>
+          <li><%= "#{t('.width')}: #{@product.width.nil? ? 'n/a' : sprintf('%g', @product.width)+'cm'}"%></li>
+        </div>
+        <div class="flex justify-end mt-auto">
+          <%= link_to t('.contact'), new_contact_path, class: "font-semibold bg-lb hover:bg-lbd p-2 rounded-md text-white" %>
+        </div>
+      </div>
+    </div>
+    <div class="flex font-semibold">
+      <% if Current.user == @product.user or Current.user&.admin? %>
+        <div class="p-1 text-center text-white rounded-b-lg bg-lb hover:bg-lbd">
+          <%= link_to t('.edit'), edit_product_path(@product) %>
+        </div>
+        <div class="p-1 text-center text-white bg-red-600 rounded-b-lg hover:bg-red-700">
+          <%= link_to t('.destroy'), product_path(@product), data: { turbo_method: :delete } %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
