@@ -1,22 +1,19 @@
-<div id="<%= dom_id product %>" class="bg-white grid grid-cols-4 gap-x-1 p-1 border-t-4 font-sans font-medium">
-  <div class="min-h-10 bg-white rounded-md">
-        <%= image_tag product.photo, class: "object-scale-down w-full h-10 rounded-t-lg" if product.photo.attached? %>
+<div id="<%= dom_id product %>" class="grid grid-cols-4 p-1 font-sans font-medium bg-white border-t-4 gap-x-1">
+  <div class="bg-white rounded-md min-h-10">
+    <%= image_tag product.photo, class: "object-scale-down w-full h-10 rounded-t-lg" if product.photo.attached? %>
   </div>
-
   <div class="flex items-center hover:text-lbd">
     <%= link_to product_path(product.id) do %>
       <%= product.title %>
     <% end %>
   </div>
-
-  <div class="flex justify-end items-center">
-    <div class="font-semibold bg-lb hover:bg-lbd px-1 rounded-md text-white">
+  <div class="flex items-center justify-end">
+    <div class="px-1 font-semibold text-white rounded-md bg-lb hover:bg-lbd">
       <%= link_to t('.edit'), edit_product_path(product) %>
     </div>
   </div>
-
-  <div class="flex justify-end items-center">
-    <div class="bg-red-600 px-1 rounded-md text-white hover:bg-red-700">
+  <div class="flex items-center justify-end">
+    <div class="px-1 text-white bg-red-600 rounded-md hover:bg-red-700">
       <%= link_to t('.destroy'), product_path(product), data: {
         turbo_method: :delete
       } %>

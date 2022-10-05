@@ -1,0 +1,14 @@
+<div class="flex justify-center font-montserrat">
+  <div class="w-auto">
+    <div class="p-2 rounded-lg bg-slate-200">
+      <div>
+        <%= render partial: 'category', collection: @categories %>
+      </div>
+      <div class="flex justify-start">
+        <div class="p-1 font-medium text-center text-white rounded-b-lg bg-lb hover:bg-lbd">
+          <%= link_to t('.new'), new_category_path %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

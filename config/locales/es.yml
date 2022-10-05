@@ -122,44 +122,44 @@ es:
     destroy:
       destroyed: 'El producto ha sido eliminado'
   categories:
+    category:
+      edit: 'Editar'
+      destroy: 'Eliminar'
     form:
       name: 'Nombre *'
-      back: 'Volver a categorias'
       placeholder_name: 'Nombre de categoria'
+      back: 'Volver a categorias'
+    table:
+      new: 'Crear categoria'
+    edit:
+      title: 'Editar categoria'
     index:
       title: 'Categorias'
-      new: 'Crear categoria'
     new:
       title: 'Nueva categoria'
     create:
       created: 'La categoria ha sido creada con exito!!'
-    edit:
-      title: 'Editar categoria'
     update:
       updated: 'La categoria ha sido actualizada con exito!!'
     destroy:
       destroyed: 'La categoria ha sido eliminada'
       cant_delete: 'Imposible eliminar categoria, ya que tiene productos asociados'
-    category:
-      edit: 'Editar'
-      destroy: 'Eliminar'
   authentication:
     users:
-      new:
-        title: 'Nuevo usuario'
-        add_user: 'Crear usuario'
+      form:
         placeholder_username: 'Nombre de usuario'
         placeholder_email: 'Correo electronico'
         placeholder_password: 'contraseña'
+        add_user: 'Crear usuario'
+      new:
+        title: 'Nuevo usuario'
       create:
         created: 'El usuario ha sido ingresado con exito!!'
     sessions:
-      new:
+      form:
         title: 'INICIAR SESIÓN'
         placeholder_username: 'Usuario o email'
         placeholder_password: 'Contraseña'
-        login: 'Usuario'
-        password: 'Contraseña'
         new_session: 'Iniciar sesion'
       create:
         created: 'Inicio de sesión completado con exito'
@@ -187,12 +187,13 @@ es:
     brand_logos:
       title: 'Nuestras marcas'
   administrations:
-    index:
-      title: 'Administrar productos'
-      new: 'Crear producto'
     product:
       edit: 'Editar'
       destroy: 'Eliminar'
+    table:
+      new: 'Crear producto'
+    index:
+      title: 'Administrar productos'
   contacts:
     create:
       created: 'Tu mensaje ha sido enviado, gracias por contactarnos!!'

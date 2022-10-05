@@ -1,19 +1,2 @@
-<div class="flex justify-center font-montserrat">
-  <div class="w-auto">
-      <h1 class=" text-left text-2xl text-bgray font-medium py-4 antialiased"><%= t('.title') %></h1>
-      <div class="bg-slate-200 p-2 rounded-lg">
-
-      <div>
-        <%= render partial: 'product', collection: @products %>
-      </div>
-
-      <div class="flex justify-start">
-        <div class="font-semibold bg-lb hover:bg-lbd rounded-b-lg text-center p-1 text-white">
-          <%= link_to t('.new'), new_product_path %>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="py-20"></div>
+<h1 class="py-4 text-2xl antialiased font-medium text-left text-bgray"><%= t('.title') %></h1>
+<%= render partial: 'table' %>

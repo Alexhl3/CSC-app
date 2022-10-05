@@ -106,41 +106,44 @@ en:
     destroy:
       destroyed: 'The product has been removed'
   categories:
+    category:
+      edit: 'Edit'
+      destroy: 'Delete'
     form:
       name: 'Name *'
+      placeholder_name: 'Category name'
       back: 'Back to categories'
+    table:
+      new: 'Add category'
+    edit:
+      title: 'Edit category'
     index:
       title: 'Categories'
-      new: 'New category'
     new:
       title: 'New category'
     create:
       created: 'The category has been successfully created!!'
-    edit:
-      title: 'Edit category'
     update:
       updated: 'The category has been successfully edited!!'
     destroy:
       destroyed: 'The category has been removed'
       cant_delete: 'The category cannot be deleted because it has associated products'
-    category:
-      edit: 'Edit'
-      destroy: 'Delete'
   authentication:
     users:
-      new:
-        title: 'Sign up'
-        add_user: 'Add user'
+      form:
         placeholder_username: 'Username'
         placeholder_email: 'Email adress'
         placeholder_password: 'Password'
+        add_user: 'Add user'
+      new:
+        title: 'Sign up'
       create:
         created: 'The user has been successfully created!!'
-  sessions:
-      new:
-        title: 'Account'
-        login: 'User'
-        password: 'Password'
+    sessions:
+      form:
+        title: 'Login'
+        placeholder_username: 'User or email'
+        placeholder_password: 'Password'
         new_session: 'Login'
       create:
         created: 'Successful login'
@@ -168,12 +171,13 @@ en:
     brand_logos:
       title: 'Nuestras marcas'
   administrations:
-    index:
-      title: 'Administrate products'
-      new: 'Add product'
     product:
       edit: 'Edit'
       destroy: 'Destroy'
+    table:
+      new: 'Add product'
+    index:
+      title: 'Administrate products'
   contacts:
     create:
       created: 'Your message has been sent, thank you for contacting us!'
