@@ -4,7 +4,7 @@
     <div>
       <%= turbo_frame_tag :products do %>
         <%= turbo_frame_tag "products-#{@pagy.page}", class: 'products' do %>
-          <div class="grid grid-cols-3 gap-4 px-4 pb-2 text-dgray">
+          <div data-aos="fade-up" data-aos-duration="800" class="grid grid-cols-3 gap-4 px-4 pb-2 text-dgray">
             <%= render partial: 'product', collection: @products %>
             <% if @products.blank? %>
               <div class=""></div>

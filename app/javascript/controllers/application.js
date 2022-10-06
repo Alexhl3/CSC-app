@@ -7,3 +7,9 @@ application.debug = false
 window.Stimulus   = application
 
 export { application }
+
+import AOS from 'aos'
+AOS.init({
+  once: true,
+  duration: "800"
+});
