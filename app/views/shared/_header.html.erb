@@ -1,13 +1,12 @@
-<div class="flex flex-col bg-lb  pt-3 font-sans">
+<div class="flex flex-col pt-3 font-sans bg-lb">
   <div class="flex flex-row justify-between py-1.5 px-1.5">
     <%= link_to homes_path do %>
-      <div class="flex items-center text-white text-bold text-4xl font-montserrat font-semibold py-2">
+      <div class="flex items-center py-2 text-4xl font-semibold text-white text-bold font-montserrat">
         <%= image_tag('shared/logo.png', :class => "object-scale-down h-20 w-max rounded-lg")%>
         <%# <h1 class="px-3">Comercial Sistemas Comerciales</h1> %>
       </div>
     <% end %>
   </div>
-
   <div class="flex flex-row text-xl bg-[#003951] font-montserrat font-medium px-1.5">
     <div class="text-white hover:bg-[#104358] py-2 pr-2 ">
       <%= link_to t('.products'), products_path %>
@@ -16,20 +15,16 @@
       <div class="text-white hover:bg-[#104358] p-2">
         <%= link_to t('.categories'), categories_path %>
       </div>
-
       <div class="text-white hover:bg-[#104358] p-2">
         <%= link_to t('.administration'), administrations_path %>
       </div>
-
       <div class="text-white hover:bg-[#104358] p-2">
         <%= link_to t('.add'), new_product_path %>
       </div>
-
     <% end %>
     <div class="text-white hover:bg-[#104358] p-2">
       <%= link_to t('.contact'), new_contact_path %>
     </div>
-  
     <div class="ml-auto text-white hover:bg-[#104358] py-2">
       <%= button_to t('.logout'), session_path('123'), method: :delete if Current.user%>
     </div>
