@@ -205,7 +205,7 @@ es:
       placeholder_email: 'email'
       placeholder_message: 'Escribe tu mensaje'
   shared:
-    header:
+    links:
       add: 'Añadir producto'
       categories: 'Categorias'
       sign_up: 'Crear nuevo usuario'

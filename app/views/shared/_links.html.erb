@@ -1,0 +1,20 @@
+<div class="sm:hover:bg-[#104358] py-3 px-2 border-b sm:border-0">
+  <%= link_to t('.products'), products_path %>
+</div>
+<% if Current.user&.admin? %>
+  <div class="sm:hover:bg-[#104358] py-3 px-2 border-b sm:border-0">
+    <%= link_to t('.categories'), categories_path %>
+  </div>
+  <div class="sm:hover:bg-[#104358] py-3 px-2 border-b sm:border-0">
+    <%= link_to t('.administration'), administrations_path %>
+  </div>
+  <div class="sm:hover:bg-[#104358] py-3 px-2 border-b sm:border-0">
+    <%= link_to t('.add'), new_product_path %>
+  </div>
+<% end %>
+<div class="sm:hover:bg-[#104358] py-3 px-2 border-b sm:border-0">
+  <%= link_to t('.contact'), new_contact_path %>
+</div>
+<div class="ml-auto sm:hover:bg-[#104358] py-3 px-2 sm:border-0">
+  <%= button_to t('.logout'), session_path('123'), method: :delete if Current.user%>
+</div>

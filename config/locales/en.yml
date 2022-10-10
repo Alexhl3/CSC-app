@@ -190,7 +190,7 @@ en:
       message: 'Message *'
       placeholder_send: 'Add your message'
   shared:
-    header:
+    links:
       add: 'Add product'
       categories: 'Categories'
       sign_up: 'Sign up'
@@ -200,6 +200,7 @@ en:
       products: 'Products'
       phone_number: 'Phone number'
       adress: 'Adress'
+      administration: 'Admin products'
       contact: 'Contact us'
     footer:
       why_contact_us: 'Why you should contact us?'

@@ -1,32 +1,24 @@
-<div class="flex flex-col pt-3 font-sans bg-lb">
-  <div class="flex flex-row justify-between py-1.5 px-1.5">
+<div class="flex flex-col font-sans sm:pt-3 bg-lb" data-controller="menu">
+  <div class="flex items-center flex-row justify-between py-1.5 px-1.5">
     <%= link_to homes_path do %>
       <div class="flex items-center py-2 text-4xl font-semibold text-white text-bold font-montserrat">
         <%= image_tag('shared/logo.png', :class => "object-scale-down h-20 w-max rounded-lg")%>
         <%# <h1 class="px-3">Comercial Sistemas Comerciales</h1> %>
       </div>
     <% end %>
+    <button class="mr-3 h-11 w-11 sm:hidden" data-action="click->menu#open">
+      <%= image_tag('icons/menu.svg')%>
+    </button>
   </div>
-  <div class="flex flex-row text-xl bg-[#003951] font-montserrat font-medium px-1.5">
-    <div class="text-white hover:bg-[#104358] py-2 pr-2 ">
-      <%= link_to t('.products'), products_path %>
-    </div>
-    <% if Current.user&.admin? %>
-      <div class="text-white hover:bg-[#104358] p-2">
-        <%= link_to t('.categories'), categories_path %>
-      </div>
-      <div class="text-white hover:bg-[#104358] p-2">
-        <%= link_to t('.administration'), administrations_path %>
-      </div>
-      <div class="text-white hover:bg-[#104358] p-2">
-        <%= link_to t('.add'), new_product_path %>
-      </div>
-    <% end %>
-    <div class="text-white hover:bg-[#104358] p-2">
-      <%= link_to t('.contact'), new_contact_path %>
-    </div>
-    <div class="ml-auto text-white hover:bg-[#104358] py-2">
-      <%= button_to t('.logout'), session_path('123'), method: :delete if Current.user%>
+  <div class="hidden sm:flex flex-row text-xl bg-[#003951] font-montserrat font-medium px-1.5 text-white space-x-5">
+    <%= render 'shared/links' %>
+  </div>
+  <div class="absolute z-50 flex flex-col w-full h-full font-medium duration-300 -translate-y-full bg-white shadow-lg sm:hidden easy-in-out fontfont-montserrat text-bgray" data-menu-target="items">
+    <button class="flex justify-end px-2 py-3 bg-dgreen" data-action="click->menu#close">
+      <%= image_tag('icons/close.svg', :class => "h-10 w-10")%>
+    </button>
+    <div class="flex flex-col items-centerpx-3">
+      <%= render 'shared/links' %>
     </div>
   </div>
 </div>
