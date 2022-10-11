@@ -10,13 +10,15 @@
       <%= image_tag('icons/menu.svg')%>
     </button>
   </div>
-  <div class="hidden sm:flex flex-row text-xl bg-[#003951] font-montserrat font-medium px-1.5 text-white space-x-5">
+  <div class="hidden sm:flex flex-row text-xl bg-dgreen font-montserrat font-medium px-1.5 text-white space-x-5">
     <%= render 'shared/links' %>
   </div>
   <div class="absolute z-50 flex flex-col w-full h-full font-medium duration-300 -translate-y-full bg-white shadow-lg sm:hidden easy-in-out fontfont-montserrat text-bgray" data-menu-target="items">
-    <button class="flex justify-end px-2 py-3 bg-dgreen" data-action="click->menu#close">
-      <%= image_tag('icons/close.svg', :class => "h-10 w-10")%>
-    </button>
+    <div class="flex justify-end px-2 py-3 bg-lb">
+      <button data-action="click->menu#close">
+        <%= image_tag('icons/close.svg', :class => "h-10 w-10")%>
+      </button>
+    </div>
     <div class="flex flex-col items-centerpx-3">
       <%= render 'shared/links' %>
     </div>

@@ -1,20 +1,40 @@
-<div class="sm:hover:bg-[#104358] py-3 px-2 border-b sm:border-0">
-  <%= link_to t('.products'), products_path %>
+<%= link_to products_path, class: "sm:hover:bg-[#104358] py-3 px-2 border-b sm:border-0" do %>
+<div class="flex items-center">
+  <%= image_tag('icons/bag.svg', :class => "sm:hidden object-scale-down h-6 w-6 pr-1")%>
+  <%= t('.products') %>
 </div>
-<% if Current.user&.admin? %>
-  <div class="sm:hover:bg-[#104358] py-3 px-2 border-b sm:border-0">
-    <%= link_to t('.categories'), categories_path %>
-  </div>
-  <div class="sm:hover:bg-[#104358] py-3 px-2 border-b sm:border-0">
-    <%= link_to t('.administration'), administrations_path %>
-  </div>
-  <div class="sm:hover:bg-[#104358] py-3 px-2 border-b sm:border-0">
-    <%= link_to t('.add'), new_product_path %>
-  </div>
 <% end %>
-<div class="sm:hover:bg-[#104358] py-3 px-2 border-b sm:border-0">
-  <%= link_to t('.contact'), new_contact_path %>
+
+<% if Current.user&.admin? %>
+  <%= link_to categories_path, class: "sm:hover:bg-[#104358] py-3 px-2 border-b sm:border-0" do %>
+  <div class="flex items-center">
+    <%= image_tag('icons/tag.svg', :class => "sm:hidden object-scale-down h-6 w-6 pr-1")%>
+    <%= t('.categories') %>
+  </div>
+  <% end %>
+  <%= link_to administrations_path, class: "sm:hover:bg-[#104358] py-3 px-2 border-b sm:border-0" do %>
+  <div class="flex items-center">
+    <%= image_tag('icons/edit.svg', :class => "sm:hidden object-scale-down h-6 w-6 pr-1")%>
+    <%= t('.administration') %>
+  </div>
+  <% end %>
+  <%= link_to new_product_path, class: "sm:hover:bg-[#104358] py-3 px-2 border-b sm:border-0" do %>
+  <div class="flex items-center">
+    <%= image_tag('icons/plus.svg', :class => "sm:hidden object-scale-down h-6 w-6 pr-1")%>
+    <%= t('.add') %>
+  </div>
+  <% end %>
+<% end %>
+<%= link_to new_contact_path, class: "sm:hover:bg-[#104358] py-3 px-2 border-b sm:border-0" do %>
+<div class="flex items-center">
+  <%= image_tag('icons/message.svg', :class => "sm:hidden object-scale-down h-6 w-6 pr-1")%>
+  <%= t('.contact') %>
 </div>
-<div class="ml-auto sm:hover:bg-[#104358] py-3 px-2 sm:border-0">
-  <%= button_to t('.logout'), session_path('123'), method: :delete if Current.user%>
+<% end %>
+
+<%= button_to session_path('123'), method: :delete, class: "ml-auto sm:hover:bg-[#104358] py-3 px-2 border-b sm:border-0 w-full" do%>
+<div class="flex items-center">
+  <%= image_tag('icons/logout.svg', :class => "sm:hidden object-scale-down h-6 w-6 pr-1")%>
+  <%= t('.logout') %>
 </div>
+<% end if Current.user%>
