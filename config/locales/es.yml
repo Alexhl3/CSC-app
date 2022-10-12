@@ -60,6 +60,8 @@ es:
               blank: 'no puede estar en blanco'
               too_short: 'debe contener al menos 6 caracteres'
   products:
+    catalogue:
+      filters: 'Filtros'
     details:
       dimensions: 'Dimensiones'
       height: 'Altura'

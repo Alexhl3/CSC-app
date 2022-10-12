@@ -9,7 +9,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
     assert_response :success
     assert_select '.product', 15
-    assert_select '.category', 4
+    assert_select '.category', 8
   end
 
   test 'render detail product view' do

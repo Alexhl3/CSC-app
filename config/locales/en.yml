@@ -48,6 +48,8 @@ en:
               blank: "can't be blank"
               too_short: 'must contain at least 6 characters'
   products:
+    catalogue:
+      filters: 'Filters'
     details:
       dimensions: 'Dimensions'
       height: 'Height'
