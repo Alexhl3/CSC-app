@@ -1,15 +1,17 @@
-<%= turbo_frame_tag 'index' do %>
-  <div class="text-bgray flex font-montserrat" data-controller="filter">
-    <button class="items-center flex flex-row mr-3 sm:hidden font-semibold text-" data-action="click->filter#open">
-      <%= image_tag('icons/funnel.svg', class: "h-7 w-7")%>
-      <%= t('.filters')%>
-    </button>
-    <div class="sm:hidden absolute top-0 left-0 z-50 w-full h-full duration-300 -translate-x-full" data-filter-target="items">
-      <%= render "filters"%>
-    </div>
-    <div class="hidden sm:block">
-      <%= render "filters"%>
-    </div>
+<div data-controller="filter">
+  <button class="flex flex-row items-center mr-3 font-semibold sm:hidden text-" data-action="click->filter#open">
+    <%= image_tag('icons/funnel.svg', class: "h-7 w-7")%>
+    <%= t('.filters')%>
+  </button>
+  <div class="absolute top-0 left-0 z-50 w-full h-full duration-300 -translate-x-full sm:hidden" data-filter-target="items">
+    <%= render "filters"%>
+  </div>
+</div>
+<div class="flex text-bgray font-montserrat">
+  <div class="hidden sm:block">
+    <%= render "filters"%>
+  </div>
+  <%= turbo_frame_tag 'index' do %>
     <div class="flex flex-col">
       <div class="">
         <%= turbo_frame_tag :products do %>
