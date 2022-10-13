@@ -1,10 +1,10 @@
 <div id="carouselExampleControls" class="relative h-full carousel slide" data-bs-ride="carousel">
-  <div class="relative h-full overflow-hidden bg-white carousel-inner w-96">
-    <div class="relative float-left carousel-item active w-96">
+  <div class="relative w-full h-full overflow-hidden bg-white carousel-inner">
+    <div class="relative float-left w-full carousel-item active">
       <%= image_tag @product.photo, class: "object-scale-down w-full max-h-96 rounded-t-lg"%>
     </div>
     <% @product.images.each do |image| %>
-      <div class="relative float-left carousel-item w-96">
+      <div class="relative float-left w-full carousel-item">
         <%= image_tag(image, class: "object-scale-down w-full max-h-96 rounded-t-lg")%>
       </div>
     <% end %>
