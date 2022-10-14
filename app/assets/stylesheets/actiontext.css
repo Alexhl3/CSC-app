@@ -32,7 +32,7 @@
 
 .description_form .trix-content {
   overflow-y: auto;
-  resize: both;
+  resize: vertical;
   max-width: 500px;
   min-width: 100px;
   background-color: #f9f9f9;

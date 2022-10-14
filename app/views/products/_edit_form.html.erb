@@ -1,5 +1,8 @@
 <div class="flex justify-center font-montserrat">
-  <div class="flex space-x-4">
+  <div class="flex flex-col space-y-4 sm:space-x-4 sm:flex-row">
+    <div class="sm:hidden">
+      <%= render 'attachments' %>
+    </div>
     <div>
       <%= form_with model: @product do |form| %>
         <% @product.errors.full_messages.each do |error|%>
@@ -20,35 +23,35 @@
             <%= form.label :description, t('products.form.description') , class: "font-medium" %>
             <%= form.rich_text_area :description %>
           </div>
-          <div class="flex py-2 ">
+          <div class="flex flex-col py-2 sm:flex-row">
             <div>
               <div>
-                <%= form.label :category_id, t('products.form.category') , class: "font-medium" %>
+                <%= form.label :category_id, t('.category') , class: "font-medium" %>
               </div>
               <div>
                 <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name, {}, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slg focus:bg-white font-medium"%>
               </div>
             </div>
-            <div class="ml-auto">
+            <div class="sm:ml-auto">
               <div>
-                <%= form.label :price, t('products.form.price'), class: "font-medium" %>
+                <%= form.label :price, t('.price'), class: "font-medium w-full" %>
               </div>
               <div>
-                <%= form.number_field :price, required: true, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slg focus:bg-white font-medium",placeholder: t('products.form.placeholder_price') %>
+                <%= form.number_field :price, required: true, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slg focus:bg-white font-medium",placeholder: t('.placeholder_price') %>
               </div>
             </div>
           </div>
           <div>
-            <h1 class="font-medium"><%= t('products.form.dimensions')%></h1>
-            <div class="flex py-2 space-x-2">
+            <h1 class="font-medium"><%= t('.dimensions')%></h1>
+            <div class="flex flex-col py-2 sm:space-x-2 sm:flex-row">
               <div>
-                <%= form.number_field :height, step: :any, class: "w-32 block border border-grey-light p-3 rounded mb-4 bg-slg focus:bg-white font-medium", placeholder: t('products.form.placeholder_height') %>
+                <%= form.number_field :height, step: :any, class: "w-full sm:w-32 block border border-grey-light p-3 rounded mb-4 bg-slg focus:bg-white font-medium", placeholder: t('.placeholder_height') %>
               </div>
               <div>
-                <%= form.number_field :depth, step: :any, class: "w-32 block border border-grey-light p-3 rounded mb-4 bg-slg focus:bg-white font-medium", placeholder: t('products.form.placeholder_depth') %>
+                <%= form.number_field :depth, step: :any, class: "w-full sm:w-32 block border border-grey-light p-3 rounded mb-4 bg-slg focus:bg-white font-medium", placeholder: t('.placeholder_depth') %>
               </div>
               <div>
-                <%= form.number_field :width, step: :any, class: "w-32 block border border-grey-light p-3 rounded mb-4 bg-slg focus:bg-white font-medium", placeholder: t('products.form.placeholder_width') %>
+                <%= form.number_field :width, step: :any, class: "w-full sm:w-32 block border border-grey-light p-3 rounded mb-4 bg-slg focus:bg-white font-medium", placeholder: t('.placeholder_width') %>
               </div>
             </div>
           </div>
@@ -85,23 +88,8 @@
         <% end %>
       </div>
     </div>
-    <% unless @product.id.nil? %>
-      <div>
-        <div class="px-10 py-5 rounded-lg bg-slate-200">
-          <div class= "text-lg font-medium" font-light pb-1">
-            <%= t('.delete_attachement') %>
-          </div>
-          <div class="grid grid-cols-2 gap-2">
-            <% @product.images.each do |image| %>
-              <div data-controller="imagedelete" class="rounded-md animated bg-slate-200 800 h-max w-28">
-                <%= image_tag(image, class: "object-scale-down h-24 w-full bg-white")%>
-                <%= button_to t('.remove'), delete_image_attachment_product_path(image.id), method: :delete, data: { action: "imagedelete#dismiss"}, class: " rounded-b-lg bg-red-700 text-white hover:bg-red-600 w-full"%>
-              </div>
-            <% end %>
-          </div>
-        </div>
-      <% end %>
+    <div class="hidden sm:block">
+      <%= render 'attachments' %>
     </div>
   </div>
 </div>
-<div class="py-20"></div>
