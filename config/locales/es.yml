@@ -199,6 +199,9 @@ es:
       error: 'No se ha podido enviar tu mensaje. Inténtalo de nuevo más tarde'
     new:
       title: 'Contactanos'
+      location: 'Ubicacion'
+      dir: 'Nos encontraras en: ..... XXXX'
+      availability: 'Horario de atencion: XX:XX a XX:XX'
     form:
       name: 'Nombre *'
       email: 'Correo electronico *'

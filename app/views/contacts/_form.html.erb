@@ -1,6 +1,6 @@
 <div class="flex justify-center font-montserrat">
   <div class="flex space-x-4">
-    <div class="px-10 py-5 rounded-r-lg bg-slate-200">
+    <div class="px-10 py-5 rounded-r-lg bg-slate-200 w-80 sm:w-max">
       <%= form_for @contact do |form| %>
         <div>
           <h1 class="font-medium"><%= t('.name')%></h1>
@@ -12,7 +12,7 @@
         </div>
         <div>
           <h1 class="font-medium"><%= t('.message')%></h1>
-          <%= form.text_area  :message, required: true, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slg focus:bg-white font-medium w-96 h-44",placeholder: t('.placeholder_message') %>
+          <%= form.text_area  :message, required: true, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slg focus:bg-white font-medium w-full sm:w-96 h-44",placeholder: t('.placeholder_message') %>
         </div>
         <div class="flex justify-center py-2">
           <%= form.submit t('commond.submit'), class: "font-semibold bg-lb hover:bg-lbd p-2 rounded-md text-white" %>

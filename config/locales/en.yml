@@ -187,10 +187,16 @@ en:
       error: 'Your message could not be sent. Please try again later'
     new:
       title: 'Contact us'
+      location: 'Location'
+      dir: 'We are located in: ..... XXXX'
+      availability: 'Attention hours: XX:XX a XX:XX'
+    form:
       name: 'Name *'
       email: 'Email *'
       message: 'Message *'
-      placeholder_send: 'Add your message'
+      placeholder_name: 'Enter your name'
+      placeholder_email: 'email'
+      placeholder_message: 'Write your message'
   shared:
     links:
       add: 'Add product'
