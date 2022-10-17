@@ -3,7 +3,7 @@
     <%= image_tag product.photo, class: "object-scale-down w-full h-10 rounded-t-lg" if product.photo.attached? %>
   </div>
   <div class="flex items-center hover:text-lbd">
-    <div class="flex justify-center w-10">
+    <div class="flex justify-center w-10 sm:hidden">
       <%= image_tag product.photo, class: "object-scale-down max-w-fit h-10 rounded-t-lg" if product.photo.attached? %>
     </div>
     <%= link_to product_path(product.id) do %>
@@ -11,9 +11,9 @@
     <% end %>
     <div class="relative ml-auto sm:hidden" data-controller="dropMenu">
       <button data-action="click->dropMenu#open">
-        <%= image_tag('icons/ellipsis-vertical.svg', class: "w-7 h-7 ")%>
+        <%= image_tag('icons/ellipsis-vertical.svg', class: "w-7 h-7")%>
       </button>
-      <div class="absolute right-0 z-50 hidden text-white shadow-lg desactivated buttom-0" data-dropMenu-target="items">
+      <div class="absolute right-0 z-40 hidden text-white shadow-lg buttom-0" data-dropMenu-target="items">
         <%= link_to edit_product_path(product) do %>
           <h1 class="px-2 py-1 rounded-t bg-lbd"><%= t('.edit')%></h1>
         <% end %>
