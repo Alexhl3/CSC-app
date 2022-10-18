@@ -1,7 +1,7 @@
-<div id="<%= dom_id category %>" class="grid grid-cols-1 p-1 font-sans font-medium bg-white border-t-4 sm:grid-cols-3 gap-x-1">
+<div id="<%= dom_id category %>" class="grid grid-cols-1 p-1 font-sans font-medium bg-white border-t-4 lg:grid-cols-3 gap-x-1">
   <div class="flex flex-row items-center">
     <%= category.name %>
-    <div class="relative ml-auto sm:hidden" data-controller="dropMenu">
+    <div class="relative ml-auto lg:hidden" data-controller="dropMenu">
       <button data-action="click->dropMenu#open">
         <%= image_tag('icons/ellipsis-vertical.svg', class: "w-7 h-7 ")%>
       </button>
@@ -15,12 +15,12 @@
       </div>
     </div>
   </div>
-  <div class="justify-end hidden sm:flex">
+  <div class="justify-end hidden lg:flex">
     <div class="px-1 font-semibold text-white rounded-md bg-lb hover:bg-lbd">
       <%= link_to t('.edit'), edit_category_path(category) %>
     </div>
   </div>
-  <div class="justify-end hidden sm:flex">
+  <div class="justify-end hidden lg:flex">
     <div class="px-1 text-white bg-red-600 rounded-md hover:bg-red-700">
       <%= link_to t('.destroy'), category_path(category), data: { turbo_method: :delete } %>
     </div>

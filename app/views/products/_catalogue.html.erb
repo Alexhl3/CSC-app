@@ -1,14 +1,14 @@
 <div data-controller="filter">
-  <button class="flex flex-row items-center p-1.5 rounded-md m-4 font-semibold text-white bg-dgreen sm:hidden text-" data-action="click->filter#open">
+  <button class="flex flex-row items-center p-1.5 rounded-md m-4 font-semibold text-white bg-dgreen lg:hidden text-" data-action="click->filter#open">
     <%= image_tag('icons/funnel.svg', class: "h-7 w-7")%>
     <%= t('.filters')%>
   </button>
-  <div class="fixed top-0 left-0 z-50 w-full h-full duration-300 -translate-x-full sm:hidden" data-filter-target="items">
+  <div class="fixed top-0 left-0 z-50 w-full h-full duration-300 -translate-x-full lg:hidden" data-filter-target="items">
     <%= render "filters"%>
   </div>
 </div>
 <div class="flex text-bgray font-montserrat">
-  <div class="hidden sm:block">
+  <div class="hidden lg:block">
     <%= render "filters"%>
   </div>
   <%= turbo_frame_tag 'index' do %>
@@ -16,7 +16,7 @@
       <div class="">
         <%= turbo_frame_tag :products do %>
           <%= turbo_frame_tag "products-#{@pagy.page}", class: 'products' do %>
-            <div data-aos="fade-up" data-aos-duration="800" class="grid grid-cols-1 gap-4 px-4 pb-2 sm:grid-cols-3 text-dgray">
+            <div data-aos="fade-up" data-aos-duration="800" class="grid grid-cols-1 gap-4 px-4 pb-2 lg:grid-cols-3 text-dgray">
               <%= render partial: 'product', collection: @products %>
               <% if @products.blank? %>
                 <div class=""></div>

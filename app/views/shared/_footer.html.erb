@@ -1,35 +1,35 @@
-<div class="w-full pt-5 pb-3 mt-auto sm:flex bg-dgray font-montserrat">
-  <div class="hidden w-1/3 px-8 font-medium text-center sm:block text-slg">
+<div class="w-full pt-5 pb-3 mt-auto lg:flex bg-dgray font-montserrat">
+  <div class="hidden w-1/3 px-8 font-medium text-center lg:block text-slg">
     <h3 class="text-lg font-semibold text-slg"><%= t('.why_contact_us')%></h3>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi doloremque autem voluptatum corrupti a sint perferendis beatae fugit, quasi reiciendis officia numquam inventore? Rerum, ipsum cumque? Vero ex dolorum ab.</p>
   </div>
-  <div class="hidden w-1/3 px-8 font-medium text-center sm:block text-slg">
+  <div class="hidden w-1/3 px-8 font-medium text-center lg:block text-slg">
     <h3 class="text-lg font-semibold text-slg"><%= t('.payment_options')%></h3>
     <%= image_tag('footer/redbank.jpg', :class => "p-4 h-36")%>
     <h3 class="hover:animate-spin"><%= t('.copyright')%></h3>
   </div>
-  <div class="flex flex-col w-full px-8 font-medium sm:text-right text-slg sm:w-1/3">
-    <h3 class="text-lg font-semibold text-center sm:text-right text-slg"><%= t('.contact_us')%></h3>
+  <div class="flex flex-col w-full px-8 font-medium lg:text-right text-slg lg:w-1/3">
+    <h3 class="text-lg font-semibold text-center lg:text-right text-slg"><%= t('.contact_us')%></h3>
     <%= link_to 'https://www.google.cl/maps/@-33.3905646,-70.5465761,15z' do %>
-      <div class="flex justify-center w-full sm:justify-end">
+      <div class="flex justify-center w-full lg:justify-end">
           <%= image_tag('icons/pin.svg', :class => "object-scale-down h-6 w-6 pr-1")%>
           <%= t('.address')%>
       </div>
     <% end %>
-    <div class="flex justify-center w-full sm:justify-end">
+    <div class="flex justify-center w-full lg:justify-end">
       <%= image_tag('icons/phone.svg', :class => "object-scale-down h-6 w-6 pr-1 ")%>
       <h3><%= t('.phone_number')%></h3>
     </div>
     <%= link_to new_contact_path do %>
-      <div class="flex justify-center w-full sm:justify-end">
+      <div class="flex justify-center w-full lg:justify-end">
         <%= image_tag('icons/at_sign.svg', :class => "object-scale-down h-6 w-6 pr-1")%>
         <h3><%= t('.email')%></h3>
       </div>
     <% end %>
-    <div class="flex justify-center w-full sm:justify-end">
+    <div class="flex justify-center w-full lg:justify-end">
       <%= image_tag('icons/chat.svg', :class => "object-scale-down h-6 w-6 pr-1")%>
       <h3><%= t('.whatsapp_number')%></h3>
     </div>
-    <h3 class="py-1 text-center sm:hidden hover:animate-spin"><%= t('.copyright')%></h3>
+    <h3 class="py-1 text-center lg:hidden hover:animate-spin"><%= t('.copyright')%></h3>
   </div>
 </div>

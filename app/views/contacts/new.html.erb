@@ -1,10 +1,10 @@
 <h1 class="py-4 text-2xl antialiased font-medium text-center text-bgray"><%= t('.title') %></h1>
-<div class="flex-row hidden sm:flex drop-shadow">
+<div class="flex-row hidden lg:flex drop-shadow">
   <%= render 'map' %>
   <%= render 'form' %>
 </div>
 
-<div class="flex flex-col font-medium sm:hidden w-80 text-bgray">
+<div class="flex flex-col font-medium lg:hidden w-80 text-bgray">
   <%= render 'form' %>
   <h1 class="pt-8 pb-4 text-2xl antialiased text-center"><%= t('.location') %></h1>
   <%= render 'map' %>
