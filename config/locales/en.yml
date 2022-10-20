@@ -49,7 +49,7 @@ en:
               too_short: 'must contain at least 6 characters'
   products:
     catalogue:
-      filters: 'Filters'
+      filters: 'Order by'
     details:
       dimensions: 'Dimensions'
       height: 'Height'
@@ -72,6 +72,7 @@ en:
       expensive: 'Expensive'
       cheapest: 'Cheapest'
       any: 'any status'
+      any_category: 'All categories'
       all: 'All'
       category: 'Category'
       status: 'Machine status'

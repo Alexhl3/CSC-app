@@ -24,7 +24,7 @@
       <h1 class="pt-3 mb-2 font-semibold border-b border-slate-400 text-dgray "><%= t('.status')%></h1>
       <%= form.select :status, options_for_select(Product::PRODUCT_STATUS.keys.map { |status| [t(".#{status}"), status] }, params[:status]), {include_blank: t('.any')}, { onChange: 'this.form.requestSubmit()', class: "block border border-grey-light w-full p-3 rounded mb-4 bg-white font-sans font-medium" } %>
       <h1 class="mb-2 font-semibold border-b border-slate-400 text-dgray"><%= t('.category')%></h1>
-      <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name, {include_blank: t('.any')}, {onChange: 'this.form.requestSubmit()', class: "block border border-grey-light w-full p-3 rounded mb-4 bg-white font-sans font-medium category"}%>
+      <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name, {include_blank: t('.any_category')}, {onChange: 'this.form.requestSubmit()', class: "block border border-grey-light w-full p-3 rounded mb-4 bg-white font-sans font-medium category"}%>
       <div class="block w-full mt-2 font-sans text-center border rounded border-grey-light bg-slate-300 hover:bg-red-500">
         <%= link_to t('.all'), products_path %>
       </div>
