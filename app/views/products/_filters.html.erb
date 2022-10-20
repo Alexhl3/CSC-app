@@ -1,8 +1,8 @@
 <div class="h-full p-1 bg-white rounded-lg drop-shadow">
   <div class="flex flex-col p-2 py-3 bg-white rounded-lg">
     <button class="w-10 h-10 ml-auto mr-3 lg:hidden" data-action="click->filter#close">
-        <%= image_tag('icons/close_mini.svg')%>
-      </button>
+      <%= image_tag('icons/close_mini.svg')%>
+    </button>
     <%= form_with url: products_path,data: {turbo_frame: "index"}, method: :get do |form| %>
       <div>
         <h1 class="mb-2 font-semibold border-b border-slate-400 text-dgray"><%= t('.name')%></h1>
@@ -24,7 +24,12 @@
       <h1 class="pt-3 mb-2 font-semibold border-b border-slate-400 text-dgray "><%= t('.status')%></h1>
       <%= form.select :status, options_for_select(Product::PRODUCT_STATUS.keys.map { |status| [t(".#{status}"), status] }, params[:status]), {include_blank: t('.any')}, { onChange: 'this.form.requestSubmit()', class: "block border border-grey-light w-full p-3 rounded mb-4 bg-white font-sans font-medium" } %>
       <h1 class="mb-2 font-semibold border-b border-slate-400 text-dgray"><%= t('.category')%></h1>
-      <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name, {include_blank: t('.any_category')}, {onChange: 'this.form.requestSubmit()', class: "block border border-grey-light w-full p-3 rounded mb-4 bg-white font-sans font-medium category"}%>
+      <%= form.collection_check_boxes(:category_id, Category.all.order(name: :asc), :id, :name,{include_hidden: false} , { onChange: 'this.form.requestSubmit()', class: "category"}) do |b| %>
+        <div class="font-medium text-dgray">
+          <%= b.check_box %>
+          <%= b.object.name %>
+        </div>
+      <% end %>
       <div class="block w-full mt-2 font-sans text-center border rounded border-grey-light bg-slate-300 hover:bg-red-500">
         <%= link_to t('.all'), products_path %>
       </div>
