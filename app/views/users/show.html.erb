@@ -1,9 +1,8 @@
 <div>
   <div class ="flex justify-center">
     <div>
-      <h2 class="text-center pb-10 text-stone-800 font-sans text-2xl font-normal py-4 antialiased"><%=t('.products_of')%> <%= @user.username %></h2>
+      <h2 class="py-4 pb-10 font-sans text-2xl antialiased font-normal text-center text-stone-800"><%=t('.products_of')%> <%= @user.username %></h2>
       <%= turbo_frame_tag :products, src: products_path(user_id: @user.id) %>
     </div>
   </div>
 </div>
-

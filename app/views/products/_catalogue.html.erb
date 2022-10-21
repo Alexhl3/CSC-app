@@ -3,7 +3,7 @@
     <%= image_tag('icons/funnel.svg', class: "h-7 w-7")%>
     <%= t('.filters')%>
   </button>
-  <div class="fixed top-0 left-0 z-50 w-full h-full duration-300 -translate-x-full lg:hidden" data-filter-target="items">
+  <div class="fixed top-0 left-0 z-50 w-full h-full overflow-y-scroll duration-300 -translate-x-full lg:hidden" data-filter-target="items">
     <%= render "filters"%>
   </div>
 </div>
