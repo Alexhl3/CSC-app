@@ -73,6 +73,9 @@ es:
     edit_form:
       remove: 'Eliminar'
       delete_attachement: 'Eliminar imagenes adjuntas'
+      placeholder_height: 'Altura'
+      placeholder_depth: 'Profun'
+      placeholder_width: 'Ancho'
     filters:
       name: 'Nombre'
       text: 'Buscar'

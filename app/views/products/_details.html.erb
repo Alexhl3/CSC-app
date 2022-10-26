@@ -17,12 +17,14 @@
           <h1 class="font-medium">Especificaciones</h1>
           <%= @product.description %>
         </div>
-        <div class="py-2">
-          <h1 class="font-medium"><%= t('.dimensions') %></h1>
-          <li><%= "#{t('.height')}: #{@product.height.nil? ? 'n/a' : sprintf('%g', @product.height)+'cm'}"%></li>
-          <li><%= "#{t('.depth')}: #{@product.depth.nil? ? 'n/a' : sprintf('%g', @product.depth)+'cm'}"%></li>
-          <li><%= "#{t('.width')}: #{@product.width.nil? ? 'n/a' : sprintf('%g', @product.width)+'cm'}"%></li>
-        </div>
+        <% if !@product.height.nil? && !@product.depth.nil? && !@product.width.nil?%>
+          <div class="py-2">
+            <h1 class="font-medium"><%= t('.dimensions') %></h1>
+            <li><%= "#{t('.height')}: #{sprintf('%g', @product.height)+'cm'}"%></li>
+            <li><%= "#{t('.depth')}: #{sprintf('%g', @product.depth)+'cm'}"%></li>
+            <li><%= "#{t('.width')}: #{sprintf('%g', @product.width)+'cm'}"%></li>
+          </div>
+        <% end %>
         <div class="flex flex-row items-center mt-auto text-lg font-medium">
           <span class='justify-start text-2xl text-red-700 lg:hidden price'>$<%= @product.price.to_s.reverse.scan(/.{1,3}/).join('.').reverse %></span>
           <%= link_to t('.contact'), new_contact_path, class: "ml-auto justify-end font-semibold bg-lb hover:bg-lbd p-2 rounded-md text-white" %>

@@ -61,6 +61,9 @@ en:
     edit_form:
       remove: 'Delete'
       delete_attachement: 'delete attached image'
+      placeholder_height: 'height'
+      placeholder_depth: 'depth'
+      placeholder_width: 'width'
     filters:
       name: 'Name'
       text: 'Search'
