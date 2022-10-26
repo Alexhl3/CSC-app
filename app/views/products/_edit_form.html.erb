@@ -23,8 +23,8 @@
             <%= form.label :description, t('products.form.description') , class: "font-medium" %>
             <%= form.rich_text_area :description %>
           </div>
-          <div class="flex flex-col py-2 lg:flex-row">
-            <div>
+          <div class="flex flex-col py-2 lg:flex-row lg:space-x-2">
+            <div class="lg:w-3/5">
               <div>
                 <%= form.label :category_id, t('.category') , class: "font-medium" %>
               </div>
@@ -32,12 +32,12 @@
                 <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name, {}, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slg focus:bg-white font-medium"%>
               </div>
             </div>
-            <div class="lg:ml-auto">
+            <div class="lg:w-full">
               <div>
                 <%= form.label :price, t('.price'), class: "font-medium w-full" %>
               </div>
               <div>
-                <%= form.number_field :price, required: true, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slg focus:bg-white font-medium",placeholder: t('.placeholder_price') %>
+                <%= form.number_field :price, min: 1,  max: 2147483647, required: true, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slg focus:bg-white font-medium",placeholder: t('.placeholder_price') %>
               </div>
             </div>
           </div>
@@ -45,13 +45,13 @@
             <h1 class="font-medium"><%= t('.dimensions')%></h1>
             <div class="flex flex-col py-2 lg:space-x-2 lg:flex-row">
               <div>
-                <%= form.number_field :height, step: :any, class: "w-full lg:w-32 block border border-grey-light p-3 rounded mb-4 bg-slg focus:bg-white font-medium", placeholder: t('.placeholder_height') %>
+                <%= form.number_field :height, min: 1,  max: 2147483647, step: :any, class: "w-full lg:w-32 block border border-grey-light p-3 rounded mb-4 bg-slg focus:bg-white font-medium", placeholder: t('.placeholder_height') %>
               </div>
               <div>
-                <%= form.number_field :depth, step: :any, class: "w-full lg:w-32 block border border-grey-light p-3 rounded mb-4 bg-slg focus:bg-white font-medium", placeholder: t('.placeholder_depth') %>
+                <%= form.number_field :depth, min: 1,  max: 2147483647, step: :any, class: "w-full lg:w-32 block border border-grey-light p-3 rounded mb-4 bg-slg focus:bg-white font-medium", placeholder: t('.placeholder_depth') %>
               </div>
               <div>
-                <%= form.number_field :width, step: :any, class: "w-full lg:w-32 block border border-grey-light p-3 rounded mb-4 bg-slg focus:bg-white font-medium", placeholder: t('.placeholder_width') %>
+                <%= form.number_field :width, min: 1,  max: 2147483647, step: :any, class: "w-full lg:w-32 block border border-grey-light p-3 rounded mb-4 bg-slg focus:bg-white font-medium", placeholder: t('.placeholder_width') %>
               </div>
             </div>
           </div>

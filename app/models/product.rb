@@ -27,10 +27,11 @@ class Product < ApplicationRecord
 
   validates :title, presence: true
   validates :description, presence: true
-  validates :price, presence: true
+  validates :price, presence: true, inclusion: 1..2147483647
   validates :photo, presence: true
   validates :images, presence: true
   validates_length_of :images, maximum: 4
+
 
   belongs_to :category
   belongs_to :user, default: -> { Current.user }
