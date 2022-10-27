@@ -1,20 +1,20 @@
 <div class="flex flex-col font-sans lg:pt-3 bg-lb" data-controller="menu">
-  <div class="flex items-center flex-row justify-between py-1.5 px-1.5">
+  <div class="flex items-center flex-row-reverse lg:flex-row justify-between py-1.5 px-2 w-full">
     <%= link_to homes_path do %>
-      <div class="flex items-center py-2 text-4xl font-semibold text-white text-bold font-montserrat">
+      <div class="flex items-center px-1 py-2 text-4xl font-semibold text-white lg:px-0 text-bold font-montserrat">
         <%= image_tag('shared/logo.png', :class => "object-scale-down h-20 w-max rounded-lg")%>
         <%# <h1 class="px-3">Comercial Sistemas Comerciales</h1> %>
       </div>
     <% end %>
-    <button class="mr-3 h-11 w-11 lg:hidden" data-action="click->menu#open">
-      <%= image_tag('icons/menu.svg')%>
+    <button class="lg:hidden" data-action="click->menu#open">
+      <%= image_tag('icons/menu.svg', :class => "object-cover h-11 w-11")%>
     </button>
   </div>
   <div class="hidden lg:flex flex-row text-xl bg-dgreen font-montserrat font-medium px-1.5 text-white space-x-5">
     <%= render 'shared/links' %>
   </div>
   <div class="absolute z-50 flex flex-col w-full h-full font-medium duration-300 -translate-y-full bg-white shadow-lg lg:hidden easy-in-out fontfont-montserrat text-bgray" data-menu-target="items">
-    <div class="flex justify-end px-2 py-3 bg-lb">
+    <div class="flex justify-start px-2 py-3 bg-lb">
       <button data-action="click->menu#close">
         <%= image_tag('icons/close.svg', :class => "h-10 w-10")%>
       </button>
