@@ -33,7 +33,7 @@ class ProductsController < ApplicationController
     authorized?(product)
 
     if product.update(product_params)
-      redirect_to administrations_path, notice: t('.updated')
+      redirect_to product_path(product.id), notice: t('.updated')
     else
       render :edit, status: :unprocessable_entity
     end

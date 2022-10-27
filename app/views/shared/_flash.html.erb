@@ -1,5 +1,5 @@
 <% if alert %>
-  <div class="flex justify-center">
+  <div class="z-40 flex justify-center">
     <div data-controller="flash" class="fixed flex items-center p-1 font-bold text-white bg-red-700 rounded-md animated fadeInDown font-montserrat top-2 drop-shadow-lg">
       <%= alert %>
       <button type="button" data-action="flash#dismiss">
@@ -11,7 +11,7 @@
   </div>
 <% end %>
 <% if notice %>
-  <div class="flex justify-center">
+  <div class="z-40 flex justify-center">
     <div data-controller="flash" class="fixed flex items-center p-1 font-bold text-white bg-green-700 rounded-md animated fadeInDown font-montserrat top-2 drop-shadow-lg">
       <%= notice %>
       <button type="button" data-action="flash#dismiss">
