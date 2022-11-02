@@ -71,6 +71,19 @@
             </div>
           </div>
           <div>
+            <div>
+              <%= form.label :discount, t('products.form.discount'), class: "font-medium" %>
+            </div>
+            <div class="flex flex-row items-center space-x-4 px-3">
+              <div class="flex items-center bg-slate-300">
+                <%= form.check_box :discount %>
+              </div>
+              <div>
+                <%= form.number_field :discount_percent, class: "block border border-grey-light w-full rounded p-3 bg-slg focus:bg-white font-medium",placeholder: t('products.form.placeholder_discount') %>
+              </div>
+            </div>
+          </div>
+          <div>
             <%= form.label :photo, t('products.form.photo'), class: "font-medium" %>
           </div>
           <div>
