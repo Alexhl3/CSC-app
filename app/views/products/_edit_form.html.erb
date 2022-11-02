@@ -79,7 +79,7 @@
                 <%= form.check_box :discount %>
               </div>
               <div>
-                <%= form.number_field :discount_percent, class: "block border border-grey-light w-full rounded p-3 bg-slg focus:bg-white font-medium",placeholder: t('products.form.placeholder_discount') %>
+                <%= form.number_field :discount_percent, min: 0, class: "block border border-grey-light w-full rounded p-3 bg-slg focus:bg-white font-medium",placeholder: t('products.form.placeholder_discount') %>
               </div>
             </div>
           </div>
