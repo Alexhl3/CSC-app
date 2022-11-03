@@ -3,7 +3,7 @@
     <div class="bg-white rounded-md min-h-80">
       <%= image_tag product.photo, class: "object-scale-down w-full h-80 rounded-t-lg" if product.photo.attached? %>
       <% if product.discount %>
-        <div class="bg-red-400 w-1/5 h-9 flex items-center justify-center absolute top-4 right-0 rounded-l-lg">
+        <div class="bg-red-500 w-1/5 h-9 flex items-center justify-center absolute top-4 right-0 rounded-l-lg">
           <h1 class="text-white text-center font-bold"><%= "-#{product.discount_percent}%" %></h1>
         </div>
       <% end %>

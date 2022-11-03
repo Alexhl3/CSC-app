@@ -59,12 +59,12 @@
             <div>
               <%= form.label :discount, t('products.form.discount'), class: "font-medium pb-2" %>
             </div>
-            <div class="flex flex-row items-center space-x-4 px-3">
+            <div class="flex flex-row items-center space-x-4">
               <div class="flex items-center bg-slate-300">
                 <%= form.check_box :discount %>
               </div>
-              <div>
-                <%= form.number_field :discount_percent, min: 0, class: "block border border-grey-light w-full rounded p-3 bg-slg focus:bg-white font-medium",placeholder: t('products.form.placeholder_discount') %>
+              <div class="w-full">
+                <%= form.number_field :discount_percent, min: 0, max:100, class: "block border border-grey-light w-full rounded p-3 bg-slg focus:bg-white font-medium",placeholder: t('products.form.placeholder_discount') %>
               </div>
             </div>
           </div>
