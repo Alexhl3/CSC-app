@@ -29,6 +29,9 @@
   html:not(.no-js) [data-aos^=flip][data-aos^=flip] {
     opacity: 1 !important;
   }
+  html:not(.no-js) [data-aos^=zoom][data-aos^=zoom] {
+    opacity: 1 !important;
+  }
   html:not(.no-js) [data-aos=fade-up] {
     transform: none !important;
   }
@@ -42,6 +45,9 @@
     transform: none !important;
   }
   html:not(.no-js) [data-aos=flip-up] {
+    transform: none !important;
+  }
+  html:not(.no-js) [data-aos=zoom-out] {
     transform: none !important;
   }
 }
