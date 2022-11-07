@@ -66,6 +66,8 @@ en:
       placeholder_width: 'width'
     filters:
       name: 'Name'
+      discount: 'Discount'
+      only_discount: 'Show only with discunt'
       text: 'Search'
       price: 'Price'
       min_price: 'Min price'

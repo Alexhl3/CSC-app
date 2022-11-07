@@ -16,6 +16,7 @@ es:
         height: 'Altura'
         depth: 'Profundidad'
         width: 'Ancho'
+        discount: Descuento
       category:
         name: 'Nombre'
       user:
@@ -78,6 +79,8 @@ es:
       placeholder_width: 'Ancho'
     filters:
       name: 'Nombre'
+      discount: 'Descuento'
+      only_discount: 'Mostrar solo con descuento'
       text: 'Buscar'
       price: 'Precio'
       min_price: 'Precio min'

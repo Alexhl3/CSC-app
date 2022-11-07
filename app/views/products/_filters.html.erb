@@ -17,6 +17,11 @@
           <%= form.number_field :max_price, min: 1,  max: 2147483647, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-white font-sans font-medium", placeholder: t('.max_price'), onChange: 'this.form.requestSubmit()', value: params[:max_price] %>
         </div>
       </div>
+      <div class="pb-3">
+        <h1 class="mb-2 font-semibold border-b border-slate-400 text-dgray"><%= t('.discount')%></h1>
+        <%= form.check_box :discount, {include_hidden: false, onChange: 'this.form.requestSubmit()'} %>
+        <%= form.label :discount, t('.only_discount'), class: "font-medium text-dgray" %>
+      </div>
       <div>
         <h1 class="mb-2 font-semibold border-b border-slate-400 text-dgray"><%= t('.filter')%></h1>
         <%= form.select :order_by, options_for_select(Product::ORDER_BY.keys.map { |order| [t(".#{order}"), order] }, params[:order_by]), {}, { onChange: 'this.form.requestSubmit()', class: "block border border-grey-light w-full p-3 rounded mb-4 bg-white font-sans font-medium" } %>
