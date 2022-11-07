@@ -24,6 +24,8 @@ machine3:
   depth: 8
   width: 8.2
   height: 6
+  discount: true
+  discount_percent: 75
 
 machine4:
   title: Maquina 4
@@ -96,6 +98,8 @@ machine11:
   depth: 1
   width: 1
   height: 7.3
+  discount: true
+  discount_percent: 50
 
 machine12:
   title: Maquina 12
@@ -141,6 +145,8 @@ machine16:
   depth: 4.1
   width: 7
   height: 8.1
+  discount: true
+  discount_percent: 50
 
 machine17:
   title: Maquina 17
@@ -186,6 +192,8 @@ machine21:
   depth: 6
   width: 6
   height: 7.2
+  discount: true
+  discount_percent: 75
 
 machine22:
   title: Maquina 22
@@ -231,6 +239,8 @@ machine26:
   depth: 8.1
   width: 32
   height: 44
+  discount: true
+  discount_percent: 50
 
 machine27:
   title: Maquina 27
@@ -240,3 +250,5 @@ machine27:
   depth: 2.2
   width: 3.2
   height: 4
+  discount: true
+  discount_percent: 25

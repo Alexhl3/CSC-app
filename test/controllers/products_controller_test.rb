@@ -20,6 +20,15 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_select '.price', '$200'
   end
 
+  test 'render detail discunt product view' do
+    get product_path(products(:machine3))
+
+    assert_response :success
+    assert_select '.title', 'Maquina 3'
+    assert_select '.discount_percent', '-75%'
+    assert_select '.price', '$18'
+  end
+
   test 'render new product from' do
     get new_product_path
 
@@ -115,6 +124,13 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
     assert_response :success
     assert_select '.product', 12
+  end
+
+  test 'filter products by discount' do
+    get products_path(discount: true)
+
+    assert_response :success
+    assert_select '.product', 6
   end
 
   test 'filter products by query_text' do
