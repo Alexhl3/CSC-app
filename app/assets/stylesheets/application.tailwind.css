@@ -6,7 +6,7 @@
 
 @layer components {
   .btn-primary {
-    @apply py-2 px-4 bg-blue-200;
+    @apply px-4 py-2 bg-blue-200;
   }
 }
 
@@ -15,3 +15,51 @@
 
 ul { list-style-type: disc !important; }
 ol { list-style-type: decimal !important; }
+
+
+.pagy-nav,
+.pagy-nav-js {
+  @apply flex space-x-2;
+}
+
+.pagy-nav .page a,
+.pagy-nav .page.active,
+.pagy-nav .page.prev.disabled,
+.pagy-nav .page.next.disabled,
+.pagy-nav-js .page a,
+.pagy-nav-js .page.active,
+.pagy-nav-js .page.prev.disabled,
+.pagy-nav-js .page.next.disabled {
+  @apply block px-3 py-1 text-sm font-semibold text-gray-500 bg-gray-200 rounded-lg shadow-md hover:bg-gray-300 active:text-white active:bg-gray-400;
+  }
+
+.pagy-nav .page.prev.disabled,
+.pagy-nav .page.next.disabled,
+.pagy-nav-js .page.prev.disabled,
+.pagy-nav-js .page.next.disabled {
+  @apply text-gray-400 cursor-default hover:text-gray-400 hover:bg-gray-200 active:text-gray-400 active:bg-gray-200;
+}
+
+.pagy-nav .page.active,
+.pagy-nav-js .page.active {
+  @apply text-white bg-gray-400 cursor-default hover:text-white hover:bg-gray-400 active:text-white active:bg-gray-400;
+}
+
+
+.pagy-combo-nav-js {
+  @apply flex px-3 py-1 text-sm font-semibold text-gray-500 bg-gray-200 rounded-full shadow-md max-w-max;
+}
+
+.pagy-combo-nav-js .pagy-combo-input {
+  @apply bg-white px-2 rounded-sm
+}
+
+.pagy-combo-nav-js .page.prev,
+.pagy-combo-nav-js .page.next {
+    @apply hover:text-gray-800 active:text-gray-800;
+}
+
+.pagy-combo-nav-js .page.prev.disabled,
+.pagy-combo-nav-js .page.next.disabled {
+  @apply text-gray-400 cursor-default;
+}
