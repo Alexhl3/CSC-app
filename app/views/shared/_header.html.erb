@@ -6,7 +6,7 @@
         <%# <h1 class="px-3">Comercial Sistemas Comerciales</h1> %>
       </div>
     <% end %>
-    <div class="absolute flex items-center justify-center w-full space-x-12 text-2xl font-bold text-white font-montserrat">
+    <div class="absolute items-center justify-center hidden w-full space-x-12 text-2xl font-bold text-white lg:flex font-montserrat">
       <%= link_to products_path, class: ["hover:text-slate-200", ("text-slate-200" if request.path == products_path)] do %>
         <%= t('.products') %>
       <% end %>
@@ -14,7 +14,7 @@
         <%= t('.contact') %>
       <% end %>
     </div>
-    <div class="z-40 px-2 ml-auto">
+    <div class="z-40 hidden px-2 ml-auto lg:block">
       <%= form_with url: products_path, method: :get do |form| %>
         <div>
           <%= form.text_field :query_text, class: "block border border-grey-light w-52 p-3 rounded bg-white font-sans font-medium focus:border-dgreen focus:border-2", placeholder: t('.search'), onChange: 'this.form.requestSubmit()', value: params[:query_text] %>
