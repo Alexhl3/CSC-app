@@ -1,18 +1,35 @@
-<div class="flex flex-col font-sans lg:pt-3 bg-lb" data-controller="menu">
-  <div class="flex items-center flex-row-reverse lg:flex-row justify-between py-1.5 px-2 w-full">
-    <%= link_to homes_path do %>
-      <div class="flex items-center px-1 py-2 text-4xl font-semibold text-white lg:px-0 text-bold font-montserrat">
-        <%= image_tag('shared/logo.png', :class => "object-scale-down h-20 w-max rounded-lg")%>
+<div class="flex flex-col font-sans bg-lb" data-controller="menu">
+  <div class="flex items-center flex-row-reverse lg:flex-row justify-between lg:justify-start py-1.5 w-full">
+    <%= link_to homes_path, class: "z-40" do %>
+      <div class="flex items-center py-2 text-4xl font-semibold text-white lg:px-0 text-bold font-montserrat">
+        <%= image_tag('shared/logo.png', :class => "object-scale-down px-2 h-16 w-max rounded-lg")%>
         <%# <h1 class="px-3">Comercial Sistemas Comerciales</h1> %>
       </div>
     <% end %>
+    <div class="absolute flex items-center justify-center w-full space-x-12 text-2xl font-bold text-white font-montserrat">
+      <%= link_to products_path, class: ["hover:text-slate-200", ("text-slate-200" if request.path == products_path)] do %>
+        <%= t('.products') %>
+      <% end %>
+      <%= link_to new_contact_path, class: ["hover:text-slate-200", ("text-slate-200" if request.path == new_contact_path)] do %>
+        <%= t('.contact') %>
+      <% end %>
+    </div>
+    <div class="z-40 px-2 ml-auto">
+      <%= form_with url: products_path, method: :get do |form| %>
+        <div>
+          <%= form.text_field :query_text, class: "block border border-grey-light w-52 p-3 rounded bg-white font-sans font-medium focus:border-dgreen focus:border-2", placeholder: t('.search'), onChange: 'this.form.requestSubmit()', value: params[:query_text] %>
+        </div>
+      <% end %>
+    </div>
     <button class="lg:hidden" data-action="click->menu#open">
       <%= image_tag('icons/menu.svg', :class => "object-cover h-11 w-11")%>
     </button>
   </div>
-  <div class="hidden lg:flex flex-row text-xl bg-dgreen font-montserrat font-medium px-1.5 text-white space-x-5">
-    <%= render 'shared/links' %>
-  </div>
+  <% if Current.user&.admin? %>
+    <div class="hidden lg:flex flex-row text-xl bg-dgreen font-montserrat font-medium px-1.5 text-white space-x-5">
+      <%= render 'shared/links' %>
+    </div>
+  <% end %>
   <div class="absolute z-50 flex flex-col w-full h-full font-medium duration-300 -translate-y-full bg-white shadow-lg lg:hidden easy-in-out fontfont-montserrat text-bgray" data-menu-target="items">
     <div class="flex justify-start px-2 py-3 bg-lb">
       <button data-action="click->menu#close">

@@ -206,6 +206,10 @@ en:
       placeholder_email: 'email'
       placeholder_message: 'Write your message'
   shared:
+    header:
+      search: 'what are you looking for?'
+      products: 'Products'
+      contact: 'Contact us'
     links:
       add: 'Add product'
       categories: 'Categories'
