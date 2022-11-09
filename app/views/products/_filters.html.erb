@@ -19,8 +19,10 @@
       </div>
       <div class="pb-3">
         <h1 class="mb-2 font-semibold border-b border-slate-400 text-dgray"><%= t('.discount')%></h1>
-        <%= form.check_box :discount, {include_hidden: false, onChange: 'this.form.requestSubmit()'} %>
-        <%= form.label :discount, t('.only_discount'), class: "font-medium text-dgray" %>
+        <div class="flex flex-row items-center space-x-2">
+          <%= form.check_box :discount, {include_hidden: false, onChange: 'this.form.requestSubmit()'} %>
+          <h1 class="font-medium text-dgray"><%= t('.only_discount')%></h1>
+        </div>
       </div>
       <div>
         <h1 class="mb-2 font-semibold border-b border-slate-400 text-dgray"><%= t('.filter')%></h1>
