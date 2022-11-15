@@ -32,12 +32,24 @@
                 <%= form.collection_select :category_id, Category.all.order(name: :asc), :id, :name, {}, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slg focus:bg-white font-medium"%>
               </div>
             </div>
-            <div class="lg:w-full">
-              <div>
-                <%= form.label :price, t('.price'), class: "font-medium w-full" %>
+            <div class="flex flex-row space-x-2 lg:w-full">
+              <div class="w-3/4">
+                <div>
+                  <%= form.label :price, t('.price'), class: "font-medium w-full" %>
+                </div>
+                <div>
+                  <%= form.number_field :price,min: 1,  max: 2147483647, required: true, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slg focus:bg-white font-medium",placeholder: t('.placeholder_price') %>
+                </div>
               </div>
-              <div>
-                <%= form.number_field :price, min: 1,  max: 2147483647, required: true, class: "block border border-grey-light w-full p-3 rounded mb-4 bg-slg focus:bg-white font-medium",placeholder: t('.placeholder_price') %>
+              <div class="w-1/4">
+                <div class="text-center">
+                  <%= form.label :iva_status, t('.iva'), class: "font-medium w-full" %>
+                </div>
+                <div class="flex items-center justify-center h-[3.1rem]">
+                  <div class="flex items-center justify-center rounded w-11 h-11 bg-slate-300">
+                    <%= form.check_box :iva_status, class: "check_box" %>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -59,7 +71,7 @@
             <div>
               <%= form.label :discount, t('products.form.discount'), class: "font-medium pb-2" %>
             </div>
-            <div class="flex flex-row items-center space-x-4 h-12" data-controller="check">
+            <div class="flex flex-row items-center h-12 space-x-4" data-controller="check">
               <div class="flex items-center bg-slate-300" data-action="click->check#check">
                 <%= form.check_box :discount, class: "check_box" %>
               </div>

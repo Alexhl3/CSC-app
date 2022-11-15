@@ -103,6 +103,7 @@ es:
       category: 'Categoria *'
       price: 'Precio *'
       placeholder_price: 'Precio'
+      iva: 'IVA'
       dimensions: 'Dimensiones (Opcional)'
       placeholder_height: 'Altura'
       placeholder_depth: 'Profun'

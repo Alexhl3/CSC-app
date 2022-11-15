@@ -89,6 +89,7 @@ en:
       description: 'Description *'
       category: 'Category *'
       price: 'Price *'
+      iva: 'IVA'
       placeholder_price: 'Price'
       dimensions: 'Dimensions (Optional)'
       placeholder_height: 'Height'
