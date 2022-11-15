@@ -94,7 +94,7 @@ en:
       placeholder_height: 'Height'
       placeholder_depth: 'Depth'
       placeholder_width: 'Width'
-      discount: 'Discount (Optional)'
+      discount: 'Discount percentage (Optional)'
       placeholder_discount: 'Total discount'
       status: 'machine condition *'
       new: 'New'

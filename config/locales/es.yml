@@ -107,7 +107,7 @@ es:
       placeholder_height: 'Altura'
       placeholder_depth: 'Profun'
       placeholder_width: 'Ancho'
-      discount: 'Descuento (Opcional)'
+      discount: 'Porcentaje de descuento (Opcional)'
       placeholder_discount: 'Total del descuento'
       status: 'Estado de la maquina *'
       new: 'Nueva'
