@@ -64,6 +64,7 @@ es:
     catalogue:
       filters: 'Filtros'
     details:
+      iva: 'I.V.A Incluido'
       dimensions: 'Dimensiones'
       height: 'Altura'
       depth: 'Profundidad'
@@ -118,6 +119,7 @@ es:
     product:
       new: 'Nueva'
       old: 'Usada'
+      iva: 'I.V.A Incluido'
     edit:
       title: 'Editar producto'
     index:

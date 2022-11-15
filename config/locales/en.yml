@@ -51,6 +51,7 @@ en:
     catalogue:
       filters: 'Order by'
     details:
+      iva: 'I.V.A included'
       dimensions: 'Dimensions'
       height: 'Height'
       depth: 'Depth'
@@ -105,6 +106,7 @@ en:
     product:
       new: 'New'
       old: 'Used'
+      iva: 'I.V.A included'
     index:
       title: 'Products'
     new:
