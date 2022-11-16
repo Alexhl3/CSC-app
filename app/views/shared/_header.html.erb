@@ -6,18 +6,16 @@
         <%# <h1 class="px-3">Comercial Sistemas Comerciales</h1> %>
       </div>
     <% end %>
-    <div class="absolute items-center justify-center hidden w-full space-x-12 text-2xl font-bold text-white lg:flex font-montserrat">
-      <%= link_to products_path, class: ["hover:text-slate-200", ("text-slate-200" if request.path == products_path)] do %>
-        <%= t('.products') %>
-      <% end %>
-      <%= link_to new_contact_path, class: ["hover:text-slate-200", ("text-slate-200" if request.path == new_contact_path)] do %>
-        <%= t('.contact') %>
-      <% end %>
-    </div>
+    <%= link_to products_path, class: ["hover:text-slate-200 text-xl font-bold text-white lg:flex font-montserrat px-5", ("shadow" if request.path == products_path)] do %>
+      <%= t('.products') %>
+    <% end %>
+    <%= link_to new_contact_path, class: ["hover:text-slate-200 text-xl font-bold text-white lg:flex font-montserrat px-5", ("shadow" if request.path == new_contact_path)] do %>
+      <%= t('.contact') %>
+    <% end %>
     <div class="z-40 hidden px-2 ml-auto lg:block">
       <%= form_with url: products_path, method: :get do |form| %>
         <div>
-          <%= form.text_field :query_text, class: "block border border-grey-light w-52 p-3 rounded bg-white font-sans font-medium focus:border-dgreen focus:border-2", placeholder: t('.search'), onChange: 'this.form.requestSubmit()', value: params[:query_text] %>
+          <%= form.text_field :query_text, class: "block border border-grey-light w-80 p-3 rounded bg-white font-sans font-medium focus:border-dgreen focus:border-2", placeholder: t('.search'), onChange: 'this.form.requestSubmit()', value: params[:query_text] %>
         </div>
       <% end %>
     </div>
