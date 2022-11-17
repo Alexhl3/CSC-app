@@ -19,6 +19,15 @@ class Product < ApplicationRecord
     new: 'true',
     old: 'false'
   }
+  
+  def sum_iva
+    if iva_status
+      (price*1.19).round
+    else
+      price
+    end
+  end
+
 
   has_one_attached :photo
   has_many_attached :images
