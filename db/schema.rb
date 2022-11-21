@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_15_125415) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_21_122742) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -82,6 +82,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_15_125415) do
     t.boolean "discount"
     t.integer "discount_percent", default: 0
     t.boolean "iva_status", default: false
+    t.integer "final_price"
     t.index ["category_id"], name: "index_products_on_category_id"
     t.index ["user_id"], name: "index_products_on_user_id"
   end

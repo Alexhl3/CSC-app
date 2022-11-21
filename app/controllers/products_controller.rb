@@ -17,6 +17,12 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
 
+    if @product.discount
+      @product.final_price = @product.discount_price
+    else
+      @product.final_price = @product.price
+    end
+
     if @product.save
       redirect_to administrations_path, notice: t('.created')
     else
@@ -31,6 +37,24 @@ class ProductsController < ApplicationController
 
   def update
     authorized?(product)
+
+    # puts product.price
+    # puts product.discount
+    # puts product.discount_percent
+
+    # puts @product.price
+    # puts @product.discount
+    # puts @product.discount_percent
+    
+    # puts product_params[:price]
+    # puts product_params[:discount]
+    # puts product_params[:discount_percent]
+
+    if product_params[:discount].to_i == 1
+      product.final_price = product.discount_price(product_params[:price].to_i, product_params[:discount_percent].to_i)
+    else
+      product.final_price = product_params[:price].to_i
+    end
 
     if product.update(product_params)
       redirect_to product_path(product.id), notice: t('.updated')

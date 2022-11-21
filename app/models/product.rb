@@ -19,7 +19,11 @@ class Product < ApplicationRecord
     new: 'true',
     old: 'false'
   }
-  
+
+  def discount_price(price = self.price , discount_percent = self.discount_percent)
+    price - (price*discount_percent/100)
+  end
+
   def sum_iva
     if iva_status
       (price*1.19).round
