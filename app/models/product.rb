@@ -24,7 +24,7 @@ class Product < ApplicationRecord
     price - (price*discount_percent/100)
   end
 
-  def sum_iva
+  def sum_iva(price = self.price, iva_status = self.iva_status)
     if iva_status
       (price*1.19).round
     else

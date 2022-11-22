@@ -17,9 +17,13 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
 
-    if @product.discount
+    if @product.iva_status && @product.discount
+      @product.final_price = @product.discount_price(@product.sum_iva)
+    elsif @product.iva_status
+      @product.final_price = @product.sum_iva
+    elsif @product.discount
       @product.final_price = @product.discount_price
-    else
+    elsif
       @product.final_price = @product.price
     end
 
@@ -38,23 +42,21 @@ class ProductsController < ApplicationController
   def update
     authorized?(product)
 
-    # puts product.price
-    # puts product.discount
-    # puts product.discount_percent
-
-    # puts @product.price
-    # puts @product.discount
-    # puts @product.discount_percent
-    
-    # puts product_params[:price]
-    # puts product_params[:discount]
-    # puts product_params[:discount_percent]
-
-    if product_params[:discount].to_i == 1
+    if product_params[:iva_status].to_i == 1 && product_params[:discount].to_i == 1
+      product.final_price = product.discount_price(product.sum_iva(product_params[:price].to_i, product_params[:iva_status].to_i), product_params[:discount_percent].to_i)
+    elsif product_params[:iva_status].to_i == 1
+      product.final_price = product.sum_iva(product_params[:price].to_i, product_params[:iva_status].to_i)
+    elsif product_params[:discount].to_i == 1
       product.final_price = product.discount_price(product_params[:price].to_i, product_params[:discount_percent].to_i)
-    else
-      product.final_price = product_params[:price].to_i
+    elsif
+      product.final_price = product_params[:price]
     end
+
+    # if product_params[:discount].to_i == 1
+    #   product.final_price = product.discount_price(product_params[:price].to_i, product_params[:discount_percent].to_i)
+    # else
+    #   product.final_price = product_params[:price].to_i
+    # end
 
     if product.update(product_params)
       redirect_to product_path(product.id), notice: t('.updated')
@@ -85,7 +87,7 @@ class ProductsController < ApplicationController
   end
 
   def product_params_index
-    params.permit(:category_id, :min_price, :max_price, :query_text, :order_by, :page, :favorites, :user_id, :status, :discount, category_id: [])
+    params.permit(:category_id, :min_price, :max_price, :query_text, :order_by, :page, :favorites, :user_id, :status, :discount, :final_price, category_id: [])
   end
 
   def product
