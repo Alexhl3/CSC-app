@@ -17,15 +17,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
 
-    if @product.iva_status && @product.discount
-      @product.final_price = @product.discount_price(@product.sum_iva)
-    elsif @product.iva_status
-      @product.final_price = @product.sum_iva
-    elsif @product.discount
-      @product.final_price = @product.discount_price
-    elsif
-      @product.final_price = @product.price
-    end
+    @product.final_price = calculate_final_price(product_params)
 
     if @product.save
       redirect_to administrations_path, notice: t('.created')
@@ -42,21 +34,7 @@ class ProductsController < ApplicationController
   def update
     authorized?(product)
 
-    if product_params[:iva_status].to_i == 1 && product_params[:discount].to_i == 1
-      product.final_price = product.discount_price(product.sum_iva(product_params[:price].to_i, product_params[:iva_status].to_i), product_params[:discount_percent].to_i)
-    elsif product_params[:iva_status].to_i == 1
-      product.final_price = product.sum_iva(product_params[:price].to_i, product_params[:iva_status].to_i)
-    elsif product_params[:discount].to_i == 1
-      product.final_price = product.discount_price(product_params[:price].to_i, product_params[:discount_percent].to_i)
-    elsif
-      product.final_price = product_params[:price]
-    end
-
-    # if product_params[:discount].to_i == 1
-    #   product.final_price = product.discount_price(product_params[:price].to_i, product_params[:discount_percent].to_i)
-    # else
-    #   product.final_price = product_params[:price].to_i
-    # end
+    product.final_price = calculate_final_price(product_params)
 
     if product.update(product_params)
       redirect_to product_path(product.id), notice: t('.updated')
@@ -92,6 +70,19 @@ class ProductsController < ApplicationController
 
   def product
     @product ||= Product.find(params[:id])
+  end
+
+  def calculate_final_price(product_params)
+    product = Product.new(product_params)
+    if product.iva_status && product.discount
+      product.discount_price(product.sum_iva)
+    elsif product.iva_status
+      product.sum_iva
+    elsif product.discount
+      product.discount_price
+    else
+      product.price
+    end
   end
 
 end
