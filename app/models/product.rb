@@ -11,8 +11,8 @@ class Product < ApplicationRecord
 
   ORDER_BY = {
     newest: 'created_at DESC',
-    expensive: 'price DESC',
-    cheapest: 'price ASC'
+    expensive: 'final_price DESC',
+    cheapest: 'final_price ASC'
   }
 
   PRODUCT_STATUS = {
