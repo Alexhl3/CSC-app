@@ -116,7 +116,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     get products_path(min_price: 200)
 
     assert_response :success
-    assert_select '.product', 12
+    assert_select '.product', 11
   end
 
   test 'filter products by max_price' do
@@ -145,7 +145,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
     assert_response :success
     assert_select '.product', 12
-    assert_select '.products .product:first-child h2', 'Maquina 21'
+    assert_select '.products .product:first-child h2', 'Maquina 10'
   end
 
   test 'sort products by cheapest' do

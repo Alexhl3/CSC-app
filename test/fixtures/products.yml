@@ -6,6 +6,7 @@ machine1:
   depth: 2
   width: 3.4
   height: 6
+  final_price: 200
 
 machine2:
   title: Maquina 2
@@ -15,6 +16,7 @@ machine2:
   depth: 5
   width: 8
   height: 9.1
+  final_price: 300
 
 machine3:
   title: Maquina 3
@@ -26,6 +28,7 @@ machine3:
   height: 6
   discount: true
   discount_percent: 75
+  final_price: 19
 
 machine4:
   title: Maquina 4
@@ -35,6 +38,7 @@ machine4:
   depth: 2.7
   width: 5
   height: 7
+  final_price: 85
 
 machine5:
   title: Maquina 5
@@ -44,6 +48,7 @@ machine5:
   depth: 9.2
   width: 4.4
   height: 7.8
+  final_price: 15
 
 machine6:
   title: Maquina 6
@@ -53,6 +58,7 @@ machine6:
   depth: 5
   width: 9
   height: 8.2
+  final_price: 150
 
 machine7:
   title: Maquina 7
@@ -62,6 +68,7 @@ machine7:
   depth: 2
   width: 5
   height: 7.2
+  final_price: 235
 
 machine8:
   title: Maquina 8
@@ -71,6 +78,7 @@ machine8:
   depth: 6
   width: 9
   height: 8.1
+  final_price: 125
 
 machine9:
   title: Maquina 9
@@ -80,6 +88,7 @@ machine9:
   depth: 8
   width: 3
   height: 4.2
+  final_price: 55
 
 machine10:
   title: Maquina 10
@@ -89,6 +98,7 @@ machine10:
   depth: 7
   width: 5
   height: 6.2
+  final_price: 500
 
 machine11:
   title: Maquina 11
@@ -100,6 +110,7 @@ machine11:
   height: 7.3
   discount: true
   discount_percent: 50
+  final_price: 225
 
 machine12:
   title: Maquina 12
@@ -109,6 +120,7 @@ machine12:
   depth: 6
   width: 1.2
   height: 7
+  final_price: 45
 
 machine13:
   title: Maquina 13
@@ -118,6 +130,7 @@ machine13:
   depth: 5.8
   width: 8
   height: 1
+  final_price: 50
 
 machine14:
   title: Maquina 14
@@ -127,6 +140,7 @@ machine14:
   depth: 6.6
   width: 1.9
   height: 11
+  final_price: 175
 
 machine15:
   title: Maquina 15
@@ -136,6 +150,7 @@ machine15:
   depth: 3
   width: 4
   height: 7.2
+  final_price: 80
 
 machine16:
   title: Maquina 16
@@ -147,6 +162,7 @@ machine16:
   height: 8.1
   discount: true
   discount_percent: 50
+  final_price: 105
 
 machine17:
   title: Maquina 17
@@ -156,6 +172,7 @@ machine17:
   depth: 7
   width: 5
   height: 1.2
+  final_price: 345
 
 machine18:
   title: Maquina 18
@@ -165,6 +182,7 @@ machine18:
   depth: 9
   width: 5.5
   height: 5.1
+  final_price: 490
 
 machine19:
   title: Maquina 19
@@ -174,6 +192,7 @@ machine19:
   depth: 2.1
   width: 2.
   height: 1
+  final_price: 65
 
 machine20:
   title: Maquina 20
@@ -183,6 +202,7 @@ machine20:
   depth: 1
   width: 9
   height: 4.1
+  final_price: 25
 
 machine21:
   title: Maquina 21
@@ -194,6 +214,7 @@ machine21:
   height: 7.2
   discount: true
   discount_percent: 75
+  final_price: 188
 
 machine22:
   title: Maquina 22
@@ -203,6 +224,7 @@ machine22:
   depth: 1
   width: 6.2
   height: 5
+  final_price: 455
 
 machine23:
   title: Maquina 23
@@ -212,6 +234,7 @@ machine23:
   depth: 2.1
   width: 5.2
   height: 4.4
+  final_price: 356
 
 machine24:
   title: Maquina 24
@@ -221,6 +244,7 @@ machine24:
   depth: 2
   width: 4
   height: 5.2
+  final_price: 170
 
 machine25:
   title: Maquina 25
@@ -230,6 +254,7 @@ machine25:
   depth: 7.2
   width: 9.1
   height: 7.2
+  final_price: 370
 
 machine26:
   title: Maquina 26
@@ -241,6 +266,7 @@ machine26:
   height: 44
   discount: true
   discount_percent: 50
+  final_price: 40
 
 machine27:
   title: Maquina 27
@@ -252,3 +278,4 @@ machine27:
   height: 4
   discount: true
   discount_percent: 25
+  final_price: 321
